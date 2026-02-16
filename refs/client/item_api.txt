@@ -34,6 +34,7 @@ Methods
     :glob:
     
     item/m_*
+    item/master_*
 
 Events
 ======
