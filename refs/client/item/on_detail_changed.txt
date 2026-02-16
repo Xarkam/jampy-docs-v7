@@ -45,4 +45,5 @@ See also
 ========
 
 :doc:`Details </programming/data/details>`
+
 :doc:`calc_summary <m_calc_summary>`
