@@ -10,6 +10,9 @@ same way that we created the "Customers" catalog. Journals, like catalogs, corre
 First, add a "Contact date" field of the ``DATETIME`` type,
 and a "Notes" field of the ``TEXT`` type.
 
+If "Default value" for "Contact date" was set to "CURRENT DATETIME", the field 
+will be filled automatically.
+
 Then, add the
 :doc:`lookup field </programming/data/lookup_fields>`
 "Customer", which will store a reference to a record in the "Customers" catalog.
