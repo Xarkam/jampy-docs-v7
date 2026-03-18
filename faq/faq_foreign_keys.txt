@@ -14,4 +14,4 @@ The soft delete attribute of the lookup item must be set to false (see
 ) for the lookup field to appear in the 
 :doc:`Foreign Keys Dialog </admin/items/foreign_keys_dialog>`
 
-The support for foreign keys is dropped in Jam.py V7.
+The creation/deleting support for foreign keys is dropped in Jam.py V7.
