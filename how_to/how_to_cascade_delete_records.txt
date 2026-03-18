@@ -10,6 +10,9 @@ the lookup ``Artist`` record exists in the ``Artists`` table. And vice versa.
 However, if :doc:`Soft Delete </admin/items/item_editor_dialog>` is used, 
 we can use the below **Server Module** code to change the :doc:`Deleted flag </programming/data/common_fields>` 
 to ``True``.
+For tables with the "Foreign Key" constraint, only the ``Soft Delete`` is needed to achieve the same result.
+The records will not be physically deleted in this case.
+For table with no "Foreign Key" constraint and no ``Soft Delete``, the records will be deleted permanently.
 
 The below code is within the ``Albums`` **Server Module**:
 
