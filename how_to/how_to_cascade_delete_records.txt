@@ -1,0 +1,69 @@
+===============================================
+How to cascade delete records?
+===============================================
+
+This example is using Demo ``Albums`` and ``Artists`` tables.
+For any ``Albums`` record, it is not possible to delete the record if
+the lookup ``Artist`` record exists in the ``Artists`` table. And vice versa.
+
+
+However, if :doc:`Soft Delete </admin/items/item_editor_dialog>` is used, 
+we can use the below **Server Module** code to change the :doc:`Deleted flag </programming/data/common_fields>` 
+to ``True``.
+
+The below code is within the ``Albums`` **Server Module**:
+
+.. code-block:: py
+
+    def cascade_artist_children(delta=None, connection=None):
+
+        artists = task.artists.copy(handlers=False)
+        artists.set_where(id=delta.artist.value)
+        artists.open()
+
+        for i in range(artists.record_count()):
+            artists.rec_no = i
+            artists.delete()
+        artists.apply()
+
+        print("Delete applied successfully!")
+            
+    def on_before_apply_record(item, delta, params, connection):
+        if delta and hasattr(delta, 'rec_deleted') and delta.rec_deleted():
+            cascade_artist_children(delta, connection)
+            delta._lookup_refs = {}
+
+
+Similar code for ``Artists`` table:
+
+.. code-block:: py
+
+    def cascade_albums_children(delta=None, connection=None):
+
+        albums = task.albums.copy(handlers=False)
+        albums.set_where(artist=delta.id.value)
+        albums.open()
+
+        for i in range(albums.record_count()):
+            albums.rec_no = i
+            albums.delete()
+        albums.apply()
+
+        print("Delete applied successfully!")
+            
+    def on_before_apply_record(item, delta, params, connection):
+        if delta and hasattr(delta, 'rec_deleted') and delta.rec_deleted():
+            cascade_albums_children(delta, connection)
+            delta._lookup_refs = {}
+
+
+
+The JS code to alert the user with delete status:
+
+
+.. code-block:: js
+
+    function on_before_delete(item) {
+        item.alert_success('Successful delete!');
+        return false;
+    }
