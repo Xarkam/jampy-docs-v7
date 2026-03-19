@@ -1,0 +1,7 @@
+=================
+on_after_generate
+=================
+
+See:
+
+:doc:`Task class </refs/server/report/on_after_generate>`

@@ -1,0 +1,8 @@
+======================
+on_before_print_report
+======================
+
+See:
+====
+
+:doc:`Report class </refs/client/report/on_before_print_report>`

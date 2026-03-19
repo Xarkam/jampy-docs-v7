@@ -1,0 +1,52 @@
+====================
+on_field_get_summary
+====================
+
+on_field_get_summary(field, value)
+
+**domain**: client 
+
+**language**: javascript
+
+**class** :doc:`Item class </refs/client/item_api>`
+
+Description
+===========
+
+Write an ``on_field_get_summary`` event handler to specify the ``summary`` that will be 
+inserted in the summary cell for the field.
+
+
+The ``field`` parameter is the field whose 
+:doc:`on_field_get_summary </refs/client/item/on_field_get_summary>`
+is processed. To get the item that owns the field, use the
+:doc:`owner </refs/client/field/at_owner>` attribute of the field.
+
+Example
+=======
+
+.. code-block:: js
+
+        function on_field_get_summary(field, value) {
+            let item = field.owner;
+            if (field.field_name === 'customer') {
+                return item.rec_count;
+            }
+            // to use with Virtual Table           
+            if (field.field_name === 'total') {
+                let sum = 0;
+                item.each(function(row) {
+                    sum += parseFloat(row.total.value) || 0;
+                });
+                return '$' + sum.toFixed(2);
+            }
+        }
+
+See also
+========
+
+:doc:`Fields </programming/data/fields>`
+
+:doc:`on_field_get_text <on_field_get_text>`
+
+:doc:`on_field_get_html <on_field_get_html>`

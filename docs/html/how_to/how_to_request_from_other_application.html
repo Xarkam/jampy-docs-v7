@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I can process a request or get some data from other application or service &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/Jam.py.html_files/freemind2html.css" type="text/css" />
+    <link rel="canonical" href="https://jampy-docs-v7.readthedocs.io/en/latest/how_to/how_to_request_from_other_application.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=a354a556"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How can I perform calculations in the background" href="how_to_calculations_in_the_background.html" />
+    <link rel="prev" title="How can I use data from some other database(s) tables" href="how_to_data_from_other_database_tables.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../contents.html" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Jam.py V7 documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programming/index.html">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Jam.py FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">How to</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="how_to_install_on_windows.html">How to install Jam.py on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_implement_a_many-to-many_relationship.html">How to implement a many-to-many relationship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_migrate_development_to_production.html">How to migrate development to production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_migrate_to_another_database.html">How to migrate to another database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy/index.html">How to deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global_scripts.html">How do I write functions which have a global scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_validate_field_value.html">How to validate field value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_add_a_button_to_a_form.html">How to add a button to a form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_execute_script_from_client.html">How to execute Python code from client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_change_style_and_attributes_of_elements.html">How to change style and attributes of form elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_create_a_custom_menu.html">How to create a custom menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="to_append_a_record_without_view_form.html">How to append a record using an edit form without opening a view form?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_prohibit_changing_record.html">How to prohibit changing record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_link_two_tables.html">How to link two tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_change_field_value_of_selected_records.html">How change field value of selected records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_save_edit_form_without_closing_it.html">How to save edit form without closing it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_save_changes_to_two_tables_in_same_transaction.html">How to save changes to two tables in same transaction on the server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_prevent_duplicate_values.html">How to prevent duplicate values in a table field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_multitenancy.html">How to implement some sort of basic multi-tenancy? For example, to have users with separate data.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_use_jam_py_with_existing_database.html">Can I use Jam.py with existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_data_from_other_database_tables.html">How can I use data from some other database(s) tables</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How I can process a request or get some data from other application or service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-variables-with-curl">Using variables with Curl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#consuming-data-from-the-request">Consuming data from the request</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_calculations_in_the_background.html">How can I perform calculations in the background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_details_inside_details.html">Is it supported to have details inside details?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export_import_csv_files.html">Export to / import from csv files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authentication/index.html">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_migrate_to_v7.html">How to migrate v5 project to v7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_write_tests.html">How to write tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_cascade_delete_records.html">How to cascade delete records?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refs/index.html">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releases/index.html">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../contents.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">How to</a> &raquo;</li>
+      <li>How I can process a request or get some data from other application or service</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/jam-py-v7/jampy-docs-v7/blob/main/how_to/how_to_request_from_other_application.txt" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-i-can-process-a-request-or-get-some-data-from-other-application-or-service">
+<h1>How I can process a request or get some data from other application or service<a class="headerlink" href="#how-i-can-process-a-request-or-get-some-data-from-other-application-or-service" title="Link to this heading">¶</a></h1>
+<p>You can access the data of your application for reading and writing by sending
+a post request that has ‘ext’ added to url. For example:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>http://your_jampy_app.com/ext/something
+</pre></div>
+</div>
+<p>When an web app on the server receives such request, it
+generates the
+<a class="reference internal" href="../refs/server/task/on_ext_request.html"><span class="doc">on_ext_request</span></a>
+event</p>
+<p>For example, Jam.py application table <code class="docutils literal notranslate"><span class="pre">account_transactions</span></code> has a field <code class="docutils literal notranslate"><span class="pre">actual_amount</span></code>.
+The application Task Module has:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_ext_request</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">reqs</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">reqs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;expenses&#39;</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">account_transactions</span><span class="o">.</span><span class="n">expenses</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>The table <code class="docutils literal notranslate"><span class="pre">account_transactions</span></code> Task Server Module has:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">jam.common</span><span class="w"> </span><span class="kn">import</span> <span class="n">cur_to_str</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">expenses</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">inv</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">account_transactions</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">inv</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">inv</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span><span class="o">.</span><span class="n">actual_amount</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="n">total</span> <span class="o">=</span> <span class="n">cur_to_str</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Accessing the application with Curl command will reply with the result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">curl</span> <span class="o">-</span><span class="n">k</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">your_jampy_app</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ext</span><span class="o">/</span><span class="n">expenses</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;[]&quot;</span> <span class="o">-</span><span class="n">H</span>  <span class="s2">&quot;Content-Type: application/json&quot;</span>
+<span class="p">{</span><span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;-$2590.01&quot;</span><span class="p">,</span> <span class="s2">&quot;modification&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">},</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">}</span>
+</pre></div>
+</div>
+<section id="using-variables-with-curl">
+<h2>Using variables with Curl<a class="headerlink" href="#using-variables-with-curl" title="Link to this heading">¶</a></h2>
+<p>On Demo application, if we add to Task Server Module:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_ext_request</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+    <span class="n">reqs</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">reqs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;bla&#39;</span><span class="p">:</span>
+        <span class="n">users</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">customers</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">handlers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">users</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+        <span class="n">users</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">users</span><span class="o">.</span><span class="n">rec_count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span>
+                    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">users</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                    <span class="s1">&#39;firstname&#39;</span><span class="p">:</span> <span class="n">users</span><span class="o">.</span><span class="n">firstname</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="p">}</span>
+</pre></div>
+</div>
+<p>Passing parameters with Curl will reply with the result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="o">&gt;</span> <span class="n">curl</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">ext</span><span class="o">/</span><span class="n">bla</span> <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;{&quot;id&quot;: &quot;2&quot;, &quot;firstname&quot;: &quot;Leonie&quot;}&#39;</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span>
+<span class="p">{</span><span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Leonie&quot;</span><span class="p">,</span> <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Leonie&quot;</span><span class="p">},</span> <span class="s2">&quot;modification&quot;</span><span class="p">:</span> <span class="mi">2014</span><span class="p">},</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="consuming-data-from-the-request">
+<h2>Consuming data from the request<a class="headerlink" href="#consuming-data-from-the-request" title="Link to this heading">¶</a></h2>
+<p>The same application from above can be accessed from some other Jam.py app with
+Server Module:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># For Python 3.0 and later</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="c1"># Fall back to Python 2&#39;s urllib2</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">urllib2</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">api_fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">request</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">params</span><span class="p">)))</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">send</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="n">result</span><span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="s1">&#39;expenses&#39;</span><span class="p">;</span>
+    <span class="n">endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://your_jampy_app.com/ext&#39;</span><span class="p">;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># print(&#39;Req: &#39; + request)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">api_fetch</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+        <span class="c1"># print(result)</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="c1"># &#39;id&#39;: 1,</span>
+                <span class="s1">&#39;request&#39;</span><span class="p">:</span> <span class="n">request</span><span class="p">,</span>
+                <span class="s1">&#39;endpoint&#39;</span><span class="p">:</span> <span class="n">endpoint</span><span class="p">,</span>
+                <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">result</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Could not connect!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Client Module for some virtual table with fields <code class="docutils literal notranslate"><span class="pre">request</span></code>, <code class="docutils literal notranslate"><span class="pre">endpoint</span></code>, and <code class="docutils literal notranslate"><span class="pre">value</span></code>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_view_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">view_options</span><span class="p">.</span><span class="nx">open_item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">view_options</span><span class="p">.</span><span class="nx">form_header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span><span class="nx">open_empty</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">});</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">paginate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">view_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#edit-btn&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">view_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#delete-btn&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">view_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;#new-btn&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Fetching!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">server</span><span class="p">(</span><span class="s1">&#39;send&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">records</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">disable_controls</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">item</span><span class="p">.</span><span class="nx">warning</span><span class="p">(</span><span class="s1">&#39;Failed to fetch data: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">records</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">records</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">rec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">item</span><span class="p">.</span><span class="nx">append</span><span class="p">();</span>
+<span class="w">                    </span><span class="c1">// item.id.value = rec.id;</span>
+<span class="w">                    </span><span class="nx">item</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">rec</span><span class="p">.</span><span class="nx">request</span><span class="p">;</span>
+<span class="w">                    </span><span class="nx">item</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">rec</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">;</span>
+<span class="w">                    </span><span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">rec</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">                    </span><span class="nx">item</span><span class="p">.</span><span class="nx">post</span><span class="p">();</span>
+<span class="w">                </span><span class="p">});</span>
+<span class="w">                </span><span class="nx">item</span><span class="p">.</span><span class="nx">first</span><span class="p">();</span>
+<span class="w">                </span><span class="nx">item</span><span class="p">.</span><span class="nx">enable_controls</span><span class="p">();</span>
+<span class="w">                </span><span class="nx">item</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Successfully fetched from API!&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The  result will be displayed table with fetched <code class="docutils literal notranslate"><span class="pre">value</span></code> from <code class="docutils literal notranslate"><span class="pre">endpoint</span></code>
+with the <code class="docutils literal notranslate"><span class="pre">request</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="how_to_data_from_other_database_tables.html" class="btn btn-neutral float-left" title="How can I use data from some other database(s) tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how_to_calculations_in_the_background.html" class="btn btn-neutral float-right" title="How can I perform calculations in the background" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Mar 19, 2026.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

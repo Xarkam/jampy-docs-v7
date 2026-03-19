@@ -1,0 +1,20 @@
+=================
+Jam.py exceptions
+=================
+
+TBA
+
+Jam.py raises some of its own exceptions as well as standard Python exceptions.
+
+
+
+Jam.py Core exceptions
+======================
+
+
+``Language with id %s is not found``
+----------------------------------------------
+
+.. py:exception:: LanguageNotFound
+
+

@@ -1,0 +1,94 @@
+======================================
+How to execute Python code from client
+======================================
+
+
+
+While it is possible to execute any Python script on the OS level with the 
+``Popen`` command, first we will demonstrate using the ``Server module[F8]`` code.
+
+You can use 
+:doc:`server </refs/client/abstr_item/m_server>`
+method to send a request to the server to execute a function defined in the 
+server module of an item.
+
+In the example below we create the ``btn`` button that is a JQuery object. 
+Then we use its click method to attach a function that calls the 
+:doc:`server </refs/client/abstr_item/m_server>`
+method of the item to run the ``calculate`` function defined in the server module
+of the item.
+
+The code in the client module:
+
+.. code-block:: js
+
+  function on_view_form_created(item) {
+      var btn = item.add_view_button('Calculate', {type: 'primary'});
+      btn.click(function() {
+          item.server('calculate', [1, 2, 3], function(result, error) {
+            if (error) {
+              item.alert_error(error);
+            }
+            else {
+              console.log(result);
+            }
+          })
+      });
+  }
+  
+
+The code in the server module:
+
+.. code-block:: py
+
+  def calculate(item, a, b, c):
+      return a + b + c
+      
+      
+
+To execute the OS script, we could use the Server module code with ``Popen`` and 
+a button similar to above:
+
+
+.. code-block:: py
+
+        build = Popen([make, 'html'] , cwd=build_path, stderr=STDOUT,stdout = PIPE, shell=shell)
+        result, err = build.communicate()
+        result = result.decode("utf-8") 
+
+
+To review the build result, we can use JavaScript modal form with a button to 
+display it:
+
+.. code-block:: js
+
+        item.edit_form.find("#build-info-btn").hide().click(function() {
+            show_build_info(item);
+        });
+
+        function show_build_info(item) {
+            var i = 0,
+                color,
+                html = '<p>',
+                info = item.build_result.split('\n');
+            
+            for (i = 0; i < info.length; i++) {
+                color = '#333333';
+                if (build_problems(item, info[i])) {
+                    color = 'red';
+                }
+                html += '<span style="color: ' + color + ';">' + info[i] + '</span><br>';
+            }
+            html += '</p>';
+            html = $(html).css("margin", 20);
+            task.message(html, {width: 700, height: 600,
+                title: 'Build information', footer: false, print: true});
+        }
+
+
+On this example, the Sphinx ``make`` command is used to build Jam.py Docs.
+
+
+.. image:: /how_to/_images/how_to_run_python_script_jampy.png
+	:align: center
+	:alt: how_to_run_python_script_jampy.png

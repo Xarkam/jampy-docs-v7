@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>on_apply &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/Jam.py.html_files/freemind2html.css" type="text/css" />
+    <link rel="canonical" href="https://jampy-docs-v7.readthedocs.io/en/latest/refs/server/item/on_apply.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=a354a556"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="on_before_apply_record" href="on_before_apply_record.html" />
+    <link rel="prev" title="on_after_open" href="on_after_open.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../contents.html" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Jam.py V7 documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming/index.html">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/index.html">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../admin/index.html">Business application builder</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Jam.py class reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../client/index.html">Client side (javascript) class reference</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Server side (python) class reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../app_api.html">App class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../abstractitem_api.html">AbstractItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../task_api.html">Task class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../item_group_api.html">Group class</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../item_api.html">Item class</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../item_api.html#Item"><code class="docutils literal notranslate"><span class="pre">Item</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../item_api.html#attributes-and-properties">Attributes and properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../item_api.html#methods">Methods</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../item_api.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../detail_api.html">Detail class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../report_group_api.html">Reports class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../report_api.html">Report class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../field_api.html">Field class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filter_api.html">Filter class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions/index.html">Jam.py exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../releases/index.html">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents.html">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../contents.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Jam.py class reference</a> &raquo;</li>
+          <li><a href="../index.html">Server side (python) class reference</a> &raquo;</li>
+          <li><a href="../item_api.html">Item class</a> &raquo;</li>
+      <li>on_apply</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/jam-py-v7/jampy-docs-v7/blob/main/refs/server/item/on_apply.txt" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="on-apply">
+<h1>on_apply<a class="headerlink" href="#on-apply" title="Link to this heading">¶</a></h1>
+<p>on_apply(self, delta, params, connection)</p>
+<p><strong>domain</strong>: server</p>
+<p><strong>language</strong>: python</p>
+<p><strong>class</strong> <a class="reference internal" href="../item_api.html"><span class="doc">Item class</span></a></p>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<p>Please see <a class="reference internal" href="../../../releases/version_7/index.html"><span class="doc">verson 7</span></a>  <code class="docutils literal notranslate"><span class="pre">on_before_apply_record</span></code>
+and <code class="docutils literal notranslate"><span class="pre">on_after_apply_record</span></code>, for before and after events.</p>
+<p>Write <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler when you need to override the standard data saving
+procedure during the execution of the apply method on the
+<a class="reference internal" href="../../client/item/m_apply.html"><span class="doc">client</span></a>
+or
+<a class="reference internal" href="m_apply.html"><span class="doc">server</span></a>.</p>
+<p>See
+<a class="reference internal" href="../../../programming/server/on_apply_events.html"><span class="doc">on_apply events</span></a>
+to understand how on_apply events are triggered.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler has the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">item</span></code> - a reference to the item,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delta</span></code> - a delta containing item change log (discussed in more detail below),</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code> - the parameters passed to the server by apply method,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection</span></code> - the connection that will be used to save changes to the database.</p></li>
+</ul>
+<p>The delta parameter contains changes that must be saved in the database.
+By itself, this option is an item’s copy, and its dataset is the item’s change
+log. The nature of the record change can be obtained by using following methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rec_inserted</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rec_modified</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rec_deleted</span></code></p></li>
+</ul>
+<p>each of which returns a value of <code class="docutils literal notranslate"><span class="pre">True</span></code>, if the record is added, modified or
+deleted, respectively.</p>
+<p>If the item has a detail items, delta also has a corresponding detail items,
+storing detail changes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that when a record is deleted from an item and this record has
+detail records, the change log will just keep this deleted record,
+information about the deleted records of the details is not stored.
+To add this deleted detail records, call delta’s <code class="docutils literal notranslate"><span class="pre">update_deleted</span></code> method.</p>
+<p>You do not need to open delta detail after the cursor has been moved to
+another record.</p>
+</div>
+<p>Delta dataset fields have an old_value attribute that can be used to get the
+value of a field before changes have been made.</p>
+<p>Fields of the delta dataset have an <code class="docutils literal notranslate"><span class="pre">old_value</span></code> attribute that can be used to
+get the value of a field before changes have been made.</p>
+<p>when the <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler is not defined the <code class="docutils literal notranslate"><span class="pre">apply_delta</span></code> method
+is executed, that generates SQL queries and executes them. After that it
+returns the information about the result of processing, that stores the
+id’s of the new records as well. The client based on this information updates the
+item’s change log and values of the primary fields of new records.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler returns <code class="docutils literal notranslate"><span class="pre">None</span></code> the <code class="docutils literal notranslate"><span class="pre">apply_delta</span></code> is executed.</p>
+<p>You can make some additional processing of the delta. In the following code, the
+a value of the date field is set to the current date before changes are applied
+to the database table.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">delta</span><span class="p">:</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">edit</span><span class="p">()</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">post</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that changes made this way are not reflected in the item dataset
+on the client. You can use the item client methods
+<a class="reference internal" href="../../client/item/m_refresh_record.html"><span class="doc">refresh_record</span></a> or
+<a class="reference internal" href="../../client/item/m_refresh_page.html"><span class="doc">refresh_page</span></a> to display these
+changes.</p>
+</div>
+<p>In the following code for Jam.py V5, while saving the changes made to the invoices, the
+application will update the value of the <code class="docutils literal notranslate"><span class="pre">tracks_sold</span></code> field for tracks and current
+invoice. All this is done in one transaction.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+    <span class="n">tracks</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">tracks</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">changes</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">delta</span><span class="o">.</span><span class="n">update_deleted</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">delta</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">invoice_table</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">changes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">track</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+                <span class="n">changes</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">track</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">rec_inserted</span><span class="p">():</span>
+                <span class="n">changes</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">track</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="n">t</span><span class="o">.</span><span class="n">rec_deleted</span><span class="p">():</span>
+                <span class="n">changes</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">track</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="o">-=</span> <span class="n">t</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="n">t</span><span class="o">.</span><span class="n">rec_modified</span><span class="p">():</span>
+                <span class="n">changes</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">track</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">t</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">old_value</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">changes</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">tracks</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="n">id__in</span><span class="o">=</span><span class="n">ids</span><span class="p">)</span>
+    <span class="n">tracks</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tracks</span><span class="p">:</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">changes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">edit</span><span class="p">()</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">tracks_sold</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="n">q</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">post</span><span class="p">()</span>
+    <span class="n">tracks</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the previous examples the <code class="docutils literal notranslate"><span class="pre">on_apply</span></code> event handler returns <code class="docutils literal notranslate"><span class="pre">None</span></code> so after
+that the <code class="docutils literal notranslate"><span class="pre">apply_delta</span></code> method is executed by the application.</p>
+<p>In the following code for Jam.py V7 we do the same and much more as the Server side calculation.
+Note <code class="docutils literal notranslate"><span class="pre">calc_track</span></code> function on Details:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">delta</span><span class="o">.</span><span class="n">rec_deleted</span><span class="p">():</span>
+        <span class="n">calc_invoice</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">connection</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calc_invoice</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+    <span class="n">invoice</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">handlers</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+    <span class="n">invoice</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">delta</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">invoice</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">connection</span><span class="o">=</span><span class="n">connection</span><span class="p">)</span>
+    <span class="n">invoice</span><span class="o">.</span><span class="n">subtotal</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">invoice</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">invoice</span><span class="o">.</span><span class="n">total</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">invoice</span><span class="o">.</span><span class="n">invoice_table</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">connection</span><span class="o">=</span><span class="n">connection</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">invoice</span><span class="o">.</span><span class="n">invoice_table</span><span class="p">:</span>
+        <span class="n">task</span><span class="o">.</span><span class="n">invoice_table</span><span class="o">.</span><span class="n">calc_track</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="n">invoice</span><span class="o">.</span><span class="n">subtotal</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">amount</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">invoice</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">invoice</span><span class="o">.</span><span class="n">total</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">total</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">invoice</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">connection</span><span class="o">=</span><span class="n">connection</span><span class="p">)</span>
+    <span class="n">delta</span><span class="o">.</span><span class="n">copy_record_fields</span><span class="p">(</span><span class="n">invoice</span><span class="p">,</span> <span class="n">copy_system_fields</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>On Invoices Detail <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">Module</span></code>, there is:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calc_track</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="n">item</span><span class="o">.</span><span class="n">amount</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="n">item</span><span class="o">.</span><span class="n">unitprice</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">item</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">amount</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="n">item</span><span class="o">.</span><span class="n">master</span><span class="o">.</span><span class="n">taxrate</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="n">item</span><span class="o">.</span><span class="n">total</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">amount</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">item</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">item</span><span class="o">.</span><span class="n">paid</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">master</span><span class="o">.</span><span class="n">paid</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+<p>The more general case is:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_apply</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">):</span>
+
+  <span class="c1"># execute some code before changes are written to the database</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">apply_delta</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">connection</span><span class="p">)</span>
+
+  <span class="c1"># execute some code after changes are written to the database</span>
+
+  <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../programming/server/index.html"><span class="doc">Server side programming</span></a></p>
+<p><a class="reference internal" href="../../../programming/server/on_apply_events.html"><span class="doc">on_apply events</span></a></p>
+<p><a class="reference internal" href="../../../programming/data/modifying_datasets.html"><span class="doc">Modifying datasets</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="on_after_open.html" class="btn btn-neutral float-left" title="on_after_open" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="on_before_apply_record.html" class="btn btn-neutral float-right" title="on_before_apply_record" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Mar 19, 2026.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

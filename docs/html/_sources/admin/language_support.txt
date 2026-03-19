@@ -1,0 +1,29 @@
+================
+Language support
+================
+
+Use Language Dialog to add, select and change your language.  
+
+.. image:: _images/lang_dialog_jampy.png
+	:align: center
+	:alt: lang_dialog_jampy.png
+
+Language locale
+===============
+
+Use language locale to set up how the field value will be displayed. See
+:doc:`display_text </refs/client/field/at_display_text>`
+
+.. image:: _images/lang_locale_jampy.png
+	:align: center
+	:alt: lang_locale_jampy.png
+
+
+Language translation
+====================
+
+See :doc:`Language translation <language_translation>`
+
+.. image:: _images/lang_translation_jampy.png
+	:align: center
+	:alt: lang_translation_jampy.png

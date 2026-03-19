@@ -1,0 +1,12 @@
+============================================
+How to implement a many-to-many relationship
+============================================
+
+Many-to-many relationship is implemented on Demo application with the Invoices table. 
+Each Customer can have multiple Tracks purchased, and each Track can be sold to 
+multiple Customers. 
+No code is needed to achieve this.
+
+What Jam.py is providing is even more. As seen on Tracks form, it is possible to 
+identify which Customer purchased which Track, with automated summary.
+Some code is needed to achieve finding the Customers.

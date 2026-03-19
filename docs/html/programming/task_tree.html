@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task tree &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/Jam.py.html_files/freemind2html.css" type="text/css" />
+    <link rel="canonical" href="https://jampy-docs-v7.readthedocs.io/en/latest/programming/task_tree.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=a354a556"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Workflow" href="workflow.html" />
+    <link rel="prev" title="Jam.py programming" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../contents.html" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Jam.py V7 documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Jam.py programming</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Task tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#video">Video</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflow.html">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">Working with modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface/index.html">Client side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/index.html">Data programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server/index.html">Server side programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reports/index.html">Programming reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reserved.html">Reserved words</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how_to/index.html">How to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Business application builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refs/index.html">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releases/index.html">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../contents.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Jam.py programming</a> &raquo;</li>
+      <li>Task tree</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/jam-py-v7/jampy-docs-v7/blob/main/programming/task_tree.txt" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="task-tree">
+<h1>Task tree<a class="headerlink" href="#task-tree" title="Link to this heading">¶</a></h1>
+<p>All objects of the framework represent a tree of objects. These objects are
+called items.</p>
+<p>All items of the tree have common ancestor class <code class="docutils literal notranslate"><span class="pre">AbstractItem</span></code> (
+<a class="reference internal" href="../refs/client/abstractitem_api.html"><span class="doc">client reference</span></a>
+/
+<a class="reference internal" href="../refs/server/abstractitem_api.html"><span class="doc">server reference</span></a>
+) and common attributes:.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code>  - unique in the framework ID of the item</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner</span></code> - immediate parent and owner of the item</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task</span></code> - root of the task tree</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> - list of child items</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">item_type</span></code> - type of the item</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">item_name</span></code> - the name of the item that will be used in programming code
+to get access to the item</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">item_caption</span></code> - the item name that appears to users</p></li>
+</ul>
+<p>At the root of the tree is the task item.</p>
+<p>The task contains group items. There are three types of groups that have the
+following values of the <code class="docutils literal notranslate"><span class="pre">item_type</span></code> attribute:</p>
+<ul class="simple">
+<li><p>“journals” - these groups contain items with “item” <code class="docutils literal notranslate"><span class="pre">item_type</span></code>, that can have
+associated database table.</p></li>
+<li><p>“catalogs” - such groups also contain items that can have associated database
+tables, but they can be used to create details for other items (see
+<a class="reference internal" href="data/details.html"><span class="doc">Details</span></a>
+).</p></li>
+<li><p>“reports” - these groups contain reports - items with “report” <code class="docutils literal notranslate"><span class="pre">item_type</span></code>,
+that are used to create reports.</p></li>
+</ul>
+<p>There can be an unlimited number of groups. We would suggest logical name for the
+group, since the name is used for the drop-down menu.</p>
+<p>Items that can have associated database table can own details, that are used to
+store records that belong to a record of the master.</p>
+<p>For example the task tree of the
+<a class="reference internal" href="../intro/demo_project.html"><span class="doc">Demo project</span></a>
+is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">demo</span><span class="o">/</span>
+    <span class="n">catalogs</span><span class="o">/</span>
+       <span class="n">customers</span>
+       <span class="n">tracks</span><span class="o">/</span>
+            <span class="n">invoice_table</span>
+       <span class="n">albums</span>
+       <span class="n">artists</span>
+       <span class="n">genres</span>
+       <span class="n">mail</span>
+    <span class="n">journals</span><span class="o">/</span>
+        <span class="n">invoices</span><span class="o">/</span>
+            <span class="n">invoice_table</span>
+        <span class="n">invoices_client</span><span class="o">/</span>
+            <span class="n">invoice_table</span>
+    <span class="n">details</span><span class="o">/</span>
+        <span class="n">invoice_table</span>
+    <span class="n">reports</span><span class="o">/</span>
+        <span class="n">invoice</span>
+        <span class="n">purchases_report</span>
+    <span class="n">analytics</span>
+    <span class="n">system</span>
+</pre></div>
+</div>
+<p>At the root of the task tree is a task with the <code class="docutils literal notranslate"><span class="pre">item_name</span></code> <strong>demo</strong>. It has
+five groups: <strong>catalogs</strong>, <strong>journals</strong>, <strong>details</strong>, <strong>reports</strong>, <strong>analytics</strong>
+and <strong>system</strong>. The
+<strong>catalogs</strong> and <strong>journals</strong> groups have <code class="docutils literal notranslate"><span class="pre">item_type</span></code> “items”. The items they own
+are wrappers over the corresponding database tables. There is one detail item with
+<code class="docutils literal notranslate"><span class="pre">item_name</span></code> <strong>invoice_table</strong>, that also has its own database table, and three
+reports in the <strong>reports</strong> group.</p>
+<p>The <strong>invoices</strong> journal has the <strong>invoice_table</strong> detail, which keeps a list
+of tracks in a customer’s invoice.
+So there are three items with the same name
+“invoice_table”, detail table in Details Group, details for Journal/Invoices and
+detail for Catalogs/Tracks.</p>
+<p>Every item is an attribute of its owner and all items, tables and reports are
+attributes the task as well (they all have a unique <code class="docutils literal notranslate"><span class="pre">item_name</span></code>).</p>
+<p>A task is a global object on the client. To access it, just type <code class="docutils literal notranslate"><span class="pre">task</span></code>
+anywhere in the code.</p>
+<p>On the server, the task is not global. Jam.py is an event-driven environment.
+Each event has as a parameter the item (or field) that triggered the event.
+Functions defined in the server module of an item that can be executed from
+the client module using the
+<a class="reference internal" href="../refs/client/abstr_item/m_server.html"><span class="doc">server</span></a>
+method have the corresponding item as the first parameter as well.</p>
+<p>Knowing an item, we can access any other item of the task tree. For example to
+get access to the <strong>customers</strong> catalog we can write</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">def</span><span class="w"> </span><span class="nx">on_apply</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">delta</span><span class="p">,</span><span class="w"> </span><span class="nx">params</span><span class="p">)</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">customers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">task</span><span class="p">.</span><span class="nx">catalogs</span><span class="p">.</span><span class="nx">customers</span><span class="p">.</span><span class="nx">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>or just</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">def</span><span class="w"> </span><span class="nx">on_apply</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">delta</span><span class="p">,</span><span class="w"> </span><span class="nx">params</span><span class="p">)</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">customers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">task</span><span class="p">.</span><span class="nx">customers</span><span class="p">.</span><span class="nx">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The hierarchical structure of the project is one of the bases of the DRY
+(don’t repeat yourself) principle of the framework.</p>
+<p>For example, some methods of the items, when executed, successively generate
+events for the task, group and the item.</p>
+<p>This way we can define a basic behaviour for all items in the event handler of
+the task, that can be expanded in the event handler of the group, and finally,
+if necessary, can be specified in the event handler of the item itself. For more
+details see
+<a class="reference internal" href="interface/form_events.html"><span class="doc">Form events</span></a></p>
+<section id="video">
+<h2>Video<a class="headerlink" href="#video" title="Link to this heading">¶</a></h2>
+<p>The <a class="reference external" href="https://youtu.be/hsSKqEh6vL4">Task tree</a>  video tutorial demonstrates the task tree using
+<a class="reference internal" href="../intro/demo_project.html"><span class="doc">Demo project</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Jam.py programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="workflow.html" class="btn btn-neutral float-right" title="Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Mar 19, 2026.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+==================
+on_before_generate
+==================
+
+See:
+
+:doc:`Reports class </refs/server/report/on_before_generate>`

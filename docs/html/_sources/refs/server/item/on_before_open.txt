@@ -1,0 +1,27 @@
+===============
+on_before_open
+===============
+
+on_before_open(item, query, params, connection)
+
+**domain**: server
+
+**language**: python
+
+**class** :doc:`Item class </refs/server/item_api>`
+
+Description
+===========
+
+
+``on_before_open``  event is triggered before the sql request is executed and can be used to validate the request and add additional filters.
+
+
+See also
+========
+
+:doc:`Server side programming </programming/server/index>`
+
+:doc:`on_apply events </programming/server/on_apply_events>`
+
+:doc:`Modifying datasets </programming/data/modifying_datasets>`

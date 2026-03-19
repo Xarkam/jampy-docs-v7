@@ -1,0 +1,79 @@
+=======
+Details
+=======
+
+The Detail in Jam.py V7 is any database table linked in a way of Master/Details
+relationship.
+To group the database tables logically, we might use the :doc:`Details group <groups/table_group_editor>`
+to "store" a detail of an item, as seen on below screenshot.
+
+
+To work with a detail of an item, expand a group node that owns the item and 
+select that item in the tree. In the center of the Application builder all 
+details of this item will be displayed.
+
+The right panel of the page have following buttons:
+
+* **Client module** - click on this button to open the 
+  :doc:`Code editor </admin/code_editor>`
+  to edit client module of a detail, see 
+  :doc:`Working with modules </programming/modules>`.
+
+* **Server module**	- click on this button to open the 
+  :doc:`Code editor </admin/code_editor>`
+  to edit server module of a detail, see 
+  :doc:`Working with modules </programming/modules>`.
+
+* **View Form** - use this button to invoke the 
+  :doc:`View Form Dialog <items/view_form_dialog>`
+  to set the fields to be displayed in tables on the client and their order, 
+  by default. See 
+  :doc:`create_table </refs/client/item/m_create_table>` 
+  method
+
+* **Edit Form** -  use this button to invoke the 
+  :doc:`Edit Form Dialog <items/edit_form_dialog>`
+  to set the fields to be displayed in edit forms on the client and their 
+  order, by default. See 
+  :doc:`create_inputs </refs/client/item/m_create_inputs>`
+  method.
+
+* **Filters** - use this button to invoke the
+  :doc:`Filters Dialog <items/filters_dialog>`
+  to create, modify and delete item filters. See
+  :doc:`Filters </programming/data/filters>`.
+
+* **Details** - use this button to invoke the
+  :doc:`Details Dialog <items/details_dialog>`
+  to add or remove details linked to the item.
+
+* **Order** - use this button to invoke the
+  :doc:`Order Dialog <items/order_dialog>`
+  to specify how records will be ordered by default. See
+  :doc:`open </refs/client/item/m_open>`
+  method
+
+* **Indices** - сlick this button to open the
+  :doc:`Indices Dialog <items/indices_dialog>`
+  to create and delete indices for the item database table.
+
+..
+    * **Foreign keys** - сlick this button to open the
+      :doc:`Foreign Keys Dialog <items/foreign_keys_dialog>`
+      to create foreign keys for the database table.
+
+* **Reports** - сlick this button to open the
+  :doc:`Reports Dialog <items/reports_dialog>`
+  to specify reports that could printed for the item. 
+  A new project has a function that can be used to create a drop-up 
+  button to print the reports.
+  
+* **Privileges** - click this button to open a dialog to configure the 
+  privileges assigned to user roles for this item.
+  
+Use **Edit** button at the bottom of the page to change ``item_name`` or 
+``caption`` of a `detail`.  
+
+.. image:: _images/details_jampy.png
+	:align: center
+	:alt: Jam.py details

@@ -1,0 +1,45 @@
+=================
+on_field_get_text
+=================
+
+on_field_get_text(field)
+
+**domain**: client 
+
+**language**: javascript
+
+**class** :doc:`Item class </refs/client/item_api>`
+
+Description
+===========
+
+Write an ``on_field_get_text`` event handler to specify the ``text`` that will be 
+inserted in the table cell for the field.
+
+
+The ``field`` parameter is the field whose 
+:doc:`display_text </refs/client/field/at_display_text>`
+is processed. To get the item that owns the field, use the
+:doc:`owner </refs/client/field/at_owner>` attribute of the field.
+
+The function is used to concatenate two or more fields for displaying. The 
+fields can be any lookups from some other tables.
+
+Example
+=======
+
+.. code-block:: js
+
+    function on_field_get_text(field) {
+        if (field.field_name === 'customer' && field.value) {
+            return field.owner.firstname.lookup_text + ' ' + field.lookup_text;
+        }
+    }
+
+
+See also
+========
+
+:doc:`Fields </programming/data/fields>`
+
+:doc:`on_field_get_html <on_field_get_html>`

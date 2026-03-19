@@ -1,0 +1,8 @@
+Understanding admin.sqlite
+==========================
+
+The Mind Map for Jam.py V7 admin.sqlite database describes the Jam.py database engine schema. The intention was to quickly find the information needed, as well as the code.
+
+.. raw:: html
+   :file: ../_static/Jam.py.html
+

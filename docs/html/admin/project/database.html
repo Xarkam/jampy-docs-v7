@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Database &mdash; Jam.py  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/Jam.py.html_files/freemind2html.css" type="text/css" />
+    <link rel="canonical" href="https://jampy-docs-v7.readthedocs.io/en/latest/admin/project/database.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=a354a556"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Export" href="export.html" />
+    <link rel="prev" title="Parameters" href="parameters.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../contents.html" class="icon icon-home"> Jam.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Jam.py V7 documentation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/index.html">Jam.py programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Jam.py FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to/index.html">How to</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Business application builder</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Project management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples-of-database-setups">Examples of database setups</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="export.html">Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import.html">Import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metadata_file.html">Export/import metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="find.html">Find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="print.html">Print</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../roles.html">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users.html">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_editor.html">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../task.html">Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups/index.html">Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details.html">Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lookup_lists.html">Lookup List Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration_with_existing_database.html">Importing existing database tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saving_history.html">Saving audit trail/change history made by users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../record_locking.html">Record locking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../language_support.html">Language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../language_translation.html">Language translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sanitizing.html">Sanitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accept_string.html">Accept string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../routing.html">Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customisation.html">Builder customisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/index.html">Jam.py class reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../releases/index.html">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">Jam.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../contents.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Business application builder</a> &raquo;</li>
+          <li><a href="index.html">Project management</a> &raquo;</li>
+      <li>Database</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/jam-py-v7/jampy-docs-v7/blob/main/admin/project/database.txt" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="database">
+<h1>Database<a class="headerlink" href="#database" title="Link to this heading">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/database_jampy.png"><img alt="Database dialog" class="align-center" src="../../_images/database_jampy.png" style="width: 700.0px; height: 493.5px;" />
+</a>
+<p>In this dialog project database parameters are displayed. When they have been
+changed and OK button is clicked, the Application builder will check connection
+to the database and if it failed to connect an error will be displayed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When any <strong>Database</strong> parameter is changed, except <strong>DB manual update</strong>,
+the server application must be restarted for changes to take effect.</p>
+</div>
+<p>If <strong>DB manual update</strong> checkbox is unchecked (default), then when changes to an
+item, that have an associated database table, are saved, this database table is
+automatically modified. For example, if we add a new field to some item in the
+<a class="reference internal" href="../items/item_editor_dialog.html"><span class="doc">Item Editor Dialog</span></a>
+, the new field will be added to the associated database table. If this checkbox
+is checked, no modifications to the database tables are made.</p>
+<p>The <strong>DB manual update</strong> was renamed to <strong>DB manual mode</strong> in more recent version.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please be very careful when using this option.</p>
+</div>
+<section id="examples-of-database-setups">
+<h2>Examples of database setups<a class="headerlink" href="#examples-of-database-setups" title="Link to this heading">¶</a></h2>
+<div class="admonition-adapted-from-jam-py-design-tips admonition">
+<p class="admonition-title">Adapted from <a class="reference external" href="https://jampy-application-design-tips.readthedocs.io/">Jam.py Design Tips</a></p>
+<p>Jam.py supports many different database servers. For example <a class="reference external" href="https://www.postgresql.org/">PostgreSQL</a>, <a class="reference external" href="https://mariadb.org/">MariaDB</a>, <a class="reference external" href="https://www.mysql.com/">MySQL</a>, <a class="reference external" href="https://www.microsoft.com/en-au/sql-server/sql-server-downloads">MSSQL</a>, <a class="reference external" href="https://www.oracle.com/">Oracle</a>, <a class="reference external" href="https://firebirdsql.org/">Firebird</a>, <a class="reference external" href="https://www.ibm.com/support/pages/downloading-ibm-db2-version-115-linux-unix-and-windows">IBM</a>, <a class="reference external" href="https://www.sqlite.org/">SQLite</a> and SQLite with <a class="reference external" href="https://github.com/sqlcipher">SQLCipher</a>.</p>
+<p>If you are developing a small project or something you don’t plan to deploy in
+a production environment, SQLite is generally the best option as it doesn’t
+require running a separate server. However, SQLite has many differences from
+other databases, so if you are working on something substantial, it’s
+recommended to develop with the same database that you plan on using in
+production.</p>
+<p>In addition to a database backend, we need to make sure the Python
+database bindings are installed.</p>
+<ul class="simple">
+<li><p>If using PostgreSQL, the <code class="docutils literal notranslate"><span class="pre">psycopg2</span></code> or <code class="docutils literal notranslate"><span class="pre">psycopg2-binary</span></code> package is needed.</p></li>
+<li><p>If using MySQL or MariaDB, the <code class="docutils literal notranslate"><span class="pre">MySQLdb</span></code> for Python 2.x is needed. For Python 3.x, the  <code class="docutils literal notranslate"><span class="pre">mysql-connector-python</span></code> and <code class="docutils literal notranslate"><span class="pre">mysqlclient</span></code> package is needed, as well as database client development files.</p></li>
+<li><p>If using MSSQL, the <code class="docutils literal notranslate"><span class="pre">pymssql</span></code> is needed.  For ODBC on MS Windows, the <code class="docutils literal notranslate"><span class="pre">pyodbc</span></code> is needed. Configure the ODBC as usual with the DSN as a content.</p></li>
+<li><p>If using Oracle, the <a class="reference external" href="https://oracle.github.io/python-cx_Oracle/">cx_Oracle</a> is needed, as well as Python headers (development files).</p></li>
+<li><p>If using <a class="reference external" href="https://github.com/sqlcipher">SQLCipher</a>,  <code class="docutils literal notranslate"><span class="pre">sqlcipher3-binary</span></code> package is needed for Linux. There is a standalone DLL for Windows available.</p></li>
+<li><p>If using <a class="reference external" href="https://www.ibm.com/support/pages/downloading-ibm-db2-version-115-linux-unix-and-windows">IBM</a> (TBA),  <code class="docutils literal notranslate"><span class="pre">ibm_db</span></code> and <code class="docutils literal notranslate"><span class="pre">ibm_db_dbi</span></code> package is needed.</p></li>
+<li><p>If using Firebird,  <code class="docutils literal notranslate"><span class="pre">fdb</span></code> package is needed.</p></li>
+<li><p>If using <a class="reference external" href="https://www.databricks.com/blog/how-use-lakebase-transactional-data-layer-databricks-apps">Databricks</a>, <code class="docutils literal notranslate"><span class="pre">databricks-sql-connector</span></code> is needed.</p></li>
+</ul>
+</div>
+<p>Using MySQL on Windows is supported, please visit <a class="reference external" href="https://www.radishlogic.com/coding/python-3/installing-mysqldb-for-python-3-in-windows/">MySQL deployment on Windows</a>.</p>
+<p>Even though Jam.py supports all databases from the above, there is no guarantee
+that some specific and/or propriety database functionality is supported.
+Here we name a few tested databases:</p>
+<section id="id1">
+<h3>SQLite<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/SQLite_setup_jampy.png"><img alt="SQLite setup" class="align-center" src="../../_images/SQLite_setup_jampy.png" style="width: 700.0px; height: 493.5px;" />
+</a>
+</section>
+<section id="id2">
+<h3>PostgreSQL<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/postgres_setup_jampy.png"><img alt="PostgreSQL setup" class="align-center" src="../../_images/postgres_setup_jampy.png" style="width: 700.0px; height: 493.5px;" />
+</a>
+</section>
+<section id="id3">
+<h3>MySql<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/MySql_setup_jampy.png"><img alt="MySql setup" class="align-center" src="../../_images/MySql_setup_jampy.png" style="width: 700.0px; height: 493.5px;" />
+</a>
+</section>
+<section id="id4">
+<h3>FireBird<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/firebird_setup_jampy.png"><img alt="FireBird setup" class="align-center" src="../../_images/firebird_setup_jampy.png" style="width: 700.0px; height: 493.5px;" />
+</a>
+</section>
+<section id="id5">
+<h3>MSSQL<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/mssql_setup_jampy.png"><img alt="MSSQL setup" class="align-center" src="../../_images/mssql_setup_jampy.png" style="width: 800.0px; height: 580.0px;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DSN example: <code class="docutils literal notranslate"><span class="pre">DRIVER={SQL</span> <span class="pre">Server};</span> <span class="pre">SERVER=localhost\MSSQLSERVER01;</span> <span class="pre">DATABASE=master;</span> <span class="pre">Trusted_Connection=yes;</span></code></p>
+</div>
+</section>
+<section id="id6">
+<h3>Oracle<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/oracle_setup_jampy.png"><img alt="Oracle setup" class="align-center" src="../../_images/oracle_setup_jampy.png" style="width: 700.0px; height: 493.5px;" />
+</a>
+</section>
+<section id="id7">
+<h3>Databricks<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/databricks_connection_jampy.png"><img alt="Databricks setup" class="align-center" src="../../_images/databricks_connection_jampy.png" style="width: 666.0px; height: 340.0px;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Databricks workspace and database schema name is typed as <code class="docutils literal notranslate"><span class="pre">workspace.database</span></code>
+in the <code class="docutils literal notranslate"><span class="pre">Database</span></code> field. This is visible on the screenshot as
+<code class="docutils literal notranslate"><span class="pre">samples.bakehouse</span></code> in the upper right corner.</p>
+<p>Not all DDL is supported.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="parameters.html" class="btn btn-neutral float-left" title="Parameters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="export.html" class="btn btn-neutral float-right" title="Export" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jam.py Team.
+      <span class="lastupdated">Last updated on Mar 19, 2026.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962025-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122962025-6', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

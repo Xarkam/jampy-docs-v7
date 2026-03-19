@@ -1,0 +1,142 @@
+========
+on_login
+========
+
+on_login(task, form_data, info)
+
+**domain**: server
+
+**language**: python
+
+**class** :doc:`Task class </refs/server/task_api>`
+
+Description
+===========
+
+Use ``on_login`` to override default login procedure using Application
+Builder Users table.
+
+``task`` parameter is a reference to the 
+:doc:`task tree </programming/task_tree>`.
+
+``form_data`` is a dictionary containing the values that the user entered in 
+the inputs in the login form. The keys of the dictionary are name attributes
+of the inputs.
+
+``info`` parameter is a dictionary with the following attributes: 
+
+* ``ip`` is the ip address of the request 
+* ``session_uuid`` is uuid of the session that will be created.
+
+The event handler must return the dictionary with the following attributes:
+
+* ``user_id`` - the unique id of the user
+* ``user_name`` - user name
+* ``role_id`` - ID of the role defined in the 
+  :doc:`Roles </admin/roles>`
+* ``role_name`` - role name
+
+The login form as a template is located in the Jam.py ``login.html``
+file. 
+You can add your own
+custom file with inputs and get their values using form_data parameter.
+
+The custom ``login.html`` in the project folder will override the default file.
+
+.. code-block:: html
+
+        <form action="" method="post">
+            <div class="modal-body">
+                <div class="my-1 mx-4 row">
+                    <label for="login" class="col-sm-3 col-form-label">%(login_text)s</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="login" id="login" placeholder="%(login_text)s" value="%(login)s" required>
+                    </div>
+                </div>
+				
+				<div class="my-1 mx-4 row">
+                    <label for="password" class="col-sm-3 col-form-label">%(password_text)s</label>
+                    <div class="col-sm-9">
+					<div class="input-group">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="%(password_text)s" value="%(password)s">
+						<button class="btn btn-outline" type="button" id="togglePassword">
+							<i class="bi bi-eye-fill"></i>
+						</button>
+					</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input class="btn btn-primary px-4" type="submit" value="OK">
+            </div>
+        </form>
+
+
+Example
+=======
+
+In this example user information is stored in the table of the **Users** item in the
+project database:
+
+.. code-block:: py
+
+  def on_login(task, form_data, info): 
+      users = task.users.copy(handlers=False)
+      users.set_where(login=form_data['login'])
+      users.open()
+      if users.rec_count == 1:
+          if task.check_password_hash(users.password_hash.value, form_data['password']):
+              return {
+                  'user_id': users.id.value,
+                  'user_name': users.name.value,
+                  'role_id': users.role.value,
+                  'role_name': users.role.display_text
+              }
+
+       
+Adding a Reset Password
+=======================
+
+To add a reset password option, create a custom ``login.html`` file with i.e. below link, 
+develop a custom ``reset_pass.html`` file, and develop ``on_ext_request`` logic and ``on_request`` routing:
+
+.. code-block:: html
+
+		<div class="modal-footer">
+			<a href="/reset_pass.html" class="button" target="_blank">Forgotten password?</a>
+			<button class="btn btn-lg btn-primary w-100 mt-3" type="submit">Login</button>
+		</div>
+
+.. code-block:: py
+
+        def on_request(task, request):
+            parts = request.path.strip('/').split('/')
+            if not parts[0]:
+                if task.logged_in(request):
+                    return task.serve_page('index.html')
+                else:
+                    return task.redirect('/login.html')
+            .
+            .
+            elif parts[0] == 'reset_pass.html':
+                return task.serve_page('reset_pass.html')
+
+        def on_ext_request(task, request, params):
+            reqs = request.split('/')
+            
+            #reset password
+            if reqs[2] == 'reset_pass':
+            .
+            .
+
+
+See also
+========
+
+:doc:`session </refs/server/abstr_item/at_session>`
+
+:doc:`environ </refs/server/abstr_item/at_environ>`
+
+:doc:`generate_password_hash <m_generate_password_hash>`
+
+:doc:`check_password_hash <m_check_password_hash>`

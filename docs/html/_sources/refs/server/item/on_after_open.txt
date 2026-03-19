@@ -1,0 +1,26 @@
+=============
+on_after_open
+=============
+
+on_after_open(self, delta, params, connection)
+
+**domain**: server
+
+**language**: python
+
+**class** :doc:`Item class </refs/server/item_api>`
+
+Description
+===========
+
+
+``on_after_open`` event handler is triggered after the sql request is executed and has a dataset as a parameter that can be modified before it is sent to the client.
+
+See also
+========
+
+:doc:`Server side programming </programming/server/index>`
+
+:doc:`on_apply events </programming/server/on_apply_events>`
+
+:doc:`Modifying datasets </programming/data/modifying_datasets>`

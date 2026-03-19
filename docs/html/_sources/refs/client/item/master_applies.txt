@@ -1,0 +1,35 @@
+=================
+master_applies
+=================
+
+
+.. js:attribute:: master_applies
+
+**domain**: client 
+
+**language**: javascript
+
+**class** :doc:`Item class </refs/client/item_api>`
+
+Description
+===========
+
+If the ``master_applies`` attribute is a set to **true** in Master/Detail scenario, the **Master** will apply the 
+changes made with adding/removing Detail item. 
+If the attribute is a set to **false**, the **Detail** will apply the changes immediately 
+to complete dataset in Details on creating a new record.
+
+
+Example
+=======
+
+.. code-block:: js
+
+    function on_view_form_created(item) {
+        item.invoice_table.master_applies = true; 
+    }
+
+See also
+========
+
+:doc:`Details </programming/data/details>`
