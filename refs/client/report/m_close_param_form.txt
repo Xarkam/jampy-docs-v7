@@ -22,7 +22,7 @@ and
 
 * returns true - the form is destroyed, the report's 
   :doc:`param_form <at_param_form>`
-  atrribute is set to undefined and the methods exits
+  attribute is set to undefined and the methods exits
 
 * return false - the operation is aborted and the methods exits,
 
@@ -33,7 +33,7 @@ event handler is defined and
 
 * returns true - the form is destroyed, the report's 
   :doc:`param_form <at_param_form>`
-  atrribute is set to undefined and the methods exits
+  attribute is set to undefined and the methods exits
 
 * return false - the operation is aborted and the methods exits,
 
@@ -44,14 +44,14 @@ event handler is defined and
 
 * returns true - the form is destroyed, the report's 
   :doc:`param_form <at_param_form>`
-  atrribute is set to undefined and the methods exits
+  attribute is set to undefined and the methods exits
 
 * return false - the operation is aborted and the methods exits,
 
 If no event handler is defined or none of these event handlers return false, the 
 form is destroyed and the report's 
 :doc:`param_form <at_param_form>`
-atrribute is set to undefined.
+attribute is set to undefined.
 
 See also
 ========

@@ -13,46 +13,35 @@ close_filter_form
 Description
 ===========
 
-Use ``close_filter_form`` method to close the filter form of the item.
-
+Use the ``close_filter_form`` method to close the item's filter form.
 
 The ``close_filter_form`` method triggers the 
-:doc:`on_filter_form_close_query <on_filter_form_close_query>`
-event handler of the item, if one is defined. If the event handler is defined 
-and 
+:ref:`on_filter_form_close_query <on_filter_form_close_query>` 
+event handler of the item, if defined:
 
-* returns ````false```` - the form is destroyed, the item's 
-  :doc:`filter_form <at_filter_form>`
-  atrribute is set to undefined and the methods exits
+* If the handler returns ``true``, the form is destroyed, the item's 
+  :attr:`filter_form` attribute is set to ``undefined``, and the method exits.
+* If the handler returns ``false``, the operation is aborted and the method exits.
 
-* return ``false`` - the operation is aborted and the methods exits,
+If the handler returns ``undefined``, the method triggers the 
+:ref:`on_filter_form_close_query <group-on_filter_form_close_query>` 
+of the item's parent group, if defined:
 
-If it don't return a value (undefined) the method triggers the 
-:doc:`on_filter_form_close_query </refs/client/group/on_filter_form_close_query>`
-of the group that owners the item, if one is defined for the group. If this 
-event handler is defined and 
+* If the handler returns ``true``, the form is destroyed, the item's 
+  :attr:`filter_form` attribute is set to ``undefined``, and the method exits.
+* If the handler returns ``false``, the operation is aborted and the method exits.
 
-* returns ``true`` - the form is destroyed, the item's 
-  :doc:`filter_form <at_filter_form>`
-  atrribute is set to undefined and the methods exits
+If the group handler returns ``undefined``, the method triggers the 
+:ref:`on_filter_form_close_query <task-on_filter_form_close_query>` 
+of the task:
 
-* return ``false`` - the operation is aborted and the methods exits,
+* If the handler returns ``true``, the form is destroyed, the item's 
+  :attr:`filter_form` attribute is set to ``undefined``, and the method exits.
+* If the handler returns ``false``, the operation is aborted and the method exits.
 
-If it don't return a value (undefined) the method triggers the 
-:doc:`on_filter_form_close_query </refs/client/task/on_filter_form_close_query>`
-of the task. If this 
-event handler is defined and 
-
-* returns ``true`` - the form is destroyed, the item's 
-  :doc:`filter_form <at_filter_form>`
-  atrribute is set to undefined and the methods exits
-
-* return ``false`` - the operation is aborted and the methods exits,
-
-If no event handler is defined or none of these event handlers return ``false``, the 
-form is destroyed and the item's 
-:doc:`filter_form <at_filter_form>`
-atrribute is set to undefined.
+If no event handler is defined, or none of the handlers return ``false``, 
+the form is destroyed and the item's :attr:`filter_form` attribute is set to 
+``undefined``.
 
 See also
 ========

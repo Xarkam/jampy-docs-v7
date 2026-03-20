@@ -117,44 +117,38 @@
 <p><strong>class</strong> <a class="reference internal" href="../item_api.html"><span class="doc">Item class</span></a></p>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
-<p>Use <code class="docutils literal notranslate"><span class="pre">close_edit_form</span></code> method to close the edit form of the item.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">close_edit_form</span></code> method triggers the
-<a class="reference internal" href="on_edit_form_close_query.html"><span class="doc">on_edit_form_close_query</span></a>
-event handler of the item, if one is defined. If the event handler is defined
-and</p>
+<span class="xref std std-ref">on_edit_form_close_query</span>
+event handler of the item, if defined:</p>
 <ul class="simple">
-<li><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> - the form is destroyed, the item’s
-<a class="reference internal" href="at_edit_form.html"><span class="doc">edit_form</span></a>
-atrribute is set to undefined and the methods exits</p></li>
-<li><p>return <code class="docutils literal notranslate"><span class="pre">false</span></code> - the operation is aborted and the methods exits,</p></li>
+<li><p>If the handler returns <code class="docutils literal notranslate"><span class="pre">true</span></code>, the form is destroyed, the item’s
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">edit_form</span></code> attribute is set to <code class="docutils literal notranslate"><span class="pre">undefined</span></code>, and the method exits.</p></li>
+<li><p>If the handler returns <code class="docutils literal notranslate"><span class="pre">false</span></code>, the operation is aborted and the method exits.</p></li>
 </ul>
-<p>If it don’t return a value (undefined) the method triggers the
-<a class="reference internal" href="../group/on_edit_form_close_query.html"><span class="doc">on_edit_form_close_query</span></a>
-of the group that owners the item, if one is defined for the group. If this
-event handler is defined and</p>
+<p>If the handler returns <code class="docutils literal notranslate"><span class="pre">undefined</span></code>, the method triggers the
+<span class="xref std std-ref">on_edit_form_close_query</span>
+of the item’s parent group, if defined:</p>
 <ul class="simple">
-<li><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> - the form is destroyed, the item’s
-<a class="reference internal" href="at_edit_form.html"><span class="doc">edit_form</span></a>
-atrribute is set to undefined and the methods exits</p></li>
-<li><p>return <code class="docutils literal notranslate"><span class="pre">false</span></code> - the operation is aborted and the methods exits,</p></li>
+<li><p>If the handler returns <code class="docutils literal notranslate"><span class="pre">true</span></code>, the form is destroyed, the item’s
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">edit_form</span></code> attribute is set to <code class="docutils literal notranslate"><span class="pre">undefined</span></code>, and the method exits.</p></li>
+<li><p>If the handler returns <code class="docutils literal notranslate"><span class="pre">false</span></code>, the operation is aborted and the method exits.</p></li>
 </ul>
-<p>If it don’t return a value (undefined) the method triggers the
-<a class="reference internal" href="../task/on_edit_form_close_query.html"><span class="doc">on_edit_form_close_query</span></a>
-of the task. If this
-event handler is defined and</p>
+<p>If the group handler returns <code class="docutils literal notranslate"><span class="pre">undefined</span></code>, the method triggers the
+<span class="xref std std-ref">on_edit_form_close_query</span>
+of the task:</p>
 <ul class="simple">
-<li><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> - the form is destroyed, the item’s
-<a class="reference internal" href="at_edit_form.html"><span class="doc">edit_form</span></a>
-atrribute is set to undefined and the methods exits</p></li>
-<li><p>return <code class="docutils literal notranslate"><span class="pre">false</span></code> - the operation is aborted and the methods exits,</p></li>
+<li><p>If the handler returns <code class="docutils literal notranslate"><span class="pre">true</span></code>, the form is destroyed, the item’s
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">edit_form</span></code> attribute is set to <code class="docutils literal notranslate"><span class="pre">undefined</span></code>, and the method exits.</p></li>
+<li><p>If the handler returns <code class="docutils literal notranslate"><span class="pre">false</span></code>, the operation is aborted and the method exits.</p></li>
 </ul>
-<p>If no event handler is defined or none of these event handlers return <code class="docutils literal notranslate"><span class="pre">false</span></code>, the
-form is destroyed and the item’s
-<a class="reference internal" href="at_edit_form.html"><span class="doc">edit_form</span></a>
-atrribute is set to undefined.</p>
+<p>If no event handler is defined, or none of the handlers return <code class="docutils literal notranslate"><span class="pre">false</span></code>,
+the form is destroyed and the item’s <code class="xref py py-attr docutils literal notranslate"><span class="pre">edit_form</span></code> attribute is set to
+<code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">close_edit_form</span></code> is mostly used with <a class="reference internal" href="../../../admin/items/item_editor_dialog.html"><span class="doc">Virtual table</span></a>.</p>
 </section>
 <section id="see-also">
 <h2>See also<a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../how_to/authentication/how_give_user_ability_to_change_password.html"><span class="doc">Virtual Table</span></a></p>
 <p><a class="reference internal" href="../../../programming/interface/forms.html"><span class="doc">Forms</span></a></p>
 <p><a class="reference internal" href="m_create_edit_form.html"><span class="doc">create_edit_form</span></a></p>
 <p><a class="reference internal" href="at_edit_form.html"><span class="doc">edit_form</span></a></p>
@@ -173,7 +167,7 @@ atrribute is set to undefined.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Mar 19, 2026.
+      <span class="lastupdated">Last updated on Mar 20, 2026.
       </span></p>
   </div>
 

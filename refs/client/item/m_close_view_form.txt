@@ -23,7 +23,7 @@ and
 
 * returns ``true`` - the form is destroyed, the item's 
   :doc:`view_form <at_view_form>`
-  atrribute is set to undefined and the methods exits
+  attribute is set to undefined and the methods exits
 
 * return ``false`` - the operation is aborted and the methods exits,
 
@@ -34,7 +34,7 @@ event handler is defined and
 
 * returns ``true`` - the form is destroyed, the item's 
   :doc:`view_form <at_view_form>`
-  atrribute is set to undefined and the methods exits
+  attribute is set to undefined and the methods exits
 
 * return ``false`` - the operation is aborted and the methods exits,
 
@@ -45,14 +45,14 @@ event handler is defined and
 
 * returns ``true`` - the form is destroyed, the item's 
   :doc:`view_form <at_view_form>`
-  atrribute is set to undefined and the methods exits
+  attribute is set to undefined and the methods exits
 
 * return ``false`` - the operation is aborted and the methods exits,
 
 If no event handler is defined or none of these event handlers return ``false``, the 
 form is destroyed and the item's 
 :doc:`view_form <at_view_form>`
-atrribute is set to undefined.
+attribute is set to undefined.
 
 See also
 ========

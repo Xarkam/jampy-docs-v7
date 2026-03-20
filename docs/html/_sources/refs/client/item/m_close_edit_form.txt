@@ -13,49 +13,40 @@ close_edit_form
 Description
 ===========
 
-Use ``close_edit_form`` method to close the edit form of the item.
-
-
 The ``close_edit_form`` method triggers the 
-:doc:`on_edit_form_close_query <on_edit_form_close_query>`
-event handler of the item, if one is defined. If the event handler is defined 
-and 
+:ref:`on_edit_form_close_query <on_edit_form_close_query>` 
+event handler of the item, if defined:
 
-* returns ``true`` - the form is destroyed, the item's 
-  :doc:`edit_form <at_edit_form>`
-  atrribute is set to undefined and the methods exits
+* If the handler returns ``true``, the form is destroyed, the item's 
+  :attr:`edit_form` attribute is set to ``undefined``, and the method exits.
+* If the handler returns ``false``, the operation is aborted and the method exits.
 
-* return ``false`` - the operation is aborted and the methods exits,
+If the handler returns ``undefined``, the method triggers the 
+:ref:`on_edit_form_close_query <group-on_edit_form_close_query>` 
+of the item's parent group, if defined:
 
-If it don't return a value (undefined) the method triggers the 
-:doc:`on_edit_form_close_query </refs/client/group/on_edit_form_close_query>`
-of the group that owners the item, if one is defined for the group. If this 
-event handler is defined and 
+* If the handler returns ``true``, the form is destroyed, the item's 
+  :attr:`edit_form` attribute is set to ``undefined``, and the method exits.
+* If the handler returns ``false``, the operation is aborted and the method exits.
 
-* returns ``true`` - the form is destroyed, the item's 
-  :doc:`edit_form <at_edit_form>`
-  atrribute is set to undefined and the methods exits
+If the group handler returns ``undefined``, the method triggers the 
+:ref:`on_edit_form_close_query <task-on_edit_form_close_query>` 
+of the task:
 
-* return ``false`` - the operation is aborted and the methods exits,
+* If the handler returns ``true``, the form is destroyed, the item's 
+  :attr:`edit_form` attribute is set to ``undefined``, and the method exits.
+* If the handler returns ``false``, the operation is aborted and the method exits.
 
-If it don't return a value (undefined) the method triggers the 
-:doc:`on_edit_form_close_query </refs/client/task/on_edit_form_close_query>`
-of the task. If this 
-event handler is defined and 
+If no event handler is defined, or none of the handlers return ``false``, 
+the form is destroyed and the item's :attr:`edit_form` attribute is set to 
+``undefined``.
 
-* returns ``true`` - the form is destroyed, the item's 
-  :doc:`edit_form <at_edit_form>`
-  atrribute is set to undefined and the methods exits
-
-* return ``false`` - the operation is aborted and the methods exits,
-
-If no event handler is defined or none of these event handlers return ``false``, the 
-form is destroyed and the item's 
-:doc:`edit_form <at_edit_form>`
-atrribute is set to undefined.
+``close_edit_form`` is mostly used with :doc:`Virtual table </admin/items/item_editor_dialog>`.
 
 See also
 ========
+
+:doc:`Virtual Table </how_to/authentication/how_give_user_ability_to_change_password>`
 
 :doc:`Forms </programming/interface/forms>`
 
