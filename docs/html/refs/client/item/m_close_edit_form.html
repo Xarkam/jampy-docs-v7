@@ -117,10 +117,6 @@
 <p><strong>class</strong> <a class="reference internal" href="../item_api.html"><span class="doc">Item class</span></a></p>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>TBA - from Jam.py v5 Docs, below needs updating!</p>
-</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">close_edit_form</span></code> method triggers the
 <span class="xref std std-ref">on_edit_form_close_query</span>
 event handler of the item, if defined:</p>
@@ -149,6 +145,24 @@ of the task:</p>
 the form is destroyed and the item’s <code class="xref py py-attr docutils literal notranslate"><span class="pre">edit_form</span></code> attribute is set to
 <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">close_edit_form</span></code> is mostly used with <a class="reference internal" href="../../../admin/items/item_editor_dialog.html"><span class="doc">Virtual table</span></a>.</p>
+<p>Example:</p>
+<p>Form 2 has a button <code class="docutils literal notranslate"><span class="pre">Next</span> <span class="pre">Form</span></code> and after click, the form is destroyed and Form 1 displayed.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_edit_form_created</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">edit_form</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;#ok-btn&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Next Form&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;click.task&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">item</span><span class="p">.</span><span class="nx">close_edit_form</span><span class="p">();</span>
+<span class="w">            </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">show_f1</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="w">            </span><span class="p">},</span><span class="w"> </span><span class="mf">300</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="p">}</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">on_edit_form_close_query</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <section id="see-also">
 <h2>See also<a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>

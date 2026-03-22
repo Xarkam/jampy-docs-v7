@@ -13,11 +13,6 @@ close_edit_form
 Description
 ===========
 
-.. warning::
-
-    TBA - below needs updating!
-
-
 
 
 The ``close_edit_form`` method triggers the 
@@ -49,6 +44,29 @@ the form is destroyed and the item's :attr:`edit_form` attribute is set to
 ``undefined``.
 
 ``close_edit_form`` is mostly used with :doc:`Virtual table </admin/items/item_editor_dialog>`.
+
+
+Example:
+
+Form 2 has a button ``Next Form`` and after click, the form is destroyed and Form 1 displayed. 
+
+.. code:: js
+
+      function on_edit_form_created(item) {
+          item.edit_form.find('#ok-btn')
+              .text('Next Form')
+              .off('click.task')
+              .on('click', function() {
+                  item.close_edit_form();
+                  setTimeout(function() {
+                      show_f1(item);
+                  }, 300);
+              });    
+      }
+      function on_edit_form_close_query(item) {
+          return true;
+      }      
+      
 
 See also
 ========
