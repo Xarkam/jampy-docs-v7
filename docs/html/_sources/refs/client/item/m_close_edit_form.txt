@@ -13,6 +13,13 @@ close_edit_form
 Description
 ===========
 
+.. warning::
+
+    TBA - from Jam.py v5 Docs, below needs updating!
+
+
+
+
 The ``close_edit_form`` method triggers the 
 :ref:`on_edit_form_close_query <on_edit_form_close_query>` 
 event handler of the item, if defined:
