@@ -2,7 +2,7 @@
 on_before_delete
 ================
 
-on_before_delete(item)
+.. js:function:: on_before_delete(item)
 
 **domain**: client 
 

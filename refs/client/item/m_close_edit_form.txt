@@ -16,7 +16,7 @@ Description
 
 
 The ``close_edit_form`` method triggers the 
-:ref:`on_edit_form_close_query <on_edit_form_close_query>` 
+:doc:`on_edit_form_close_query <on_edit_form_close_query>` 
 event handler of the item, if defined:
 
 * If the handler returns ``true``, the form is destroyed, the item's 
@@ -24,7 +24,7 @@ event handler of the item, if defined:
 * If the handler returns ``false``, the operation is aborted and the method exits.
 
 If the handler returns ``undefined``, the method triggers the 
-:ref:`on_edit_form_close_query <group-on_edit_form_close_query>` 
+:doc:`on_edit_form_close_query </refs/client/group/on_edit_form_close_query>`
 of the item's parent group, if defined:
 
 * If the handler returns ``true``, the form is destroyed, the item's 
@@ -32,7 +32,7 @@ of the item's parent group, if defined:
 * If the handler returns ``false``, the operation is aborted and the method exits.
 
 If the group handler returns ``undefined``, the method triggers the 
-:ref:`on_edit_form_close_query <task-on_edit_form_close_query>` 
+:doc:`on_edit_form_close_query </refs/client/task/on_edit_form_close_query>`
 of the task:
 
 * If the handler returns ``true``, the form is destroyed, the item's 
@@ -79,3 +79,4 @@ See also
 
 :doc:`edit_form <at_edit_form>`
 
+:doc:`on_edit_form_close_query </refs/client/task/on_edit_form_close_query>`

@@ -2,7 +2,7 @@
 on_before_edit
 ==============
 
-on_before_edit(item)
+.. js:function:: on_before_edit(item)
 
 **domain**: client 
 

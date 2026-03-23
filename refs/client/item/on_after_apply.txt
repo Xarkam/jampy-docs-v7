@@ -2,7 +2,7 @@
 on_after_apply
 ==============
 
-on_after_apply(item)
+.. js:function:: on_after_apply(item)
 
 **domain**: client 
 

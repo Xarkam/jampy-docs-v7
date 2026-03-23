@@ -2,7 +2,7 @@
 on_filter_record
 ================
 
-on_filter_record(item)
+.. js:function:: on_filter_record(item)
 
 The item parameter is the item that triggered the event.
 

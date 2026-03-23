@@ -2,7 +2,7 @@
 on_before_append
 ================
 
-on_before_append(item)
+.. js:function:: on_before_append(item)
 
 **domain**: client 
 

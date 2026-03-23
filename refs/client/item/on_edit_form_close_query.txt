@@ -2,7 +2,7 @@
 on_edit_form_close_query
 ========================
 
-on_edit_form_close_query(item)
+.. js:function:: on_edit_form_close_query(item)
 
 **domain**: client 
 
@@ -19,8 +19,21 @@ method of the item.
 
 The ``item`` parameter is the item that triggered the event.
 
+Example:
+
+.. code:: js
+
+
+      function on_edit_form_close_query(item) {
+          return true;
+      }    
+
+
+
 See also
 ========
+
+:doc:`close_edit_form <m_close_edit_form>`
 
 :doc:`Forms </programming/interface/forms>`
 
@@ -28,4 +41,4 @@ See also
 
 :doc:`edit_form <at_edit_form>`
 
-:doc:`close_edit_form <m_close_edit_form>`
+

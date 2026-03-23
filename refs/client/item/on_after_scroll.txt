@@ -2,7 +2,7 @@
 on_after_scroll
 ===============
 
-on_after_scroll(item)
+.. js:function:: on_after_scroll(item)
 
 **domain**: client 
 
