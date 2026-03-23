@@ -2,7 +2,7 @@
 on_param_form_created
 =====================
 
-on_param_form_created(item)
+.. js:function:: on_param_form_created(item)
 
 **domain**: client 
 
