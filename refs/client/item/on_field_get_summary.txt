@@ -14,7 +14,7 @@ Description
 ===========
 
 Write an ``on_field_get_summary`` event handler to specify the ``summary`` that will be 
-inserted in the summary cell for the field.
+inserted in the summary cell for the field. 
 
 
 The ``field`` parameter is the field whose 
@@ -61,6 +61,9 @@ Example Server Module:
             return result;
 
 
+Client Module for the above:
+============================
+
 .. code-block:: js
 
         let cachedTotal = null;
@@ -69,8 +72,6 @@ Example Server Module:
             task.tracks.server('get_total', [], function(total, err) {
                 if (!err) {
                     cachedTotal = total;
-                    console.log("total:", total);
-                    // Refresh the summary field
                     let summaryField = task.tracks.fields.tracks_sold;
                     if (summaryField) {
                         if (summaryField.set_value) {
@@ -98,7 +99,9 @@ Example Server Module:
 
 The above Client and Server Code will result in summary for Calculated Field ``Tracks Sold``:
 
- 
+.. image:: /programming/_images/tracks_summary_calculated_field_jampy.png
+	:align: center
+	:alt: Catalog Tracks Sold summary
 
 
 See also
