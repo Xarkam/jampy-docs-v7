@@ -74,7 +74,7 @@ and the **OK** button to save changes.
 	:align: center
 	:alt: details_dialog_jampy.png
 
-A new "To do list" item will be created as a child of the "Contacts" journal.
+A new "To do list" item will be created as a Detail of the "Contacts" journal.
 
 .. image:: /intro/_images/contacts_to_do_list_jampy.png
 	:scale: 50%
