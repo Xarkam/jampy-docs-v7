@@ -202,13 +202,14 @@ database bindings are installed.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For a <strong>SQLite</strong> database, when an item field is deleted or renamed, or foreign
-key is created, the
-<a class="reference internal" href="../admin/index.html"><span class="doc">Application builder</span></a>
-creates a new table and copies records from the old one into it.</p>
-<p>For <strong>SQLite</strong> database, Jam.py doesn’t support importing of metadata into an
-existing project (project with tables in the database).
-You can only import metadata into a new project.</p>
+<p>For <strong>SQLite</strong> databases, certain schema changes—such as deleting or renaming a field,
+or creating a foreign key - require the
+<a class="reference internal" href="../admin/index.html"><span class="doc">Application Builder</span></a>
+to recreate the table. In this process, a new table is created and all records are
+copied from the original table into it.</p>
+<p>Additionally, Jam.py does not support importing metadata into an existing SQLite
+project (i.e., a project with already created tables).
+Metadata can only be imported when creating a new project.</p>
 </div>
 <p>More about the database setups is within the <a class="reference internal" href="../admin/project/database.html"><span class="doc">Project management</span></a>.</p>
 <p>If all goes well, a new project will be created and the project tree will appear

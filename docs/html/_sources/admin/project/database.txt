@@ -16,12 +16,16 @@ to the database and if it failed to connect an error will be displayed.
    When any **Database** parameter is changed, except **DB manual update**, 
    the server application must be restarted for changes to take effect.
 
-If **DB manual update** checkbox is unchecked (default), then when changes to an 
-item, that have an associated database table, are saved, this database table is 
-automatically modified. For example, if we add a new field to some item in the
-:doc:`Item Editor Dialog </admin/items/item_editor_dialog>`
-, the new field will be added to the associated database table. If this checkbox 
-is checked, no modifications to the database tables are made. 
+If the **DB Manual Update** checkbox is unchecked (default), any changes made to an
+item that has an associated database table will automatically be applied to that table.
+
+For example, if you add a new field in the :doc:`Item Editor Dialog </admin/items/item_editor_dialog>`,
+the corresponding
+column will be created in the associated database table.
+
+If the checkbox is checked, the system will not perform any automatic modifications
+to the database tables. In this case, all database changes must be applied manually.
+
 
 The **DB manual update** was renamed to **DB manual mode** in more recent version.
 
@@ -76,6 +80,19 @@ Examples of database setups
 .. _SQLCipher: https://github.com/sqlcipher
 .. _IBM: https://www.ibm.com/support/pages/downloading-ibm-db2-version-115-linux-unix-and-windows
 .. _Databricks: https://www.databricks.com/blog/how-use-lakebase-transactional-data-layer-databricks-apps
+
+
+.. note::
+
+    For **SQLite** databases, certain schema changes—such as deleting or renaming
+    a field, or creating a foreign key - require the  
+    :doc:`Application Builder </admin/index>`  
+    to recreate the table. In this process, a new table is created and all records
+    are copied from the original table into it.
+    
+    Additionally, Jam.py does not support importing metadata into an existing SQLite
+    project (i.e., a project with already created tables).  
+    Metadata can only be imported when creating a new project.
 
 
 Using MySQL on Windows is supported, please visit `MySQL deployment on Windows`_.

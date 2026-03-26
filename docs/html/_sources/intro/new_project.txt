@@ -158,14 +158,15 @@ Examples of database setups
     
 .. note::
 
-    For a **SQLite** database, when an item field is deleted or renamed, or foreign
-    key is created, the  
-    :doc:`Application builder </admin/index>`
-    creates a new table and copies records from the old one into it.
+    For **SQLite** databases, certain schema changes—such as deleting or renaming a field,
+    or creating a foreign key - require the  
+    :doc:`Application Builder </admin/index>`  
+    to recreate the table. In this process, a new table is created and all records are
+    copied from the original table into it.
     
-    For **SQLite** database, Jam.py doesn’t support importing of metadata into an 
-    existing project (project with tables in the database). 
-    You can only import metadata into a new project.
+    Additionally, Jam.py does not support importing metadata into an existing SQLite
+    project (i.e., a project with already created tables).  
+    Metadata can only be imported when creating a new project.
 
 
 

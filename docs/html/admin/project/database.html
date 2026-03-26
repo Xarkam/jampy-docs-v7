@@ -126,12 +126,13 @@ to the database and if it failed to connect an error will be displayed.</p>
 <p>When any <strong>Database</strong> parameter is changed, except <strong>DB manual update</strong>,
 the server application must be restarted for changes to take effect.</p>
 </div>
-<p>If <strong>DB manual update</strong> checkbox is unchecked (default), then when changes to an
-item, that have an associated database table, are saved, this database table is
-automatically modified. For example, if we add a new field to some item in the
-<a class="reference internal" href="../items/item_editor_dialog.html"><span class="doc">Item Editor Dialog</span></a>
-, the new field will be added to the associated database table. If this checkbox
-is checked, no modifications to the database tables are made.</p>
+<p>If the <strong>DB Manual Update</strong> checkbox is unchecked (default), any changes made to an
+item that has an associated database table will automatically be applied to that table.</p>
+<p>For example, if you add a new field in the <a class="reference internal" href="../items/item_editor_dialog.html"><span class="doc">Item Editor Dialog</span></a>,
+the corresponding
+column will be created in the associated database table.</p>
+<p>If the checkbox is checked, the system will not perform any automatic modifications
+to the database tables. In this case, all database changes must be applied manually.</p>
 <p>The <strong>DB manual update</strong> was renamed to <strong>DB manual mode</strong> in more recent version.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -160,6 +161,17 @@ database bindings are installed.</p>
 <li><p>If using Firebird,  <code class="docutils literal notranslate"><span class="pre">fdb</span></code> package is needed.</p></li>
 <li><p>If using <a class="reference external" href="https://www.databricks.com/blog/how-use-lakebase-transactional-data-layer-databricks-apps">Databricks</a>, <code class="docutils literal notranslate"><span class="pre">databricks-sql-connector</span></code> is needed.</p></li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <strong>SQLite</strong> databases, certain schema changes—such as deleting or renaming
+a field, or creating a foreign key - require the
+<a class="reference internal" href="../index.html"><span class="doc">Application Builder</span></a>
+to recreate the table. In this process, a new table is created and all records
+are copied from the original table into it.</p>
+<p>Additionally, Jam.py does not support importing metadata into an existing SQLite
+project (i.e., a project with already created tables).
+Metadata can only be imported when creating a new project.</p>
 </div>
 <p>Using MySQL on Windows is supported, please visit <a class="reference external" href="https://www.radishlogic.com/coding/python-3/installing-mysqldb-for-python-3-in-windows/">MySQL deployment on Windows</a>.</p>
 <p>Even though Jam.py supports all databases from the above, there is no guarantee
@@ -226,7 +238,7 @@ in the <code class="docutils literal notranslate"><span class="pre">Database</sp
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Mar 19, 2026.
+      <span class="lastupdated">Last updated on Mar 26, 2026.
       </span></p>
   </div>
 
