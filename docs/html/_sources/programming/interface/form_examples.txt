@@ -41,11 +41,6 @@ method to create inputs in the div with class "edit-body". But before that it
 checks if ``init_inputs`` function is defined in the item's client module, that 
 can be used to specify the options parameter of the method.
 
-It uses the  
-:doc:`create_inputs </refs/client/item/m_create_inputs>`
-method to create input controls in the div with the "edit-body" class. 
-But before that, it checks whether the init_inputs function is defined in the 
-client module of the element, which can be used to specify the method options.
 
 It then assigns the jQuery events to the OK and Cancel buttons.
 

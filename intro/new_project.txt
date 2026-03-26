@@ -188,12 +188,14 @@ in the Application builder.
         ``Jam.py`` framework ``version`` number. 
 
 
-Now, to see the project itself, create a new page in the browser and type in the 
-address bar:
+Open a new tab, type
 
 .. code-block:: console
 
-    127.0.0.1:8080
+	127.0.0.1:8080
+
+in the address bar and press Enter.
+A new project appears with an empty menu.
 
 
 .. image:: _images/empty_project_jampy.png

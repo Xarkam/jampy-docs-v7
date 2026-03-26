@@ -2,7 +2,7 @@
 on_edit_form_close_query
 ========================
 
-on_edit_form_created(item)
+.. js:function:: on_edit_form_created(item)
 
 **domain**: client 
 

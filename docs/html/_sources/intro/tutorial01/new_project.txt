@@ -56,7 +56,7 @@ Now you should see the project tree in the left panel.
         As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
         ``Jam.py`` framework ``version`` number. 
 
-Open a new page, type
+Open a new tab, type
 
 .. code-block:: console
 
