@@ -2,7 +2,7 @@
 on_before_print_report
 ======================
 
-on_before_print_report(item)
+.. js:function:: on_before_print_report(item)
 
 **domain**: client 
 

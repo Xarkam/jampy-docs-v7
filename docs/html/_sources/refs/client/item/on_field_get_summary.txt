@@ -2,7 +2,7 @@
 on_field_get_summary
 ====================
 
-on_field_get_summary(field, value)
+.. js:function:: on_field_get_summary(field, value)
 
 **domain**: client 
 
@@ -14,7 +14,7 @@ Description
 ===========
 
 Write an ``on_field_get_summary`` event handler to specify the ``summary`` that will be 
-inserted in the summary cell for the field.
+inserted in the summary cell for the field. 
 
 
 The ``field`` parameter is the field whose 
@@ -22,15 +22,15 @@ The ``field`` parameter is the field whose
 is processed. To get the item that owns the field, use the
 :doc:`owner </refs/client/field/at_owner>` attribute of the field.
 
-Example
-=======
+Example Client Module:
+======================
 
 .. code-block:: js
 
         function on_field_get_summary(field, value) {
             let item = field.owner;
-            if (field.field_name === 'customer') {
-                return item.rec_count;
+            if (field.field_name === 'total') {
+                return '€' + value;
             }
             // to use with Virtual Table           
             if (field.field_name === 'total') {
@@ -41,6 +41,68 @@ Example
                 return '$' + sum.toFixed(2);
             }
         }
+
+
+Example Server Module:
+======================
+
+.. code-block:: py
+
+        def get_total(item):
+            result = 0;
+            copy = task.invoice_table.copy()
+            item.set_where(deleted=0)
+
+            copy.open(fields=['quantity'],
+                funcs={'quantity': 'sum'})
+
+            if copy.record_count():
+                result = copy.quantity.value
+            return result;
+
+
+Client Module for the above:
+============================
+
+.. code-block:: js
+
+        let cachedTotal = null;
+
+        function refreshTotal() {
+            task.tracks.server('get_total', [], function(total, err) {
+                if (!err) {
+                    cachedTotal = total;
+                    let summaryField = task.tracks.fields.tracks_sold;
+                    if (summaryField) {
+                        if (summaryField.set_value) {
+                            summaryField.set_value(total);
+                        } else {
+                            summaryField.value = total;
+                            if (summaryField.refresh) summaryField.refresh();
+                        }
+                    }
+                }
+            });
+        }
+
+        function on_field_get_summary(field, value) {
+            let item = field.owner;
+            
+            if (field.field_name === 'tracks_sold') {
+                if (cachedTotal === null) {
+                    refreshTotal();
+                    return value;
+                }
+                return cachedTotal;
+            }
+        }
+
+The above Client and Server Code will result in summary for Calculated Field ``Tracks Sold``:
+
+.. image:: /programming/_images/tracks_summary_calculated_field_jampy.png
+	:align: center
+	:alt: Catalog Tracks Sold summary
+
 
 See also
 ========

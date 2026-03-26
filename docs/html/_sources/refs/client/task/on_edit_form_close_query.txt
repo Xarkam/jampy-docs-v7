@@ -19,6 +19,16 @@ method of the item.
 
 The ``item`` parameter is the item that triggered the event.
 
+Example:
+
+.. code:: js
+
+      function on_edit_form_close_query(item) {
+          return true;
+      }    
+
+
+
 See also
 ========
 

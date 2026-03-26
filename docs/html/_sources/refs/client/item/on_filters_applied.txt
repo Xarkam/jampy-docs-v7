@@ -2,7 +2,7 @@
 on_filters_applied
 ==================
 
-on_filters_applied(item)
+.. js:function:: on_filters_applied(item)
 
 **domain**: client 
 

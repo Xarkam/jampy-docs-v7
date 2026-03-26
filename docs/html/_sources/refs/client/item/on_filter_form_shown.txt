@@ -2,7 +2,7 @@
 on_filter_form_shown
 ====================
 
-on_filter_form_shown(item)
+.. js:function:: on_filter_form_shown(item)
 
 The item parameter is the item that triggered the event.
 

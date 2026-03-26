@@ -2,7 +2,7 @@
 on_view_form_close_query
 ========================
 
-on_view_form_close_query(item)
+.. js:function:: on_view_form_close_query(item)
 
 **domain**: client 
 

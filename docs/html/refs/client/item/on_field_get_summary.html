@@ -107,7 +107,11 @@
              
   <section id="on-field-get-summary">
 <h1>on_field_get_summary<a class="headerlink" href="#on-field-get-summary" title="Link to this heading">¶</a></h1>
-<p>on_field_get_summary(field, value)</p>
+<dl class="js function">
+<dt class="sig sig-object js" id="on_field_get_summary">
+<span class="sig-name descname"><span class="n"><span class="pre">on_field_get_summary</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#on_field_get_summary" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <p><strong>domain</strong>: client</p>
 <p><strong>language</strong>: javascript</p>
 <p><strong>class</strong> <a class="reference internal" href="../item_api.html"><span class="doc">Item class</span></a></p>
@@ -120,12 +124,12 @@ inserted in the summary cell for the field.</p>
 is processed. To get the item that owns the field, use the
 <a class="reference internal" href="../field/at_owner.html"><span class="doc">owner</span></a> attribute of the field.</p>
 </section>
-<section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h2>
+<section id="example-client-module">
+<h2>Example Client Module:<a class="headerlink" href="#example-client-module" title="Link to this heading">¶</a></h2>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">on_field_get_summary</span><span class="p">(</span><span class="nx">field</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">field</span><span class="p">.</span><span class="nx">owner</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">field_name</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;customer&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">rec_count</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">field_name</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;total&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;€&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="c1">// to use with Virtual Table</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">field_name</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;total&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -138,6 +142,59 @@ is processed. To get the item that owns the field, use the
 <span class="p">}</span>
 </pre></div>
 </div>
+</section>
+<section id="example-server-module">
+<h2>Example Server Module:<a class="headerlink" href="#example-server-module" title="Link to this heading">¶</a></h2>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_total</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">copy</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">invoice_table</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">item</span><span class="o">.</span><span class="n">set_where</span><span class="p">(</span><span class="n">deleted</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">copy</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;quantity&#39;</span><span class="p">],</span>
+        <span class="n">funcs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;quantity&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">})</span>
+
+    <span class="k">if</span> <span class="n">copy</span><span class="o">.</span><span class="n">record_count</span><span class="p">():</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="client-module-for-the-above">
+<h2>Client Module for the above:<a class="headerlink" href="#client-module-for-the-above" title="Link to this heading">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">cachedTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">refreshTotal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">task</span><span class="p">.</span><span class="nx">tracks</span><span class="p">.</span><span class="nx">server</span><span class="p">(</span><span class="s1">&#39;get_total&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">total</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">cachedTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="nx">summaryField</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">tracks</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">tracks_sold</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">summaryField</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">summaryField</span><span class="p">.</span><span class="nx">set_value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">summaryField</span><span class="p">.</span><span class="nx">set_value</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">summaryField</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">summaryField</span><span class="p">.</span><span class="nx">refresh</span><span class="p">)</span><span class="w"> </span><span class="nx">summaryField</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">on_field_get_summary</span><span class="p">(</span><span class="nx">field</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">field</span><span class="p">.</span><span class="nx">owner</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">field_name</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;tracks_sold&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cachedTotal</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">refreshTotal</span><span class="p">();</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">cachedTotal</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The above Client and Server Code will result in summary for Calculated Field <code class="docutils literal notranslate"><span class="pre">Tracks</span> <span class="pre">Sold</span></code>:</p>
+<img alt="Catalog Tracks Sold summary" class="align-center" src="../../../_images/tracks_summary_calculated_field_jampy.png" />
 </section>
 <section id="see-also">
 <h2>See also<a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
@@ -159,7 +216,7 @@ is processed. To get the item that owns the field, use the
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Jam.py Team.
-      <span class="lastupdated">Last updated on Mar 19, 2026.
+      <span class="lastupdated">Last updated on Mar 26, 2026.
       </span></p>
   </div>
 

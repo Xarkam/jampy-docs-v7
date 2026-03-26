@@ -2,12 +2,11 @@
 Fields
 ======
 
-All items, working with database table data have a 
+All items that work with database table data have a
 :doc:`fields </refs/client/item/at_fields>`
-attribute - a list of field objects, which are used to represent fields in item's
-table records. 
+attribute. This attribute is a list of field objects used to represent the fields of the item’s table records.
 
-Every field have the following attributes:
+Every field has the following attributes:
 
 .. csv-table:: 
    :header: Client, Server, Description
@@ -21,7 +20,7 @@ Every field have the following attributes:
    :doc:`required </refs/client/field/at_required>`, :doc:`required </refs/server/field/at_required>`, "Specifies whether a nonblank value for a field is required."   
 
 
-To get access to the item dataset data, the Field class have the following properties: 
+To get access to the item dataset data, the Field class has the following properties: 
 
 .. csv-table:: 
    :header: Client, Server, Description
@@ -34,8 +33,8 @@ To get access to the item dataset data, the Field class have the following prope
    :doc:`display_text </refs/client/field/at_display_text>`, :doc:`display_text </refs/server/field/at_display_text>`, "Represents the field's value as it is displayed in data-aware controls. When the field is a lookup field it's value is the lookup_text value, otherwise it is the text value, with regard of project locale parameters. This behavior can be overridden by the :doc:`on_field_get_text </refs/client/item/on_field_get_text>` event handler of the item that owns the field."   
    :doc:`raw_value </refs/client/field/at_raw_value>`, :doc:`raw_value </refs/server/field/at_raw_value>`, "Use this property to get field value of the current record as it is stored in database. No conversion is used."      
 
-In addition every field is an attribute of the item that owns it. So, to get 
-access to a field of an item use the following syntax: ``item.field_name``
+In addition every field is an attribute of the item that owns it. To get 
+access to a field of an item, use the following syntax: ``item.field_name``
 
 .. code-block:: js
     
@@ -46,7 +45,7 @@ access to a field of an item use the following syntax: ``item.field_name``
 ``invoices.total.value`` is the value of this field
 
     
-Below are the values of the attributes of the fields of the **invoices** item in the 
+Below are the values of the fields attributes of the **invoices** item in the 
 :doc:`Demo project </intro/demo_project>`
 ::
 

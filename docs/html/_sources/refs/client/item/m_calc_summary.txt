@@ -45,4 +45,5 @@ See also
 ========
 
 :doc:`on_detail_changed <on_detail_changed>`
+
 :doc:`Details </programming/data/details>`

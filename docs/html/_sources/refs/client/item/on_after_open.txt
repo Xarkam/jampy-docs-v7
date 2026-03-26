@@ -2,7 +2,7 @@
 on_after_open
 =============
 
-on_after_open(item)
+.. js:function:: on_after_open(item)
 
 **domain**: client 
 

@@ -2,7 +2,7 @@
 on_after_delete
 ===============
 
-on_after_delete(item)
+.. js:function:: on_after_delete(item)
 
 **domain**: client 
 

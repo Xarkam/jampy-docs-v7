@@ -2,7 +2,7 @@
 on_param_form_shown
 ===================
 
-on_param_form_shown(item)
+.. js:function:: on_param_form_shown(item)
 
 **domain**: client 
 

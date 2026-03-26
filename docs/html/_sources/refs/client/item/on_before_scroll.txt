@@ -2,7 +2,7 @@
 on_before_scroll
 ================
 
-on_before_scroll(item)
+.. js:function:: on_before_scroll(item)
 
 **domain**: client 
 

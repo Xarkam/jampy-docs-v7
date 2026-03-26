@@ -2,7 +2,7 @@
 on_before_cancel
 ================
 
-on_before_cancel(item)
+.. js:function:: on_before_cancel(item)
 
 **domain**: client 
 

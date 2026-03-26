@@ -2,7 +2,7 @@
 on_before_post
 ==============
 
-on_before_post(item)
+.. js:function:: on_before_post(item)
 
 **domain**: client 
 

@@ -158,7 +158,7 @@ Examples of database setups
     
 .. note::
 
-    For **SQLite** databases, certain schema changes—such as deleting or renaming a field,
+    For **SQLite** databases, certain schema changes - such as deleting or renaming a field,
     or creating a foreign key - require the  
     :doc:`Application Builder </admin/index>`  
     to recreate the table. In this process, a new table is created and all records are

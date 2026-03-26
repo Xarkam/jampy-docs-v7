@@ -2,7 +2,7 @@
 on_after_post
 =============
 
-on_after_post(item)
+.. js:function:: on_after_post(item)
 
 **domain**: client 
 
