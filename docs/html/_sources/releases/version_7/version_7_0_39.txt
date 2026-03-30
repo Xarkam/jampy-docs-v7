@@ -1,6 +1,0 @@
-===============
-Version 7.0.39
-===============
-
-First V7 documentation created. 
-

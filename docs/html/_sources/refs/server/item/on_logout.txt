@@ -1,7 +1,0 @@
-=========
-on_logout
-=========
-
-See:
-
-:doc:`Task class </refs/server/task/on_logout>`

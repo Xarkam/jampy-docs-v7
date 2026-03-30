@@ -1,5 +1,0 @@
-===============
-Version 7.0.53
-===============
-
-Camera capture fixed.

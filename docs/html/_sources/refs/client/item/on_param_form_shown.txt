@@ -1,8 +1,0 @@
-===================
-on_param_form_shown
-===================
-
-See:
-====
-
-:doc:`Task class </refs/client/task/on_param_form_shown>`

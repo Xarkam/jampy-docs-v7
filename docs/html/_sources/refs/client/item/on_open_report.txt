@@ -1,9 +1,0 @@
-==============
-on_open_report
-==============
-
-See:
-====
-
-:doc:`Report Events</refs/client/reports/on_open_report>`
-

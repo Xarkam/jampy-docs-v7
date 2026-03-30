@@ -1,7 +1,0 @@
-========
-on_login
-========
-
-See:
-
-:doc:`Task class </refs/server/task/on_login>`

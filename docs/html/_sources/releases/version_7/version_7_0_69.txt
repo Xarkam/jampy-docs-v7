@@ -1,5 +1,0 @@
-===============
-Version 7.0.69
-===============
-
-Boolean summary fixed.

@@ -2,3 +2,4 @@ conf.py
 build/
 _build/
 __pycache__/
+docs/

@@ -1,9 +1,0 @@
-=========================
-on_param_form_close_query
-=========================
-
-
-See:
-====
-
-:doc:`Report class </refs/client/task/on_param_form_close_query>`
