@@ -37,7 +37,7 @@ Examples of database setups
 
 .. admonition:: Adapted from `Jam.py Design Tips`_
 
-    Jam.py supports many different database servers. For example PostgreSQL_, MariaDB_, MySQL_, MSSQL_, Oracle_, Firebird_, IBM_, SQLite_ and SQLite with SQLCipher_.
+    Jam.py supports many different database servers. For example PostgreSQL_, MariaDB_, MySQL_, MSSQL_, Oracle_, Firebird_, IBM_, SQLite_, DuckDB_, and SQLite with SQLCipher_.
 
     If you are developing a small project or something you don't plan to deploy in
     a production environment, SQLite is generally the best option as it doesn't
@@ -50,11 +50,11 @@ Examples of database setups
     In addition to a database backend, we need to make sure the Python
     database bindings are installed.
 
-    * If using PostgreSQL, the ``psycopg2`` or ``psycopg2-binary`` package is needed. 
+    * If using PostgreSQL_, the ``psycopg2`` or ``psycopg2-binary`` package is needed. 
 
-    * If using MySQL or MariaDB, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient`` package is needed, as well as database client development files. 
+    * If using MySQL or MariaDB_, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient`` package is needed, as well as database client development files. 
 
-    * If using MSSQL, the ``pymssql`` is needed.  For ODBC on MS Windows, the ``pyodbc`` is needed. Configure the ODBC as usual with the DSN as a content.
+    * If using MSSQL_, the ``pymssql`` is needed.  For ODBC on MS Windows, the ``pyodbc`` is needed. Configure the ODBC as usual with the DSN as a content.
 
     * If using Oracle, the `cx_Oracle`_ is needed, as well as Python headers (development files).
 
@@ -62,7 +62,9 @@ Examples of database setups
 
     * If using IBM_ (TBA),  ``ibm_db`` and ``ibm_db_dbi`` package is needed.
 
-    * If using Firebird,  ``fdb`` package is needed.
+    * If using Firebird_,  ``fdb`` package is needed.
+
+    * If using DuckDB_,  ``duckdb`` package is needed.
     
     * If using Databricks_, ``databricks-sql-connector`` is needed.
 
@@ -80,6 +82,7 @@ Examples of database setups
 .. _SQLCipher: https://github.com/sqlcipher
 .. _IBM: https://www.ibm.com/support/pages/downloading-ibm-db2-version-115-linux-unix-and-windows
 .. _Databricks: https://www.databricks.com/blog/how-use-lakebase-transactional-data-layer-databricks-apps
+.. _DuckDB: https://github.com/duckdb/duckdb
 
 
 .. note::
