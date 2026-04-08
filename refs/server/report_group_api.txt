@@ -14,8 +14,11 @@ that owns the reports of a project.
 
 Below the events of the class are listed.
 
-It, as well, inherits attributes and methods of its ancestor class
+The Reports class inherits attributes and methods of its ancestor class
 :doc:`AbstractItem class <abstractitem_api>`
+
+The Event ``on_convert_report`` was moved to Report class in V7.
+
 
 Events
 ======

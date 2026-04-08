@@ -41,3 +41,4 @@ Events
     :glob:
     
     report/on_*
+    reports/on_*
