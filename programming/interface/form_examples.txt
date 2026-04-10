@@ -215,7 +215,8 @@ or:
 
 
 
-With headers around each section, like “Track Info” / “Technical Info”:
+
+With **named** headers around each section, like “Track Info” / “Technical Info”:
 
 .. code-block:: html
 
