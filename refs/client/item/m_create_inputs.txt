@@ -36,7 +36,7 @@ The ``options`` parameter is an object that may have following attributes:
   Application builder, will be created
 
 * ``col_count`` - the number of columns that will be created for visual controls, 
-  the default value is 1, 
+  the default value is 1. Accepts 1,2,3,4,6,12.
   
 
 Before creating controls the application empties the container.
@@ -47,8 +47,8 @@ Example
 .. code-block:: js
 
     function on_edit_form_created(item) {
-    	item.create_inputs(item.edit_form.find(".left-div"), 
-    	    {fields: ['firstname', 'lastname', 'company', 'support_rep_id']}
+    	item.create_inputs(item.edit_form.find("#edit-left"), 
+    	    {fields: ['firstname', 'lastname', 'company', 'support_rep_id'], col_count: 2}
     	);
     }
 
@@ -58,6 +58,8 @@ See also
 :doc:`fields <at_fields>`
 
 :doc:`Data-aware controls </programming/interface/data_controls>`
+
+:doc:`Forms examples </programming/interface/form_examples>`
 
 :doc:`create_edit_form <m_create_edit_form>`
 

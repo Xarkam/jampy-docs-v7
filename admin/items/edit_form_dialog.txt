@@ -37,7 +37,7 @@ To order the selected fields use the buttons that located below left list.
 On the right side of the "Layout" tab are the controls that you can use to 
 specify the display options for the fields selected for editing on the form.
 
-* **Columns** - the number of columns that will be created for field inputs
+* **Columns** - the number of columns that will be created for field inputs (1,2,3,4,6,12).
 
 * **Label size** - select a value that determines the size of the labels 
   displayed to the right of the field input: 

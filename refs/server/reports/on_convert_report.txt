@@ -13,7 +13,6 @@ on_convert_report
 Description
 ===========
 
-TBA for v7.
 
 The framework converts reports internally, using LibreOffice. 
 It is possible to use portable LibreOffice installlation.
@@ -53,7 +52,7 @@ Example
 Portable LibreOffice on Windows
 ===========================================
 
-TBA for V7, modify the above with the LO installation path, ie.:
+Add the event to report and modify the above with the LO installation path, ie.:
 
 .. code-block:: py
 
