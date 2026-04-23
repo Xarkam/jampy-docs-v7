@@ -13,7 +13,11 @@ on_convert_report
 Description
 ===========
 
-The framework converts reports internally, using LibreOffice. Use the 
+
+The framework converts reports internally, using LibreOffice. 
+It is possible to use portable LibreOffice installlation.
+
+Use the 
 **on_convert_report** event if you want to use some other service or change some 
 parameters of report conversion.
 
@@ -44,3 +48,22 @@ Example
             converted = True
         except Exception as e:
             print(e)
+            
+Portable LibreOffice on Windows
+===========================================
+
+Add the event to report and modify the above with the LO installation path, ie.:
+
+.. code-block:: py
+
+
+        if os.name == "nt":
+            s_office = r"C:\Users\your_username\Downloads\LibreOfficePortable\App\libreoffice\program\soffice.exe"
+            convertion = Popen([s_office, '--headless', '--convert-to', report.ext,
+                report.report_filename, '--outdir', os.path.join(report.task.work_dir, 'static', 'reports') ],
+                stderr=STDOUT,stdout=PIPE)
+
+
+
+
+

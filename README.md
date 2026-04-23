@@ -2,7 +2,7 @@
 [![Package on PyPI](https://img.shields.io/pypi/v/jam.py-v7.svg)](https://pypi.org/project/jam.py-v7) ![Supported Python versions](https://img.shields.io/pypi/pyversions/python3-saml.svg) [![Documentation Status](https://readthedocs.org/projects/jampy-docs-v7/badge/)](https://jampy-docs-v7.readthedocs.io) [![Downloads](https://static.pepy.tech/badge/jam.py-v7)](http://pepy.tech/project/jam.py-v7)
 
 
-## This is the automated Documantation repository for Jam.py V7. The content is published to https://jampy-docs-v7.readthedocs.io/ and https://jam-py-v7.github.io/jampy-docs-v7/
+## This is the automated Documentation repository for Jam.py V7. The content is published to https://jampy-docs-v7.readthedocs.io/ and https://jam-py-v7.github.io/jampy-docs-v7/
 
 ## Jam.py is a web front-end application generator that works with both existing databases and newly created ones. 
 ## With Monaco editor and Databricks support!

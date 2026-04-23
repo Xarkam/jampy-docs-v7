@@ -35,9 +35,6 @@ Fill in the following fields:
   displayed to the right of the input, so when the user moves the mouse pointer 
   over this mark, a pop-up window appears displaying this message.
 
-Help - if any text / html-message is specified, a question mark will be displayed to the right of the input, 
-so when the user moves the mouse pointer over this label, a pop-up window appears displaying this message.
-
 * **Visible** - if this checkbox is not checked, this filter will not be displayed
   in the item Filters dialog.
 
