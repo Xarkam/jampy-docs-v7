@@ -149,6 +149,17 @@ It creates input controls for panes, corresponding to tabs:
 	:alt: Edit form template with tabs
 
 
+All of the above can be achieved with no code or template within the ``Application Builder``.
+
+
+The same form in default format:
+
+.. image:: /programming/_images/customer_edit_jampy.png
+	:align: center
+	:alt: Default edit form
+
+
+
 Edit form template using grid layout
 ------------------------------------
 
@@ -215,7 +226,8 @@ or:
 
 
 
-With headers around each section, like “Track Info” / “Technical Info”:
+
+With **named** headers around each section, like “Track Info” / “Technical Info”:
 
 .. code-block:: html
 
@@ -466,4 +478,5 @@ event handler declared in the client module of **Invoices** journal:
 .. image:: /programming/_images/invoices_view_form_tempate_jampy.png
 	:align: center
 	:alt: Invoices view form template
-	
+
+
