@@ -1,6 +1,136 @@
-=============================
-How to create a forms flow
-=============================
+====================================================
+How to Navigate Between Forms While Preserving Data
+====================================================
 
-To navigate from first Form to a second Form with keeping the data, 
+This guide explains how to navigate from one form to another while maintaining data integrity across forms, 
+when creating a new record.
+
+
+The pattern involves:
+
+    A View with a button that opens an empty Form (Form 2).
+
+    Form 2 with a navigation button to return to Form 1.
+
+    Form 1 that receives data from Form 2.
+
+
+1. Set Up the Initial View
+========================================
+
+
+Add a **New** button to your View that opens Form 2:
+
+
+.. code:: js
+
+
+        // ===== VIEW CONFIGURATION =====
+
+        function on_view_form_created(item) {
+            item.view_form.find('#new-btn')
+                .text('New')
+                .off('click.task')
+                .on('click', function() {
+                    openForm2();
+                });
+            item.refresh_page(true);
+        }
+
+        function openForm2() {
+            task.f2.open({open_empty: true}); 
+            task.f2.append_record(); 
+        }
+
+2. Configure Form 2 (Intermediate Form)
+========================================
+
+Set up Form 2 with a **Next Form** button that navigates back to Form 1:
+
+.. code:: js
+
+        // ===== FORM 2 CONFIGURATION =====
+
+        function on_edit_form_created(item) {
+            item.edit_form.find('#ok-btn')
+                .text('Next Form')
+                .off('click.task')
+                .on('click', function() {
+                    item.close_edit_form();
+                    setTimeout(function() {
+                        openForm1(item);
+                    }, 300);
+                });    
+        }
+
+        function openForm1(item) {
+            task.f1.open({open_empty: true}); 
+            task.f1.append_record(); 
+        }
+
+        function on_edit_form_close_query(item) {
+            return true;
+        }
+
+3. Configure Form 1 (Destination Form)
+========================================
+
+Map data from Form 2 to Form 1 fields:
+
+.. code:: js
+
+        // ===== FORM 1 CONFIGURATION =====
+
+        function on_edit_form_created(item) {
+            var title = 'First Form value: ';
+            
+            if (item.is_new()) {
+                // Transfer data from Form 2 to Form 1
+                item.f1t1.value = task.f2.f2t1.value;
+                
+                if (item.f1t1.value) {
+                    title += item.f1t1.value + ' value typed';
+                }
+                item.edit_options.title = title;
+            } else {
+                title = item.f1t1.value;
+                item.edit_options.title = title;
+            }
+        }
+
+
+Key Points to Remember
+========================================
+
+    ``open_empty:`` true: Ensures forms open without pre-loaded data
+
+    ``append_record():`` Adds a new empty record to the form
+
+    ``setTimeout():`` Allows proper form closure before opening the next form
+
+    ``on_edit_form_close_query:`` Returns true to bypass unsaved changes warnings
+
+
+Field Mapping Reference
+========================================
+
++-------------------+-----------------+-----------------------------------------------------------+
+| Source            |Destination      |   Description                                             |
++===================+=================+===========================================================+
+| task.f2.f2t1.value| item.f1t1.value | Transfers data from Form 2 field f2t1 to Form 1 field f1t1|
++-------------------+-----------------+-----------------------------------------------------------+
+
+
+
+
+See also
+========
+
+:doc:`on_edit_form_close_query </refs/client/item/on_edit_form_close_query>`
+
+:doc:`Forms </programming/interface/forms>`
+
+:doc:`create_edit_form </refs/client/item/m_create_edit_form>`
+
+:doc:`edit_form </refs/client/item/at_edit_form>`
 
