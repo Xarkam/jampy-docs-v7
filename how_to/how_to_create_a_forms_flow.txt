@@ -3,7 +3,7 @@ How to Navigate Between Forms While Preserving Data
 ====================================================
 
 This guide explains how to navigate from one form to another while maintaining data integrity across forms, 
-when creating a new record with modal form.
+when creating a new record with :doc:`modal </admin/items/edit_form_dialog>` form.
 
 
 The pattern involves:
@@ -12,7 +12,7 @@ The pattern involves:
 
     Form 2 with a navigation button to Form 1.
 
-    Form 1 that receives data from Form 2, save record, or go back optionally.
+    Form 1 that receives data from Form 2, saves record, or go back optionally:
 
 
 .. code-block:: text
