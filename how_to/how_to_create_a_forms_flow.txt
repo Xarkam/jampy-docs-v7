@@ -3,16 +3,27 @@ How to Navigate Between Forms While Preserving Data
 ====================================================
 
 This guide explains how to navigate from one form to another while maintaining data integrity across forms, 
-when creating a new record.
+when creating a new record with modal form.
 
 
 The pattern involves:
 
     A View with a button that opens an empty Form (Form 2).
 
-    Form 2 with a navigation button to return to Form 1.
+    Form 2 with a navigation button to Form 1.
 
-    Form 1 that receives data from Form 2.
+    Form 1 that receives data from Form 2, save record, or go back optionally.
+
+
+.. code-block:: text
+
+                   DB record
+                       ↑
+         Form 2      Form 1
+            ↓          ↑
+            └── loop  ─┘
+
+
 
 
 1. Set Up the Initial View
@@ -99,6 +110,55 @@ Map data from Form 2 to Form 1 fields:
         }
 
 
+4. Back to Intermediate Form
+========================================
+
+The **Back** button can be implemented in a similar way:
+
+.. code:: js
+
+        // ===== FORM 1 CONFIGURATION =====
+
+        function on_edit_form_created(item) {
+            var title = 'First Form value: ';
+            
+            if (item.is_new()) {
+                // Transfer data from Form 2 to Form 1
+                item.f1t1.value = task.f2.f2t1.value;
+                
+                if (item.f1t1.value) {
+                    title += item.f1t1.value + ' value typed';
+                }
+                item.edit_options.title = title;
+            } else {
+                title = item.f1t1.value;
+                item.edit_options.title = title;
+            }
+            item.edit_form.find('#cancel-btn')
+            .text('Back')
+            .off('click.task')
+            .on('click', function() {
+                item.close_edit_form();
+                setTimeout(function() {
+                    goBackToForm2();
+                }, 300);
+            });
+        }
+
+        function goBackToForm2() {
+        
+            task.f2.open({open_empty: true}); 
+            task.f2.append_record(); 
+
+            task.f2.f2t1.value = task.f1.f1t1.value;
+        }
+
+        function on_edit_form_close_query(item) {
+            return true;  
+        }
+
+
+
 Key Points to Remember
 ========================================
 
@@ -133,4 +193,5 @@ See also
 :doc:`create_edit_form </refs/client/item/m_create_edit_form>`
 
 :doc:`edit_form </refs/client/item/at_edit_form>`
+
 
