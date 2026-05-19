@@ -1,14 +1,19 @@
-===============
-Version 7.0.7x
-===============
+==============================
+Version 7.0.7x and above
+==============================
 
 
-In version 7.0.70, first version with Monaco editor released.
+In version 7.0.70, first version with `Monaco editor`_ released. Work is still needed for ``Save`` button state and Editor Tabs
+replicating Jam.py V5 `Ace editor`_ features.
 
 In version 7.0.71, the Modal Form closing bug fixed.
 
 In version 7.0.72, below Monaco editor shortcuts were added:
 
+
+.. _Ace editor: https://ace.c9.io
+
+.. _Monaco editor: https://microsoft.github.io/monaco-editor
 
 
 .. admonition:: Monaco Shortcuts
@@ -39,3 +44,5 @@ In version 7.0.86, Monaco Tab closing bug was fixed.
 In version 7.0.90, Builder translations for zh-CN added.
 
 In version 7.0.91, custom Menu permission issues fixed, History accordion fixed,  on_apply on index creation fixed.
+
+In version 7.0.97, GitHub Code Security and Quality was applied and merged.    

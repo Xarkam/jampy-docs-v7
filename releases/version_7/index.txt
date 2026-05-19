@@ -65,7 +65,7 @@ Here are the main differences to Jam.py V5, written in Nov. 2022. by Andrew Yush
 
     The code that works with database data is rewritten. For MSSQL and MYSQL alternative drivers are supported.
     The text field size can be changed for databases that have text fields with a specified length.
-    If the new size is bigger, the length of the field is changed Otherwise, the field length remains the same but
+    If the new size is bigger, the length of the field is changed. Otherwise, the field length remains the same but
     the app checks that the length text is less than the size value.
 
     The edit and post methods when changing a record can be omitted. They are implemented internally.  

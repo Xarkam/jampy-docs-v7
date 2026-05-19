@@ -53,17 +53,19 @@ Now you should see the project tree in the left panel.
 
 .. important::
 
-        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
-        ``Jam.py`` framework ``version`` number. 
+        As seen on top right corner, The Name of the application is displayed, name of the database used, application :doc:`version </admin/project/parameters>` number, and 
+        ``Jam.py`` framework version number. 
 
-Open a new tab, type
+
+
+Open a new tab, type in the browser address bar press Enter:
 
 .. code-block:: console
 
 	127.0.0.1:8080
 
-in the address bar and press Enter.
-A new project appears with an empty menu.
+
+A new project appears with an empty menu since there are no tables defined yet.
 
 .. image:: /intro/_images/empty_project_jampy.png
 	:scale: 50%

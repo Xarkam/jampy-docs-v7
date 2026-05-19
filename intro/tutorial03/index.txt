@@ -66,8 +66,9 @@ After saving the "To do list", select the "Contacts" journal and click the
 	:alt: new_detail_to_do_jampy.png
 
 
-Click the right arrow button to add the "To do list" to the "Contacts" details 
+Click the left arrow button to add the "To do list" to the "Contacts" details 
 and the **OK** button to save changes.
+
 
 .. image:: /intro/_images/details_dialog_jampy.png
 	:scale: 50%
@@ -75,6 +76,10 @@ and the **OK** button to save changes.
 	:alt: details_dialog_jampy.png
 
 A new "To do list" item will be created as a Detail of the "Contacts" journal.
+
+.. note::
+    Here we also control the "Order" for used Details.
+
 
 .. image:: /intro/_images/contacts_to_do_list_jampy.png
 	:scale: 50%
@@ -91,7 +96,7 @@ click the button to the right of the **Edit details** input and select the
 	:align: center
 	:alt: details_to_edit_jampy.png
 
-Let's update the project page and dblclick on the contact. Now we can add items 
+Let's update the project page and double click on the contact. Now we can add items 
 to the to-do list of the contact.
 
 .. image:: /intro/_images/new_to_do_item_jampy.png
@@ -100,7 +105,7 @@ to the to-do list of the contact.
 	:alt: new_to_do_item_jampy.png
 
 
-Click the **Groups** node in the project tree, dblclick the **Details** row and 
+Click the **Groups** node in the project tree, double click the **Details** row and 
 set Visible attribute to true.
 
 .. image:: /intro/_images/detail_group_visible_jampy.png
@@ -131,5 +136,20 @@ In the project page will see that the to-do list changes when the contact change
 .. image:: /intro/_images/todo_completed_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: todo_completed_jampy.png
+	:alt: todo detail
+
+
+If more Details were added, for example a "Documents" Detail, two tabs will be displayed, "To do list" and 
+"Documents".
+
+To control the "Order" for displayed Details, use UP/DOWN arrows on "Journals" "Contact" "Details" button
+on the right hand side. This will 
+affect both View and Edit form.
+
+.. image:: /intro/_images/todo_completed_two_details_jampy.png
+	:scale: 40%
+	:align: center
+	:alt: Todo with two details
+
+
 

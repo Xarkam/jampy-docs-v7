@@ -82,6 +82,9 @@ To download this document as a single PDF, please visit:
 
 https://jampy-docs-v7.readthedocs.io/_/downloads/en/latest/pdf/
 
+Simplified Chinese translation started at:
+
+https://jampy-docs.readthedocs.io/projects/V7/zh-cn/latest
 
 Video Tutorials
 ===============

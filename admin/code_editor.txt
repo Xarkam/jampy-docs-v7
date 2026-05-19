@@ -37,8 +37,8 @@ To search the project modules, click the **Find in project** button or press
 Alt-F to display the 
 :doc:`Find in project Dialog <project/find>`
 
-Jam.py uses the `ace editor`_  editor to implement its code editor. More recent Jam.py
-version will use Microsoft `Monaco editor`_.
+Jam.py uses the `ace editor`_  editor to implement its code editor. Jam.py 
+version >= 7.0.70 will use Microsoft `Monaco editor`_.
 
 `Here are keyboard shortcuts for the ace editor`_.
 

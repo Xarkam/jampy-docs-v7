@@ -85,7 +85,7 @@ On the General tab, you can specify general parameters of the project:
   task :doc:`upload </refs/client/task/m_upload>` method. Uploading files that 
   do not match these types is prohibited.
   
-* **Version** — specify the version of the project here.
+* **Version** — specify the version number of the project here.
 
 .. note::
    When **Connection pool size** or **Persistent connection** parameters are 

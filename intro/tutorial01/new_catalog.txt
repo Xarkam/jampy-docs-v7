@@ -3,7 +3,7 @@ New catalog
 ===========
 
 Let's go back to the Application builder page and create a "Customers" catalog.
-A catalog corresponds to a new table in the database.
+A catalog corresponds to a table in the database.
 
 To do this, select the "Catalogs" group in the project tree and click the **New**
 button on the bottom right corner of the page
@@ -17,13 +17,18 @@ In the
 :doc:`Item Editor </admin/items/item_editor_dialog>`
 dialog that appears, fill in the caption and name of the new catalog. The caption
 is the name that will be displayed to users, and the name is the variable name that
-will be used in code (Python or JS) to refer to this catalog. The name must be a
-valid Python identifier.
+will be used in code (Python and/or JS) to refer to this catalog. The name must be a
+valid Python/JS :doc:`identifier </programming/reserved>`.
 
 .. image:: /intro/_images/customers_new_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: New customers catalog
+
+As seen, some fields are already populated: ``Primary key field``, ``Deleted flag`` and ``Record version``.
+These fields are defined as :doc:`Common fields </programming/data/common_fields>` for each
+:doc:`Item Group </admin/groups/item_group_editor>`.
+
 
 Then, click the **New** button on the bottom right corner of the dialog to add a new field. The
 :doc:`Field Editor </admin/items/field_editor_dialog>`

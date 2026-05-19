@@ -18,7 +18,7 @@ buttons (higher priority on the top).
 	:alt: Contacts order
 
 In the example above, we set the default sorting to be
-descending contact date.
+**descending** contact date. Click the "Desc." column to set descending/ascending sorting order for the field.
 
 We can create a corresponding index for the “Contacts” journal database table. 
 Click the **Indices** button to open
