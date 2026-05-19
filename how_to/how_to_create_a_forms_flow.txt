@@ -10,18 +10,20 @@ The pattern involves:
 
     A View with a button that opens an empty Form (Form 2).
 
-    Form 2 with a navigation button to Form 1.
+    Form 2 (table f2 with field f2t1), with a navigation button to Form 1 (table f1 with field f1t1 ).
 
     Form 1 that receives data from Form 2, saves record, or go back optionally:
 
 
 .. code-block:: text
 
-                   DB record
-                       ↑
-         Form 2      Form 1
-            ↓          ↑
-            └── loop  ─┘
+                       DB record
+                           ↑
+                           
+           Form 2        Form 1
+
+            ↓ ↑           ↓ ↑
+             └──  loop    ─┘
 
 
 
