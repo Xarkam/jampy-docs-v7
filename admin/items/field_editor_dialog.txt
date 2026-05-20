@@ -8,7 +8,7 @@ Use the **Field Editor Dialog** to create a new or modify an existing field.
 
     For some operations, the :doc:`DB manual mode </admin/project/database>` must be set to true.
     For example, changing the field type or Name. Since the database is in "Manual Mode", changing the type
-    will not reflect within the database structure. Use this with caution.
+    or Name will not reflect within the database structure. Use this with caution.
 
 The dialog has following tabs: **Field**, **Lookup**, **Interface** and **Calculation**.
 
@@ -24,7 +24,8 @@ The **Field** tab have the following fields:
 * **Caption** - the field name that appears to users.
 
 * **Name** - the name of the table field that will be used in programming code to 
-  get access to the field object. It should be a valid python identifier.
+  get access to the field object. It should be a valid python/JS identifier. Changing 
+  the Name will rename the table field, unless "DB manual mode" is used. 
 
 * **Type** - type of the field — one of the following values: 
 

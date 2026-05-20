@@ -17,3 +17,5 @@ We created them to distinguish between two types of data items:
 
 * data items that store information about events 
   recorded in some documents, such as invoices, purchase orders, etc. - **Journals**
+
+**System** group is created automatically with History item creation. 

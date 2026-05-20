@@ -32,7 +32,7 @@ For each of the group, its own editor will be shown:
     table_group_editor
 	
 Use buttons in the right panel of the page to edit Client and Server modules of 
-a selected group, see 
+a selected group, see:
 
 * :doc:`Working with modules </programming/modules>`, 
 * :doc:`Code editor </admin/code_editor>`
