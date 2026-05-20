@@ -1,8 +1,8 @@
 ===================
-Detail Group Editor
+Table Group Editor
 ===================
 
-**Detail Group Editor** opens when a developer wants to create a new detail group 
+**Table Group Editor** opens when a developer wants to create a new table 
 or modify an existing one. See 
 :doc:`Task tree </programming/task_tree>`
 

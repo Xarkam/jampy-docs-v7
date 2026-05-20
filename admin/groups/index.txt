@@ -16,7 +16,7 @@ At the bottom of the page there are 3 buttons:
 
 * **New Report Group** -  use this button to create a new report group. 
   
-.. image:: /admin/_images/group_type_jampy.png
+.. image:: /admin/_images/groups_jampy.png
 	:align: center
 	:alt: Group type
 
@@ -37,6 +37,6 @@ a selected group, see:
 * :doc:`Working with modules </programming/modules>`, 
 * :doc:`Code editor </admin/code_editor>`
 
-.. image:: /admin/_images/groups_jampy.png
+.. image:: /admin/_images/group_type_jampy.png
 	:align: center
 	:alt: Group node
