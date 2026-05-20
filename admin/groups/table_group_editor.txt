@@ -1,12 +1,12 @@
 ===================
-Table Group Editor
+Item Editor
 ===================
 
-**Table Group Editor** opens when a developer wants to create a new table 
+**Item Editor** opens when a developer wants to create a new item 
 or modify an existing one. See 
 :doc:`Task tree </programming/task_tree>`
 
-The upper part of the **Detail Group Editor** have the following fields:
+The upper part of the **Item Editor** have the following fields:
 
 * **Caption** - the item name that appears to users.
 
@@ -62,7 +62,7 @@ The upper part of the **Detail Group Editor** have the following fields:
   
   
   
-In the center part of the **Detail Group Editor** dialog there is a table 
+In the center part of the **Item Editor** dialog there is a table 
 containing a list of fields, defined for the item. These fields are 
 :doc:`common </programming/data/common_fields>`
 to all items the group will own. 
@@ -90,7 +90,7 @@ In the bottom-right corner of the Dialog form there are two buttons:
     and **Deleted flag field** 
     attributes only when creating a new group or editing an empty one.
     
-    For existing detail groups, that already own items you can only change 
+    For existing item groups, that already own items you can only change 
     **Caption**, **Name** and  **Visible** attributes.
 
 .. image:: /admin/_images/detail_group_jampy.png
