@@ -175,12 +175,11 @@ Examples of database setups
 More about the database setups is within the :doc:`Project management </admin/project/database>`.
 
 
-
 If all goes well, a new project will be created and the project tree will appear 
 in the Application builder.    
 
 
-.. image:: _images/adm_new_project_jampy.png
+.. image:: /intro/_images/detail_group_jampy.png
 	:align: center
 	:alt: Jam.py Application builder
 

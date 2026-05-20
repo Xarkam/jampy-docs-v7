@@ -5,7 +5,7 @@ What is the difference between catalogs and journals
 When a new project is created, its
 :doc:`task tree </programming/task_tree>`
 has the following groups: 
-**Catalogs**, **Journals**, **Details** and **Reports**.
+**Catalogs**, **Journals** and **Reports**.
 
 **Catalogs** and **Journals** belong to the Item Group type and have the same 
 functional purpose. See :doc:`Groups </admin/groups/index>`.
