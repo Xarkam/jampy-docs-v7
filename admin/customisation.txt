@@ -90,4 +90,4 @@ If all good to go, commit and create a Github ``pull`` request with the changes.
 
 For the project maintainers, to initiate Github Actions, accomodate tag number below::
 
-  	    git push && git tag 7.0.XX && git push --tags
+  	    git tag 7.0.XX && git push --tags
