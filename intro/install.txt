@@ -91,3 +91,9 @@ This will install Jam.py in your Python installation’s site-packages directory
     If you are just starting with Jam.py and using Windows, you may find
     :doc:`How to install Jam.py on Windows <../how_to/how_to_install_on_windows>` useful.
 
+
+
+Upgrading 
+----------
+
+

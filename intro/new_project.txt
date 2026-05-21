@@ -42,11 +42,9 @@ To start the Jam.py web server, run the ``server.py`` script.
     $ ./server.py
 
 
-For Windows users:
+For Windows users::
 
-.. code-block:: console
-
-    ...\>server.py
+    python server.py
 
 
 .. note::
@@ -203,3 +201,12 @@ A new project appears with an empty menu.
 .. image:: _images/empty_project_jampy.png
 	:align: center
 	:alt: Jam.py project
+
+
+
+Stopping the project
+---------------------
+
+
+In order to stop jam.py, press Control-C on the window where it runs.
+
