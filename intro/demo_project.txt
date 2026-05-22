@@ -6,9 +6,12 @@ The framework has a full fledged demo application that demonstrates programming
 techniques used in the framework. 
 
 The demo is located in the demo folder of the Jam.py package downloaded from Github. There is also a standalone or an 
-portable application for Windows x64 provided `here <https://github.com/platipusica/jampy-exe/releases/download/Pump/jampy_win_64.exe>`_.
+portable Jam.py V5 Demo application for Windows x64 provided
+`here <https://github.com/platipusica/jampy-exe/releases/download/Pump/jampy_win_64.exe>`_.
 
 The portable application depends on LibreOffice for Reports and nothing more. Just run it and point the browser as per below.
+If the application is blocked by the Windows Defender or similar, there is also portable Northwind V7 application
+at Windows 10/11 App store. Search for Jam.py.
 
 To start the demo application go to the demo folder and run *server.py* script.
 
