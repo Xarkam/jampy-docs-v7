@@ -47,7 +47,7 @@ If you are just starting with Jam.py and using Windows, you may find
 
 .. caution::
 
-    This two different installation method, will install Jam.py in your Python global installation’s site-packages directory.
+    This two differents installation method, will install Jam.py in your Python global installation’s site-packages directory.
 
 Installing an official release with `pip`
 -----------------------------------------
@@ -64,13 +64,13 @@ This is the recommended way to install Jam.py.
 
    .. code-block:: console
 
-    $ sudo pip3 install jam.py-v7
+    sudo pip3 install jam.py-v7
 
 
    If you're using Windows, start a command shell with administrator privileges
    and run the command::
 
-    ...\> python -m pip install jam.py-v7
+    python -m pip install jam.py-v7
 
 
 
@@ -85,7 +85,7 @@ Installing an official release manually
 
 .. code-block:: console
 
-   $ python setup.py install
+   python setup.py install
 
 
 .. note::
