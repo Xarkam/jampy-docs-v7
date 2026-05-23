@@ -45,9 +45,7 @@ Install Jam.py
 If you are just starting with Jam.py and using Windows, you may find
 :doc:`How to install Jam.py on Windows <../how_to/how_to_install_on_windows>` useful.
 
-.. caution::
 
-    This two differents installation method, will install Jam.py in your Python global installation’s site-packages directory.
 
 Installing an official release with `pip`
 -----------------------------------------
@@ -91,6 +89,10 @@ Installing an official release manually
 .. note::
 	|linux_pingui_ico| On some unix like systems you may need to switch to root or run:
 	``sudo python setup.py install``
+
+.. caution::
+
+    This two differents installation method, will install Jam.py in your Python global installation’s site-packages directory.
 
 
 
