@@ -94,6 +94,13 @@ Installing an official release manually
 
 
 
+Upgrading 
+----------
+
+If you installed Jam.py from pip you can simply upgrade it with::
+
+    python -m pip install --upgrade jam.py-v7
+
 
 
 .. _pip: https://pip.pypa.io/en/stable/
