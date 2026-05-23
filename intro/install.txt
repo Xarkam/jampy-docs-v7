@@ -1,36 +1,53 @@
+.. Comments section.
+   Please, add custom directive or links, pictures, text replacement at the end of this document
+
+
 ============
 Installation
 ============
 
-Install python
+|python_ico| Install Python
 ==============
 
-Jam.py requires python. If it is not installed you can get the latest 
-version of Python at https://www.python.org/download/ 
+Jam.py requires Python 3. If it is not installed you can get the latest
+version of Python at https://www.python.org/download/
 
-You can use the following versions of Python with Jam.py:
+Although Jam.py supports Python 3.4, the minimum recommended version is 3.10 and newer.
 
-Python 3:
+|tip_ico| **Tip:** If you using |linux_pingui_ico| GNU/Linux, you have probably Python 3 already installed by default. Check your version.
 
-* Python 3.4 and newer
+|
 
-You can verify that Python is installed by typing ``python`` from your shell; 
-you should see something like::
+Check your Python version
+-------------------------
 
-    Python 2.7.12 (default, Nov 19 2016, 06:48:10) 
-    [GCC 5.4.0 20160609] on linux2
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>> 
-    
-For Python 3 installed try to type ``python3``::
+For Python 3 installed try to type into a terminal:  ``python3 --version`` on Linux, or ``python --version`` on Windows.
+Expected result::
 
-    Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
-    [GCC 5.4.0 20160609] on linux
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>>     
+    Python 3.14.4
+
+|tip_ico| **Tip:** If you want fully informations about your Python version, don't use the ``--version`` option in previous commands.
+
+   Expected result::
+
+      Python 3.14.4 (main, Apr  8 2026, 04:02:31) [GCC 15.2.0] on linux
+      Type "help", "copyright", "credits" or "license" for more information.
+
+|
+|
 
 Install Jam.py
 ====================
+
+|windows_logo_ico| Jam.py on Windows
+-----------------
+
+If you are just starting with Jam.py and using Windows, you may find
+:doc:`How to install Jam.py on Windows <../how_to/how_to_install_on_windows>` useful.
+
+.. caution::
+
+    This two differents installation method, will install Jam.py in your Python global installation’s site-packages directory.
 
 Installing an official release with `pip`
 -----------------------------------------
@@ -43,57 +60,61 @@ This is the recommended way to install Jam.py.
    work.)
 
 2. If you're using Linux, Mac OS X or some other flavour of Unix, enter the
-   command: 
-   
+   command at the shell prompt:
+
    .. code-block:: console
-   
-    sudo pip install jam.py-v7
-    
-   at the shell prompt. 
+
+    sudo pip3 install jam.py-v7
 
 
-   If you're using Windows, start a command shell with administrator privileges 
+   If you're using Windows, start a command shell with administrator privileges
    and run the command::
 
-    ...\> python -m pip install jam.py-v7
-
-
-   This will install Jam.py in your Python installation's ``site-packages`` directory.
-
-
-.. _pip: http://www.pip-installer.org/
-.. _standalone pip installer: http://www.pip-installer.org/en/latest/installing.html#install-pip
-
+    python -m pip install jam.py-v7
 
 
 
 Installing an official release manually
 ---------------------------------------
 
-1. Download the package archive. 
+1. Download the package archive (https://github.com/jam-py-v5/jam-py-v7/releases).
 
-2. Create a new directory and unpack the archive there. 
+2. Create a new directory and unpack the archive there.
 
 3. Go into the directory and run the setup command from command line
 
 .. code-block:: console
 
-   $ python setup.py install
-    
-This will install Jam.py in your Python installation’s site-packages directory.
+   python setup.py install
+
 
 .. note::
-	On some unix like systems you may need to switch to root or run: 
-	sudo python setup.py install
-
-.. admonition:: Python on Windows
-
-    If you are just starting with Jam.py and using Windows, you may find
-    :doc:`How to install Jam.py on Windows <../how_to/how_to_install_on_windows>` useful.
+	|linux_pingui_ico| On some unix like systems you may need to switch to root or run:
+	``sudo python setup.py install``
 
 
 
-Upgrading 
-----------
 
 
+.. _pip: https://pip.pypa.io/en/stable/
+.. _standalone pip installer: https://pip.pypa.io/en/latest/installation/
+
+.. |windows_logo_ico| image:: /intro/_images/microsoft_logo.jpg
+    :height: 2ex
+    :class: no-scaled-link
+
+.. |linux_pingui_ico| image:: /intro/_images/linux.png
+    :height: 3ex
+    :class: no-scaled-link
+
+.. |python_ico| image:: /intro/_images/python_logo.png
+    :height: 2ex
+    :class: no-scaled-link
+
+.. |jam_ico| image:: /intro/_images/jam_logo.png
+    :height: 4ex
+    :class: no-scaled-link
+
+.. |tip_ico| image:: /intro/_images/ktip.png
+    :height: 2ex
+    :class: no-scaled-link
