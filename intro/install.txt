@@ -9,10 +9,10 @@ Installation
 |python_ico| Install Python
 ==============
 
-Jam.py requires Python 3. If it is not installed you can get the latest
+Jam.py V7 requires Python 3. If it is not installed you can get the latest
 version of Python at https://www.python.org/download/
 
-Although Jam.py supports Python 3.4, the minimum recommended version is 3.10 and newer.
+Although Jam.py V7 supports Python 3.4, the minimum recommended version is 3.10 and newer.
 
 |tip_ico| **Tip:** If you using |linux_pingui_ico| GNU/Linux, you have probably Python 3 already installed by default. Check your version.
 
@@ -92,7 +92,7 @@ Installing an official release manually
 
 .. caution::
 
-    This two differents installation method, will install Jam.py in your Python global installation’s site-packages directory.
+    This two differents installation methods, will install Jam.py in your Python global installation’s site-packages directory.
 
 
 
