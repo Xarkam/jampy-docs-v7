@@ -20,51 +20,50 @@ You can do it the following way:
 Then in the ``Server module`` of the new items, add code to read and write 
 the data to the database tables.
 
-Below is the code for MySQL database (auto incremented primary field):
+Below code was tested with V7 for MySQL database (auto incremented primary field):
 
 .. code-block:: py
 
-from jam.db.mysql_db2 import db
-from jam.items import QueryData
+    from jam.db.mysql_db2 import db
+    from jam.items import QueryData
 
-    def on_open(item, params): 
-        connection = item.task.create_connection_ex(
-            db,
-            database='jam2',
-            user='jam',
-            password='jam',
-            server='localhost',
-            port='3307',
-        )
-        
-        try:
-            query_data = QueryData(params)
-            sql, sql_params = db.get_select_query(item, query_data)
-            rows = item.task.select(sql, connection, db, sql_params)
+        def on_open(item, params): 
+            connection = item.task.create_connection_ex(
+                db,
+                database='jam2',
+                user='jam',
+                password='jam',
+                server='localhost',
+                port='3307',
+            )
+            
+            try:
+                query_data = QueryData(params)
+                sql, sql_params = db.get_select_query(item, query_data)
+                rows = item.task.select(sql, connection, db, sql_params)
+            finally:
+                connection.close()
             return rows, ''
-        finally:
-            connection.close()
 
-
-    def on_apply(item, delta, params, con):
-        connection = item.task.create_connection_ex(
-            db,
-            database='jam2',
-            user='jam',
-            password='jam',
-            server='localhost',
-            port='3307',
-        )
-        try:
-            sql = delta.apply_delta(delta, params, connection, db)
-            connection.commit()
-        finally:
-            connection.close()
-        return ''
+        def on_apply(item, delta, params, con):
+            connection = item.task.create_connection_ex(
+                db,
+                database='jam2',
+                user='jam',
+                password='jam',
+                server='localhost',
+                port='3307',
+            )
+            try:
+                result = delta.apply_delta(delta, params, connection, db)
+                connection.commit()
+            finally:
+                connection.close()
+            return result
 
 
 .. note::
-  The below procedures were not tested with Jam.py V7. Only the above was.
+  The below procedures were not tested with Jam.py V7.
 
 If database use generators to get primary field values you must specify them
 for new records (Firebird):
@@ -178,6 +177,5 @@ Example for MSSQL:
   ``on_open`` and ``on_apply`` event handlers for it.
 
 .. note::
-  The above procedures were not tested with Jam.py V7.
   
-  The simple solution is to use the database synonyms.
+  The simple solution might be to use the database synonyms.
