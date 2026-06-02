@@ -17,8 +17,8 @@ You can do it the following way:
   
 * Select project node in the task tree, click **Database** button and restore previous values.
 
-Then in the ``Server module`` of the new items, add code to read and write 
-the data to the database tables.
+Then in the ``Server module`` for the new items, add code to read and write 
+the data to the database tables by using ``on_open`` and ``on_apply``.
 
 Below code was tested with V7 for MySQL database (auto incremented primary field):
 
@@ -62,10 +62,20 @@ Below code was tested with V7 for MySQL database (auto incremented primary field
             return result
 
 
-.. note::
-  The below procedures were not tested with Jam.py V7.
+Import example for MSSQL, the rest of code as for MySQL:
 
-If database use generators to get primary field values you must specify them
+.. code-block:: py
+
+    from jam.db.mssql_db1 import db
+    from jam.items import QueryData
+    ...
+
+
+
+.. note::
+  The below procedure were not tested with Jam.py V7.
+
+If database use generators to get primary field values, you must specify them
 for new records (Firebird):
 
 .. code-block:: py
@@ -110,64 +120,7 @@ for new records (Firebird):
           connection.close()
       return result
 
-You can use the task ``on_open`` and ``on_apply`` events. Below is the code
-from task Server module:
 
-.. code-block:: py
-
-  import MySQLdb
-  from jam.db import mysql
-  
-  def on_open(item, params):
-      if item.item_name in ['table1', 'table2']: # or
-      #if item.table_name in ['table1', 'table2']:
-        connection = item.task.create_connection_ex(mysql, database='demo', \
-            user='root', password='111', host='localhost', encoding='UTF8')
-        try:
-            sql = item.get_select_query(params, mysql)
-            rows = item.task.select(sql, connection, mysql)
-        finally:
-            connection.close()
-        return rows, ''
-  
-  def on_apply(item, delta, params):
-      if item.item_name in ['table1', 'table2']:  
-        connection = item.task.create_connection_ex(mysql, database='demo', \
-            user='root', password='111', host='localhost', encoding='UTF8')
-        try:
-            sql = delta.apply_sql(params, mysql)
-            result = item.task.execute(sql, None, connection, mysql)
-        finally:
-            connection.close()
-        return result
-
-
-Example for MSSQL:
-
-.. code-block:: py
-
-      import pymssql
-      from jam.db import mssql
-      
-      def on_open(item, params):
-          connection = item.task.create_connection_ex(mssql, database='jam7', \
-              user='sa', password='password', server='127.0.0.1', port='1433')
-          try:
-              sql = item.get_select_query(params, mssql)
-              rows = item.task.select(sql, connection, mssql)
-          finally:
-              connection.close()
-          return rows, ''
-      
-      def on_apply(item, delta, params):
-          connection = item.task.create_connection_ex(mssql, database='jam7', \
-              user='sa', password='password', server='127.0.0.1', port='1433')
-          try:
-              sql = delta.apply_sql(params, mssql)
-              result = item.task.execute(sql, None, connection, mssql)
-          finally:
-              connection.close()
-          return result
 
 .. note::
   Do not set History attribute to True for this tables. If you do so you'll get
