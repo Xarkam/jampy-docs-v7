@@ -24,28 +24,47 @@ Below is the code for MySQL database (auto incremented primary field):
 
 .. code-block:: py
 
-  import MySQLdb
-  from jam.db import mysql
-  
-  def on_open(item, params):
-      connection = item.task.create_connection_ex(mysql, database='demo', \
-          user='root', password='111', host='localhost', encoding='UTF8')
-      try:
-          sql = item.get_select_query(params, mysql)
-          rows = item.task.select(sql, connection, mysql)
-      finally:
-          connection.close()
-      return rows, ''
-  
-  def on_apply(item, delta, params):
-      connection = item.task.create_connection_ex(mysql, database='demo', \
-          user='root', password='111', host='localhost', encoding='UTF8')
-      try:
-          sql = delta.apply_sql(params, mysql)
-          result = item.task.execute(sql, None, connection, mysql)
-      finally:
-          connection.close()
-      return result
+from jam.db.mysql_db2 import db
+from jam.items import QueryData
+
+    def on_open(item, params): 
+        connection = item.task.create_connection_ex(
+            db,
+            database='jam2',
+            user='jam',
+            password='jam',
+            server='localhost',
+            port='3307',
+        )
+        
+        try:
+            query_data = QueryData(params)
+            sql, sql_params = db.get_select_query(item, query_data)
+            rows = item.task.select(sql, connection, db, sql_params)
+            return rows, ''
+        finally:
+            connection.close()
+
+
+    def on_apply(item, delta, params, con):
+        connection = item.task.create_connection_ex(
+            db,
+            database='jam2',
+            user='jam',
+            password='jam',
+            server='localhost',
+            port='3307',
+        )
+        try:
+            sql = delta.apply_delta(delta, params, connection, db)
+            connection.commit()
+        finally:
+            connection.close()
+        return ''
+
+
+.. note::
+  The below procedures were not tested with Jam.py V7. Only the above was.
 
 If database use generators to get primary field values you must specify them
 for new records (Firebird):
@@ -93,7 +112,7 @@ for new records (Firebird):
       return result
 
 You can use the task ``on_open`` and ``on_apply`` events. Below is the code
-from task client module:
+from task Server module:
 
 .. code-block:: py
 
