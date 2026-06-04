@@ -10,12 +10,18 @@ You can do it the following way:
 
 * Select project node in the task tree and click **Database** button.
 
-* Set DB manual mode and specify the database connection attributes.
+* Set DB manual mode.
+
+* Specify the database connection attributes for external database table.
 
 * Import tables information as described in the
-  :doc:`Integration with existing database </admin/integration_with_existing_database>`
-  
+  :doc:`Integration with existing database </admin/integration_with_existing_database>`. 
+    
 * Select project node in the task tree, click **Database** button and restore previous values.
+
+
+*The other method is to manually create each table and fields, with DB manual mode set.*
+
 
 Then in the ``Server module`` for the new items, add code to read and write 
 the data to the database tables by using ``on_open`` and ``on_apply``.
@@ -73,7 +79,7 @@ Import example for MSSQL, the rest of code as for MySQL:
 
 
 .. note::
-  The below procedure were not tested with Jam.py V7.
+  The below procedure was not tested with Jam.py V7.
 
 If database use generators to get primary field values, you must specify them
 for new records (Firebird):
@@ -129,6 +135,4 @@ for new records (Firebird):
   You can try to create the history table in the other database and write the
   ``on_open`` and ``on_apply`` event handlers for it.
 
-.. note::
-  
-  The simple solution might be to use the database synonyms.
+

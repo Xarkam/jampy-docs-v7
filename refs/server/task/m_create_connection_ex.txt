@@ -2,7 +2,6 @@
 create_connection_ex
 ====================
 
-TBA - changed from Jam.py v5. Awaiting for v7 pull request.
 
 .. py:method:: create_connection_ex(self, db_module, database, user=None, password=None, host=None, port=None, encoding=None, server=None)
 

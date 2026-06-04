@@ -26,7 +26,7 @@ Expected result::
 
     Python 3.14.4
 
-|tip_ico| **Tip:** If you want fully informations about your Python version, don't use the ``--version`` option in previous commands.
+|tip_ico| **Tip:** If you want fully information about your Python version, don't use the ``--version`` option in previous commands.
 
    Expected result::
 
