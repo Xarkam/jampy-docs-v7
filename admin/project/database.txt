@@ -175,4 +175,14 @@ Databricks
    in the ``Database`` field. This is visible on the screenshot as 
    ``samples.bakehouse`` in the upper right corner.
    
-   Not all DDL is supported.
+   Not all DDL is supported as well as project Import with the selected Databricks database.
+
+
+DuckDB
+----------
+
+.. note::
+   Parquet database example: ``flights.parquet``.
+
+   No DDL is supported as well as project Import with the selected DuckDB database.
+
