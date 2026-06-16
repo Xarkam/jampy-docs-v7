@@ -44,6 +44,8 @@ The result of the execution of following code snippets wil be the same:
 See also
 ========
 
+:doc:`Filtering records </programming/data/filtering_records>`
+
 :doc:`Dataset </programming/data/dataset>`
 
 :doc:`open <m_open>`

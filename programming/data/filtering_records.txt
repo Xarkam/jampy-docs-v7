@@ -107,6 +107,8 @@ See also
 
 :doc:`Filters <filters>`
 
+:doc:`How to link two tables </how_to/how_to_link_two_tables>`
+
 Client
 ------
 
