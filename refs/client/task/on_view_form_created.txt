@@ -23,8 +23,12 @@ This event, if defined, is triggered for every item of the task, whose
 :doc:`view </refs/client/item/m_view>`
 method has been called.
 
+This is one of the most used ``Jam.py`` function.
+
 See also
 ========
+
+:doc:`How to link two tables </how_to/how_to_link_two_tables>`
 
 :doc:`Forms </programming/interface/forms>`
 
