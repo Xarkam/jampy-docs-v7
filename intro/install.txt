@@ -7,7 +7,7 @@ Installation
 ============
 
 |python_ico| Install Python
-==============
+===========================
 
 Jam.py V7 requires Python 3. If it is not installed you can get the latest
 version of Python at https://www.python.org/download/
@@ -40,7 +40,7 @@ Install Jam.py
 ====================
 
 |windows_logo_ico| Jam.py on Windows
------------------
+------------------------------------
 
 If you are just starting with Jam.py and using Windows, you may find
 :doc:`How to install Jam.py on Windows <../how_to/how_to_install_on_windows>` useful.
@@ -96,7 +96,7 @@ Installing an official release manually
 
 
 
-Upgrading 
+Upgrading
 ----------
 
 If you installed Jam.py from pip, you can simply upgrade it with::

@@ -146,7 +146,10 @@ language = "en"
 
 # directories to ignore when looking for source files.
 
-exclude_patterns = ['_build']
+exclude_patterns = [
+    '_build',
+    'requirements.txt'
+]
 
 
 
@@ -581,12 +584,12 @@ def linkcode_resolve(domain, info):
     """Map specific exceptions to specific files."""
     if domain != 'py':
         return None
-    
+
     mapping = {
         'LanguageNotFound': 'https://github.com/jam-py-v5/jam-py-v7/blob/master/jam/langs.py',
         'NetworkError': 'https://github.com/username/repo/blob/main/network.py',
         'FileError': 'https://github.com/username/repo/blob/main/file_ops.py',
     }
-    
+
     exception_name = info['fullname']
     return mapping.get(exception_name)
