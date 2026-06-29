@@ -2,12 +2,11 @@
 Authentication
 ==============
 
-In the Jam.py repository there is the "Authentication" project 
-:doc:`export </admin/project/export>`
-file.
-This project demonstrates the first three topics of this section. 
 
-https://jam-py.com/repository/auth.zip
+This :doc:`export </admin/project/export>`  demonstrates the first three topics of this section:
+
+
+   :download:`auth.zip <../../_static/auth.zip>`
 
 You can download it, create a new project and 
 :doc:`import </admin/project/import>`
