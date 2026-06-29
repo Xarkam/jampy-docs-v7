@@ -26,7 +26,7 @@ Expected result::
 
     Python 3.14.4
 
-|tip_ico| **Tip:** If you want fully information about your Python version, don't use the ``--version`` option in previous commands.
+|tip_ico| **Tip:** If you want full information about your Python version, don't use the ``--version`` option in previous commands.
 
    Expected result::
 
@@ -99,7 +99,7 @@ Installing an official release manually
 Upgrading 
 ----------
 
-If you installed Jam.py from pip you can simply upgrade it with::
+If you installed Jam.py from pip, you can simply upgrade it with::
 
     python -m pip install --upgrade jam.py-v7
 

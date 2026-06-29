@@ -15,7 +15,7 @@ In Jam.py v7, the solution is to process every request in the ``on_request`` eve
 
 This enables us to do a custom login and registration forms, where custom errors can be created. For example: "User does not exist!", "Wrong password", etc.
 
-The new **login.html** page with the error message:
+Example of the **login.html** page with the error message:
 
 
 .. image:: /admin/_images/custom_login_error_jampy.png
@@ -36,7 +36,7 @@ Routing code
 
 As mentioned, the ``on_request`` is used.
 
-The below code should exist on "Task/Server Module". This example exists in the Northwind application:
+The similar code should exist on "Task/Server Module". This example exists in the Northwind application, as well as ``login.html`` and ``reset_pass.html`` files:
 
 .. code-block:: Python
 
@@ -103,6 +103,10 @@ The below code should exist on "Task/Server Module". This example exists in the 
             return err_mess
 
 
+The files should exist within the application folder.
+
+
+
 The working example for serving robots.txt file:
 
 .. code-block:: Python
@@ -119,6 +123,8 @@ The working example for serving robots.txt file:
 	            return task.serve_page('robots.txt')
 
 The ``robots.txt`` file should exist within the application folder.
+
+
 
 See also
 ========

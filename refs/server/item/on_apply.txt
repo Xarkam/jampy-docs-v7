@@ -2,7 +2,7 @@
 on_apply
 ========
 
-on_apply(self, delta, params, connection)
+on_apply(item, delta, params, connection)
 
 **domain**: server
 
@@ -41,7 +41,7 @@ log. The nature of the record change can be obtained by using following methods:
 * ``rec_modified`` 
 * ``rec_deleted``
   
-each of which returns a value of ``True``, if the record is added, modified or 
+Each method returns a value of ``True``, if the record is added, modified or 
 deleted, respectively. 
 
 If the item has a detail items, delta also has a corresponding detail items, 

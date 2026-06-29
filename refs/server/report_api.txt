@@ -8,12 +8,10 @@ Report class
 
 **language**: python
 
-Report class inherits 
-
-Below the attributes, methods and events of the class are listed.
+Report class inherits attributes, methods and events of the class are listed below.
 
 It, as well, inherits attributes and methods of its ancestor class
-:doc:`AbstractItem class <abstractitem_api>`
+:doc:`AbstractItem class <abstractitem_api>`.
 
 Attributes
 ==========

@@ -25,6 +25,8 @@ The **on_view_form_created** code is used in the
 See also
 ========
 
+:doc:`How to link two tables </how_to/how_to_link_two_tables>`
+
 :doc:`Forms </programming/interface/forms>`
 
 :doc:`view <m_view>`

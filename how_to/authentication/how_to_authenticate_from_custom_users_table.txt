@@ -25,16 +25,15 @@ We also created the
 
 We added to it the same roles (ids and names) as in the table
 :doc:`Roles </admin/roles>`
-We 'll have to sycronize this roles in the future.
+We 'll have to synchronise this roles in the future.
 
 .. image:: /how_to/_images/roles_lookup_list_jampy.png
 	:align: center
 	:alt: roles_lookup_list_jampy.png
 
 In the 
-:doc:`Roles </admin/roles>`
-it is necessary to allow view the **Users** item only people that will be 
-responsible for it
+:doc:`Roles </admin/roles>`,
+it is necessary to allow viewing the **Users** item only for people view access for it.
 
 We removed password_hash field from field lists in the
 :doc:`View Form Dialog </admin/items/view_form_dialog>`
@@ -68,7 +67,7 @@ raise the exception if such user exists, otherwise we generate hash using the
 method of the task and set the password value to None.
 
 In the client module we defined the following on_field_get_text event handler.
-It displays '**********' string insted of the password.
+It displays '**********' string instead of the password.
 
 .. code-block:: js
 
@@ -102,7 +101,7 @@ event handler in the task server module:
 
 Now we must add an admin to **Users** that has rights to work with users.
 After that we can set Safe mode in the project
-:doc:`Parameters </admin/project/parameters>` 
+:doc:`Parameters </admin/project/parameters>`.
 
 
 

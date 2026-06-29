@@ -128,10 +128,19 @@ Interface tab for FILE field
 * **Accept** - the attribute specifies the types of files that can be loaded. 
   This is an :doc:`Accept string </admin/accept_string>`. 
 
+* **Help** - if any text / html-message is specified, a question mark will be 
+  displayed to the right of the input, so when the user moves the mouse pointer 
+  over this mark, a pop-up window appears displaying this message.
+
 
 .. image:: /admin/_images/file_btns_jampy.png
 	:align: center
 	:alt: file_btns_jampy.png  
+
+
+
+**Upload btn** is always displayed (left).
+
 
 .. note::
 
@@ -186,6 +195,4 @@ Calculation tab
 
 * **Function**  - specifies the server side functions (SUM, COUNT, MIN, MAX, AVG).
 
-* **Help** - if any text / html-message is specified, a question mark will be 
-  displayed to the right of the input, so when the user moves the mouse pointer 
-  over this mark, a pop-up window appears displaying this message.
+

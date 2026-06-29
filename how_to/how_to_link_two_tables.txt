@@ -299,3 +299,13 @@ In a similar way we could link ``Tracks`` with ``Customers`` items from the Demo
                 );
             }
         }
+
+
+The variation of ``item.invoices.set_where({customer__contains: item.lastname.value});`` in the above code will produce different results.
+
+
+See also
+========
+
+:doc:`Filtering records </programming/data/filtering_records>`
+

@@ -31,6 +31,7 @@ Below code was tested with V7 for MySQL, MSSQL and PostgreSQL database (auto inc
 
 .. code-block:: py
 
+    import mysql-connector-python
     from jam.db.mysql_db2 import db
     from jam.items import QueryData
 
@@ -73,6 +74,7 @@ Import example for MSSQL, the rest of code as for MySQL:
 
 .. code-block:: py
 
+    import pymssql
     from jam.db.mssql_db1 import db
     from jam.items import QueryData
     ...
@@ -82,6 +84,7 @@ Import example for PostgreSQL, the rest of code as for MySQL:
 
 .. code-block:: py
 
+    import psycopg2-binary
     from jam.db.postgres_db import db
     from jam.items import QueryData
 
