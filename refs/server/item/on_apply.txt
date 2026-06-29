@@ -56,9 +56,6 @@ storing detail changes.
     You do not need to open delta detail after the cursor has been moved to 
     another record.
 
-Delta dataset fields have an old_value attribute that can be used to get the 
-value of a field before changes have been made.
-
 
 Fields of the delta dataset have an ``old_value`` attribute that can be used to 
 get the value of a field before changes have been made.
