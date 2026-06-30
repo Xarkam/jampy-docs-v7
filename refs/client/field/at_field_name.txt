@@ -2,13 +2,13 @@
 field_name
 ==========
 
-.. js:attribute:: field_name
+.. js:attribute:: Field.field_name
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Field class </refs/client/field_api>`
+**class** :js:class:`Field`
 
 
 Description
@@ -20,10 +20,16 @@ Use **field_name** to refer to the field in code.
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+**Related attributes**
 
-:doc:`Fields </programming/data/fields>`
+:js:attr:`field_caption <Field.field_caption>`
 
-:doc:`field_caption <at_field_caption>`
+**Related concepts**
+
+* :doc:`Dataset </programming/data/dataset>`
+* :doc:`Fields </programming/data/fields>`
+
+
+
 
 

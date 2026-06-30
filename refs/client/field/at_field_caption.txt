@@ -2,28 +2,33 @@
 field_caption
 =============
 
-.. js:attribute:: field_caption
+.. js:attribute:: Field.field_caption
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Field class </refs/client/field_api>`
+**class** :js:class:`Field`
 
 
 Description
 ===========
 
-**Field_caption** attribute specifies the name of the field that appears to 
+**Field_caption** attribute specifies the name of the field that appears to
 users.
 
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+**Related attributes**
 
-:doc:`Fields </programming/data/fields>`
+:js:attr:`field_name <Field.field_name>`
 
-:doc:`field_name <at_field_name>`
+**Related concepts**
+
+* :doc:`Dataset </programming/data/dataset>`
+* :doc:`Fields </programming/data/fields>`
+
+
 
 

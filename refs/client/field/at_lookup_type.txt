@@ -2,30 +2,31 @@
 lookup_type
 ===========
 
-.. js:attribute:: lookup_type
+.. js:attribute:: Field.lookup_type
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Field class </refs/client/field_api>`
+**class** :js:class:`Field`
 
 
 Description
 ===========
 
-For 
-:doc:`lookup fields </programming/data/lookup_fields>` 
-identifies the type of the 
-:doc:`lookup_value <at_lookup_value>`,
-otherwise returns the value of 
-:doc:`field_type <at_field_type>`
+For
+:doc:`lookup fields </programming/data/lookup_fields>`
+identifies the type of the
+:js:attr:`lookup_value <Field.lookup_value>`,
+otherwise returns the value of
+:js:attr:`field_type <Field.field_type>`
 attribute.
 
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+**Related concepts**
 
-:doc:`Fields </programming/data/fields>`
+* :doc:`Dataset </programming/data/dataset>`
+* :doc:`Fields </programming/data/fields>`
 

@@ -2,9 +2,9 @@
 item_caption
 ============
 
-.. js:attribute:: item_caption
+.. js:attribute:: Field.item_caption
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 

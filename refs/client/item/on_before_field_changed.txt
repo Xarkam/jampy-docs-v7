@@ -2,28 +2,28 @@
 on_before_field_changed
 =======================
 
-on_before_field_changed(field)
+.. js:function:: Item.on_before_field_changed(field)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Item class </refs/client/item_api>`
+**class** :js:class:`Item`
 
 Description
 ===========
 
-Write an ``on_before_field_changed`` event handler to implement any special 
+Write an ``on_before_field_changed`` event handler to implement any special
 processing before field’s data has been changed.
 
-The ``field`` parameter is the field whose data is about to be changed. To get the 
-item that owns the field, use the 
-:doc:`owner </refs/client/field/at_owner>` 
+The ``field`` parameter is the field whose data is about to be changed. To get the
+item that owns the field, use the
+:js:attr:`owner <Field.owner>`
 attribute of the field.
 
-Before triggering this event handler the application assigns the new value that is 
-about to be set to the ``new_value`` attribute to of the field. You can change 
-the value of this attribute. This value will be used to change field’s data. 
+Before triggering this event handler the application assigns the new value that is
+about to be set to the ``new_value`` attribute to of the field. You can change
+the value of this attribute. This value will be used to change field’s data.
 
 
 Example
@@ -40,9 +40,14 @@ Example
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+**Related attributes**
 
-:doc:`value </refs/client/field/at_value>`
+* :js:attr:`value <Field.value>`
 
-:doc:`on_before_field_changed <on_before_field_changed>`
+**Related events**
 
+* :js:func:`on_before_field_changed <Item.on_before_field_changed>`
+
+**Related concepts**
+
+* :doc:`Fields </programming/data/fields>`

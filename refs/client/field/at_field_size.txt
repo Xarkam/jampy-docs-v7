@@ -2,13 +2,13 @@
 field_size
 ==========
 
-.. js:attribute:: field_size
+.. js:attribute:: Field.field_size
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Field class </refs/client/field_api>`
+**class** :js:class:`Field`
 
 
 Description
@@ -19,6 +19,7 @@ Identifies the size of the text field object.
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+**Related concepts**
 
-:doc:`Fields </programming/data/fields>`
+* :doc:`Dataset </programming/data/dataset>`
+* :doc:`Fields </programming/data/fields>`

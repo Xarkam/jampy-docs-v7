@@ -2,11 +2,11 @@
 owner
 =====
 
-Indicates the item that owns this item. 
+Indicates the item that owns this item.
 
-.. js:attribute:: owner
+.. js:attribute:: AbstractItem.owner
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
@@ -15,4 +15,4 @@ Indicates the item that owns this item.
 Description
 ===========
 
-Use owner to find the owner of an item. 
+Use owner to find the owner of an item.

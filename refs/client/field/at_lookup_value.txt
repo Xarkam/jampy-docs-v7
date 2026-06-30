@@ -2,35 +2,38 @@
 lookup_value
 ============
 
-.. js:attribute:: lookup_value
+.. js:attribute:: Field.lookup_value
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Field class </refs/client/field_api>`
+**class** :js:class:`Field`
 
 
 Description
 ===========
 
-Use **lookup_value** property to get the lookup value of the 
+Use **lookup_value** property to get the lookup value of the
 :doc:`lookup field </programming/data/lookup_fields>`
 
-If the field is 
-:doc:`lookup field </programming/data/lookup_fields>` 
-gives its lookup value, 
-otherwise gives the value of the 
-:doc:`value <at_value>`
+If the field is
+:doc:`lookup field </programming/data/lookup_fields>`
+gives its lookup value,
+otherwise gives the value of the
+:js:attr:`value <Field.value>`
 property
 
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+**Related attributes**
 
-:doc:`Lookup fields </programming/data/lookup_fields>`
+* :js:attr:`lookup_value <Field.lookup_value>`
+* :js:attr:`lookup_text <Field.lookup_text>`
 
-:doc:`lookup_value <at_lookup_value>`
+**Related concepts**
 
-:doc:`lookup_text <at_lookup_text>`
+* :doc:`Fields </programming/data/fields>`
+* :doc:`Lookup fields </programming/data/lookup_fields>`
+

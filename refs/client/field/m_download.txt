@@ -2,13 +2,13 @@
 download
 ========
 
-.. js:function:: download() 
+.. js:function:: Field.download()
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Field class </refs/client/field_api>`
+**class** :js:class:`Field`
 
 Description
 ===========
@@ -22,6 +22,6 @@ Example
 
   function on_view_form_created(item) {
     item.add_view_button('Download').click(function() {
-       item.attachment.download(); 
+       item.attachment.download();
     });
   }
