@@ -8,7 +8,7 @@ open
 
 **language**: javascript
 
-**class** :js:class:`Field`
+**class**: :js:class:`Field`
 
 Description
 ===========

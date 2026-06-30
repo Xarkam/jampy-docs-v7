@@ -8,7 +8,7 @@ display_text
 
 **language**: javascript
 
-**class** :js:class:`Field`
+**class**: :js:class:`Field`
 
 
 Description
@@ -16,10 +16,10 @@ Description
 
 Represents the field's value as a string.
 
-**Display_text** property is a read-only string representation of a field's value
+**Display_text** property is a *read-only* string representation of a field's value
 to display in a data-aware control. If an
 :js:func:`on_field_get_text <Item.on_field_get_text>`
-event handler is assigned, **display_text** is the value returned by this event
+event handler is assigned, :guilabel:`display_text` is the value returned by this event
 handler. Otherwise, display_text is the value of the
 :js:attr:`lookup_text <Field.lookup_text>`
 property for
