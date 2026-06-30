@@ -2,13 +2,13 @@
 filter_name
 ===========
 
-.. js:attribute:: filter_name
+.. js:attribute:: Filter.filter_name
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Filter class </refs/client/filter_api>`
+**class**: :js:class:`Filter`
 
 
 Description
@@ -20,11 +20,14 @@ Use **filter_name** to refer to the field in code.
 See also
 ========
 
-:doc:`Filters </programming/data/filters>`
+**Related attributes**
 
-:doc:`filter_caption <at_filter_caption>`
+* :js:attr:`filter_caption <Filter.filter_caption>`
 
-:doc:`Dataset </programming/data/dataset>`
+**Related concepts**
+
+* :doc:`Filters </programming/data/filters>`
+* :doc:`Dataset </programming/data/dataset>`
 
 
 

@@ -2,13 +2,13 @@
 visible
 =======
 
-.. js:attribute:: visible
+.. js:attribute:: Filter.visible
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Filter class </refs/client/filter_api>`
+**class**: :js:class:`Filter`
 
 
 Description
@@ -23,8 +23,11 @@ method, if the **filters** option in not specified.
 See also
 ========
 
+**Related attributes**
+
+:js:attr:`value <Filter.value>`
+
+**Related concepts**
+
 :doc:`Filters </programming/data/filters>`
-
-:doc:`value <at_value>`
-
 :doc:`Dataset </programming/data/dataset>`
