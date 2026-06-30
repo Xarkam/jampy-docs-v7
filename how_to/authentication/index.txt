@@ -11,7 +11,8 @@ This :doc:`export </admin/project/export>`  demonstrates the first three topics 
 You can download it, create a new project and 
 :doc:`import </admin/project/import>`
 this file. 
-
+The export has `index.html`, `login.html` and `register.html` used for custom authentication, 
+as well as ``forgotten password`` checkbox and a Theme selector.
 
 .. toctree::
     :maxdepth: 1

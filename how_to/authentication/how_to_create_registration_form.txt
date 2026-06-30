@@ -2,13 +2,11 @@
 How to create registration form
 ===============================
 
-This part is relevant for Jam.py V5. For V7, please visit:
 
-https://groups.google.com/g/jam-py/c/DwALkbBsFcw/m/MujcOlgYAAAJ
 
-or download example from here:
+Download example from here:
 
-https://drive.google.com/file/d/1Gty1bC2I3srFo9XeQ0dXdAdnYeJbwoeB/view?usp=drive_link
+   :download:`auth.zip <../../_static/auth.zip>`
 
 
 In this topic we'll assume that you have created a :doc:`users </how_to/authentication/how_to_authenticate_from_custom_users_table>` item from the 
@@ -20,136 +18,114 @@ It contains a registration form:
 
 .. code-block:: html
 
-  <form id="login-form" target="dummy" class="form-horizontal" style="margin: 0;">
-      <div class="control-group">
-          <label class="control-label" for="name">Name</label>
-          <div class="controls">
-              <input type="text" id="name" placeholder="Login">
-          </div>
-      </div>
-      <div class="control-group">
-          <label class="control-label" for="login">Login</label>
-          <div class="controls">
-              <input type="text" id="login" placeholder="Login">
-          </div>
-      </div>
-      <div class="control-group">
-          <label class="control-label" for="password1">Password</label>
-          <div class="controls">
-              <input type="password" id="password1" 
-              placeholder="Password" autocomplete="on">
-          </div>
-      </div>
-      <div class="control-group">
-          <label class="control-label" for="password2">Repeat password</label>
-          <div class="controls">
-              <input type="password" id="password2" 
-              placeholder="Repeat password" autocomplete="on">
-          </div>
-      </div>
-      <div class="alert alert-success" style="margin: 0; display: none">
-          You have been successfuly registered.
-      </div>
-      <div class="alert alert-error" style="margin: 0; display: none">
-      </div>
-      <div class="form-footer">
-          <input type="button" class="btn expanded-btn pull-right" 
-          id="register-btn" value="OK" tabindex="3">
-      </div>
-  </form>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+			        <div class ="modal-header">
+				        <h5>Register form</h5>
+			        </div>
+                    <form class="form-horizontal" action="" method="post">
+				        <div class="modal-body">
+					        <div class="mb-3">
+						        <label for="name" class="form-label">Name</label>
+						        <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="%(name)s" required>
+					        </div>
+					        <div class="mb-3">
+						        <label for="login" class="form-label">Login</label>
+						        <input type="text" class="form-control" name="login" id="login" placeholder="Login" value="%(login)s" required>
+					        </div>
+					        <div class="mb-3">
+						        <div class="col-sm">
+							        <label for="password" class="form-label">Password</label>
+							        <div class="input-group">
+								        <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="%(password)s" required>
+								        <button class="btn btn-outline" type="button" id="toggle_password" tabindex="-1">
+									        <i class="bi bi-eye-fill"></i>
+								        </button>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="mb-3">
+						        <div class="col-sm">
+							        <label for="password2" class="form-label">Repeat password</label>
+							        <div class="input-group">
+								        <input type="password" class="form-control" name="password2" id="password2" placeholder="Repeat password" value="%(password2)s" required>
+								        <button class="btn btn-outline" type="button" id="toggle_password_2" tabindex="-1">
+									        <i class="bi bi-eye-fill"></i>
+								        </button>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="alert alert-danger d-none" role="alert" style="margin: 0;">
+						        %(error)s
+					        </div>
+					        <div class="modal-footer">
+						        <input class="btn btn-primary px-4" type="submit" value="OK">
+                            </div>
+				        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 and a javascript code:
 
 .. code-block:: js
 
-  $(document).ready(function(){
+            $(document).ready(function(){
+                var errorText = $("div.alert-danger").text().trim();
+                if(errorText !== ""){
+                    $("div.alert-danger").removeClass("d-none");
+                }
+            });
+	        
+	        $('#toggle_password').click(function() {
+                const passwordInput = $('#password');
+                const type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+			        passwordInput.attr('type', type);
+                    $(this).html(type === 'password' ? '<i class="bi bi-eye-fill"></i>' : '<i class="bi bi-eye-slash-fill"></i>');
+            });
+	        
+	        $('#toggle_password_2').click(function() {
+                const passwordInput = $('#password2');
+                const type = passwordInput.attr('type') === 'password2' ? 'text' : 'password2';
+			        passwordInput.attr('type', type);
+                    $(this).html(type === 'password2' ? '<i class="bi bi-eye-fill"></i>' : '<i class="bi bi-eye-slash-fill"></i>');
+            });
 
-      function register(name, login, password) {
-          $.ajax({
-              url: "ext/register",
-              type: "POST",
-              contentType: "application/json;charset=utf-8",
-              data: JSON.stringify([name, login, password]),
-              success: function(response, textStatus, jQxhr) {
-                  if (response.result.data) {
-                      show_alert(response.result.data);
-                  }
-                  else {
-                      $("div.alert-success").show();
-                      setTimeout(
-                          function() {
-                              window.location.href = "index.html";
-                          },
-                          1000
-                      );
-                  }
-              },
-              error: function(jqXhr, textStatus, errorThrown) {
-                  console.log(errorThrown);
-              }
-          });
-      }
-      function show_alert(message) {
-          $("div.alert-error")
-              .text(message)
-              .show();
-      }
 
-      $('input').focus(function() {
-          $("div.alert").hide();
-      });
 
-      $("#register-btn").click(function() {
-          var name = $("#name").val(),
-              login = $("#login").val(),
-              password1 = $("#password1").val(),
-              password2 = $("#password2").val();
-          if (!name) {
-              show_alert('Name is not specified');
-          }
-          else if (!login) {
-              show_alert('Login is not specified');
-          }
-          else if (!password1) {
-              show_alert('Password is not specified');
-          }
-          else if (password1 !== password2) {
-              show_alert('Passwords do not match');
-          }
-          else {
-              register(name, login, password1)
-          }
-      })
-  })
-
-When the user clicks on the **OK** button, the javascript will send to the 
-server the ajax post request with url "ext/register" and parameters 
-"name, login, password".
-
-When server receives the request starting with 'ext/' it triggers the 
-:doc:`on_ext_request </refs/server/task/on_ext_request>`
-event.
-
-The task server module has the following ``on_ext_request`` event handler:
+The task server module has the following ``on_request`` event handler:
 
 .. code-block:: py
 
-  def on_ext_request(task, request, params):
-      reqs = request.split('/')
-      if reqs[2] == 'register':
-          name, login, password = params
-          users = task.users.copy(handlers=False)
-          users.set_where(login=login)
-          users.open()
-          if users.rec_count:
-              return 'Existing login, please use different login'
-          users.append()
-          users.name.value = name
-          users.login.value = login
-          users.password_hash.value = task.generate_password_hash(password)
-          users.role.value = 2
-          users.post()
-          users.apply()
+  def on_request(task, request):
+        parts = request.split('/')
+        if not parts[0]:
+            ...
+        elif parts[0] == 'register.html':
+            if request.method == 'POST':
+                form = request.form.to_dict()
+                if form['password'] != form['password2']:
+                    return task.serve_page('register.html', 
+                        register_format("Passwords don't match", form))
+                else:
+                    users = task.users.copy(handlers=False)
+                    users.set_where(login=form['login'])
+                    users.open()
+                    if users.rec_count:
+                        return task.serve_page('register.html', 
+                            register_format("Existing login, please use different login!!!", form))
+                    users.append()
+                    users.name.value = form['name']
+                    users.login.value = form['login']
+                    users.password_hash.value = task.generate_password_hash(form['password'])
+                    users.role.value = 2
+                    users.post()
+                    users.apply()
+                    return task.redirect('/login.html')
+            else:
+                return task.serve_page('register.html', register_format())
 
 It checks if there is 'register' in url and then looks if there is no user 
 with the login and then register the user.
@@ -158,6 +134,6 @@ with the login and then register the user.
 See also
 ========
 
-:doc:`on_ext_request </refs/server/task/on_ext_request>`
+:doc:`on_request </refs/server/task/on_request>`
 
 

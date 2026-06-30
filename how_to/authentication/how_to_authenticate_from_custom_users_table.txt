@@ -47,19 +47,32 @@ event handler:
 
 .. code-block:: py
 
-  def on_apply(item, delta, params, connection):
-      for d in delta:
-          if not (d.rec_deleted() or d.rec_modified() and d.login.value == d.login.old_value):
-              users = d.task.users.copy(handlers=False)
-              users.set_where(login=d.login.value)
-              users.open(fields=['login'])
-              if users.rec_count:
-                  raise Exception('There is a user with this login - %s' % d.login.value)
-          if d.password.value:
-              d.edit();
-              d.password_hash.value = delta.task.generate_password_hash(d.password.value)
-              d.password.value = None
-              d.post();
+        def on_before_apply_record(item, delta, params, connection):
+            # if the record is deleted, then we proceed in the standard way
+            # otherwise event handler returns False, which means we will not save the delta in the standard way
+            if not delta.rec_deleted():
+                users = task.users.copy(handlers=False)
+                users.set_where(login=delta.login.value)
+                users.open()
+                if users.rec_count:
+                     if delta.rec_inserted() or delta.login.value != delta.login.cur_value:
+                        raise Exception('There is a user with this login - %s' % delta.login.value)
+                if delta.rec_inserted():
+                    users.append()
+                else:
+                    users.set_where(id=delta.id.value)
+                    users.open()
+                users.name.value = delta.name.value        
+                users.login.value = delta.login.value
+                users.role.value = delta.role.value
+                users.email.value = delta.email.value
+                users.password_hash.value = task.generate_password_hash(delta.password.value)
+                users.apply()
+                # delta is returned to the client and updates the record data (we don’t have to call refresh_record)
+                # do we assign to delta's id the id of users
+                delta.id.value = users.id.value
+                return False
+
 
 In this event handler we check if there is a users with the same login and
 raise the exception if such user exists, otherwise we generate hash using the
@@ -86,18 +99,19 @@ event handler in the task server module:
 
 .. code-block:: py
 
-  def on_login(task, form_data, info): 
-      users = task.users.copy(handlers=False)
-      users.set_where(login=form_data['login'])
-      users.open()
-      if users.rec_count == 1:
-          if task.check_password_hash(users.password_hash.value, form_data['password']):
-              return {
-                  'user_id': users.id.value,
-                  'user_name': users.name.value,
-                  'role_id': users.role.value,
-                  'role_name': users.role.display_text
-              }
+          def on_login(task, form_data, info): 
+                users = task.users.copy(handlers=False)
+                users.set_where(login=form_data['login'])
+                users.open()
+                if users.rec_count == 1:
+                    if task.check_password_hash(users.password_hash.value, form_data['password']):
+                        return {
+                            'user_id': users.id.value,
+                            'user_name': users.name.value,
+                            'role_id': users.role.value,
+                            'role_name': users.role.display_text
+                        }
+
 
 Now we must add an admin to **Users** that has rights to work with users.
 After that we can set Safe mode in the project
@@ -106,4 +120,10 @@ After that we can set Safe mode in the project
 
 
 
+See also
+========
+
+:doc:`on_before_apply_record </refs/server/item/on_before_apply_record>`
+
+:doc:`on_login </refs/server/task/on_login>`
 
