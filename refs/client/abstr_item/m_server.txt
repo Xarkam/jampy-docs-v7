@@ -4,11 +4,9 @@ server
 
 .. js:function:: AbstractItem.server(func_name, params, callback)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

@@ -4,11 +4,9 @@ item_by_ID
 
 .. js:function:: AbstractItem.item_by_ID(ID)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

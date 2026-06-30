@@ -4,11 +4,9 @@ each_item
 
 .. js:function:: AbstractItem.each_item(function(item))
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

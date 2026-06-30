@@ -4,17 +4,16 @@ Group class
 
 .. js:class:: Group
 
-**domain**: client 
+    :domain: client
+    :language: javascript
 
-**language**: javascript
-
-Group class is used to create group objects of the 
+Group class is used to create group objects of the
 :doc:`task tree </programming/task_tree>`
 
 Below the events of the class are listed.
 
 It, as well, inherits attributes and methods of its ancestor class
-:doc:`AbstractItem class <abstractitem_api>`
+:js:class:`AbstractItem`
 
 Events
 ======
@@ -22,5 +21,5 @@ Events
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     group/on_*

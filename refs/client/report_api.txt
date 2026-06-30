@@ -4,16 +4,15 @@ Report class
 
 .. js:class:: Report
 
-**domain**: client 
+    :domain: client
+    :language: javascript
 
-**language**: javascript
-
-Report class inherits 
+Report class inherits
 
 Below the attributes, methods and events of the class are listed.
 
 It, as well, inherits attributes and methods of its ancestor class
-:doc:`AbstractItem class <abstractitem_api>`
+:js:class:`AbstractItem`
 
 Attributes
 ==========
@@ -21,16 +20,16 @@ Attributes
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     report/at_*
 
-Methods 
+Methods
 =======
 
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     report/m_*
 
 Events
@@ -39,5 +38,5 @@ Events
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     report/on_*

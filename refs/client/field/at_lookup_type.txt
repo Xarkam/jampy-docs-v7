@@ -4,11 +4,9 @@ lookup_type
 
 .. js:attribute:: Field.lookup_type
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Field`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description

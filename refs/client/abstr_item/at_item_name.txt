@@ -4,11 +4,9 @@ item_name
 
 .. js:attribute:: AbstractItem.item_name
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

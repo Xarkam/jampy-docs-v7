@@ -4,11 +4,9 @@ load_script
 
 .. js:function:: AbstractItem.load_script(js_filename, callback, onload)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

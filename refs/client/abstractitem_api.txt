@@ -4,11 +4,10 @@ AbstractItem class
 
 .. js:class:: AbstractItem
 
-**domain**: client 
+    :domain: client
+    :language: javascript
 
-**language**: javascript
-
-AbstractItem class is the ancestor for all item objects of the 
+AbstractItem class is the ancestor for all item objects of the
 :doc:`task tree </programming/task_tree>`
 
 Below the attributes and methods of the class are listed.
@@ -20,15 +19,15 @@ Attributes
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     abstr_item/at_*
 
-Methods 
+Methods
 =======
 
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     abstr_item/m_*
 

@@ -4,11 +4,9 @@ download
 
 .. js:function:: Field.download()
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Field`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 Description
 ===========

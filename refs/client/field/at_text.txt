@@ -4,11 +4,9 @@ text
 
 .. js:attribute:: Field.text
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Field`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description

@@ -4,11 +4,9 @@ can_view
 
 .. js:function:: AbstractItem.can_view()
 
-**domain**: client
-
-**language**: javascript
-
-**class** :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

@@ -4,11 +4,9 @@ warning
 
 .. js:function:: AbstractItem.warning(mess, callback)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

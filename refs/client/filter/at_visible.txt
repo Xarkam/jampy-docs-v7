@@ -4,11 +4,9 @@ visible
 
 .. js:attribute:: Filter.visible
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Filter`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Filter`
 
 
 Description

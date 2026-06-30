@@ -4,11 +4,9 @@ on_edit_form_close_query
 
 .. js:function:: Group.on_edit_form_close_query(item)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Group`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Group`
 
 Description
 ===========

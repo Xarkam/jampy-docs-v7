@@ -6,11 +6,9 @@ Indicates the root of the :doc:`task tree </programming/task_tree>` that owns th
 
 .. js:attribute:: AbstractItem.task
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

@@ -4,11 +4,9 @@ yes_no_cancel
 
 .. js:function:: AbstractItem.yes_no_cancel(mess, yes_callback, no_callback, cancel_callback)
 
-**domain**: client
-
-**language**: javascript
-
-**class** :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

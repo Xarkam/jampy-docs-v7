@@ -4,11 +4,9 @@ filter_name
 
 .. js:attribute:: Filter.filter_name
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Filter`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Filter`
 
 
 Description

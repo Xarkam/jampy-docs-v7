@@ -4,9 +4,9 @@ close_edit_form
 
 .. js:function:: Item.close_edit_form()
 
-  :domain: client
-  :language: javascript
-  :class: :js:class:`Item`
+:domain: client
+:language: javascript
+:class: :js:class:`Item`
 
 Description
 ===========

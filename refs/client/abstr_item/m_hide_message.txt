@@ -4,11 +4,9 @@ hide_message
 
 .. js:function:: AbstractItem.hide_message(form)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

@@ -4,11 +4,9 @@ ID
 
 .. js:attribute:: AbstractItem.ID
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 
 Description

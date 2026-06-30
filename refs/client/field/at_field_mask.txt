@@ -4,11 +4,9 @@ field_mask
 
 .. js:attribute:: Field.field_mask
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Field`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description

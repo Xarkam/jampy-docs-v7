@@ -6,11 +6,9 @@ Creates a modal form with **Yes**, **No** buttons
 
 .. js:function:: AbstractItem.question(mess, yes_callback, no_callback, options)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

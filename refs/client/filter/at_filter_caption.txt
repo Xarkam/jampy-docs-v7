@@ -4,11 +4,9 @@ filter_caption
 
 .. js:attribute:: Filter.filter_caption
 
-**domain**: client
-
-**language**: javascript
-
-**class** :js:class:`Filter`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Filter`
 
 
 Description

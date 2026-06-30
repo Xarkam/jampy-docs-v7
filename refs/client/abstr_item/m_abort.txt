@@ -4,11 +4,9 @@ abort
 
 .. js:function:: AbstractItem.abort(message)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

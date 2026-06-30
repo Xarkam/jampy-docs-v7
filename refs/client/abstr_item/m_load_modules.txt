@@ -4,11 +4,9 @@ load_modules
 
 .. js:function:: AbstractItem.load_modules(module_array, callback)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

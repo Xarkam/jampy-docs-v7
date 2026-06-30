@@ -4,11 +4,9 @@ alert
 
 .. js:function:: AbstractItem.alert(mess, options)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

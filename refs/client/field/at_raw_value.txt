@@ -4,11 +4,9 @@ raw_value
 
 .. js:attribute:: Field.raw_value
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Field`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description

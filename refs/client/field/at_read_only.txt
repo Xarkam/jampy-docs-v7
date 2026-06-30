@@ -4,11 +4,9 @@ Field read_only
 
 .. js:attribute:: Field.read_only
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Field`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description

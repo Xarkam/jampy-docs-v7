@@ -4,11 +4,9 @@ on_edit_form_created
 
 .. js:function:: Group.on_edit_form_created(item)
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Group`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Group`
 
 Description
 ===========

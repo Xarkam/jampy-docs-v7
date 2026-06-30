@@ -4,11 +4,9 @@ open
 
 .. js:function:: Field.open()
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Field`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 Description
 ===========

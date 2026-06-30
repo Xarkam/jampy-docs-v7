@@ -6,11 +6,9 @@ Indicates the item that owns this item.
 
 .. js:attribute:: AbstractItem.owner
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`AbstractItem`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

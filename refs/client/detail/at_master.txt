@@ -4,11 +4,9 @@ master
 
 .. js:attribute:: Detail.master
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Detail`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Detail`
 
 
 Description
