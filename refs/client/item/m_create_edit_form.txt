@@ -2,66 +2,66 @@
 create_edit_form
 ================
 
-.. js:function:: create_edit_form(container)
+.. js:function:: Item.create_edit_form(container)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Item class </refs/client/item_api>`
+**class**: :js:class:`Item`
 
 Description
 ===========
 
-Use ``create_edit_form`` method to create an edit form of the item for visual 
+Use ``create_edit_form`` method to create an edit form of the item for visual
 editing of a record.
 
-The method searches for an item html template in the task 
+The method searches for an item html template in the task
 :doc:`templates </refs/client/task/at_templates>`
-attribute (See 
+attribute (See
 :doc:`Forms </programming/interface/forms>`
-), creates a 
-clone of the template and assigns it to the item 
+), creates a
+clone of the template and assigns it to the item
 :doc:`edit_form <at_edit_form>`
 attribute.
 
-If ``container`` parameter is specified the method empties it and appends the 
-html template to it. Otherwise it creates a modal form and appends the 
+If ``container`` parameter is specified the method empties it and appends the
+html template to it. Otherwise it creates a modal form and appends the
 html to it.
 
-Triggers the 
+Triggers the
 :doc:`on_edit_form_created </refs/client/task/on_edit_form_created>`
 of the task.
 
-Triggers the 
+Triggers the
 :doc:`on_edit_form_created </refs/client/group/on_edit_form_created>`
 of the group that owners the item, if one is defined for the group.
 
-Triggers the 
+Triggers the
 :doc:`on_edit_form_created <on_edit_form_created>`
 of the item, if one is defined.
 
-Assigns the JQuery keyup and keydown events to the edit_form so 
-that when an JQuery event of the window occurs, the ``on_edit_form_keyup`` and 
-``on_edit_form_keydown`` events are triggered. They are triggered (if defined) 
-in the same way: first the task event handler, the group event handler and 
-then the event handler of the item itself. After that the JQuery stopPropagation 
+Assigns the JQuery keyup and keydown events to the edit_form so
+that when an JQuery event of the window occurs, the ``on_edit_form_keyup`` and
+``on_edit_form_keydown`` events are triggered. They are triggered (if defined)
+in the same way: first the task event handler, the group event handler and
+then the event handler of the item itself. After that the JQuery stopPropagation
 method of the event is called.
 
-If the form is modal, shows it. Before showing the form the method applies 
-options specified in the 
-:doc:`edit_options <at_edit_options>` 
+If the form is modal, shows it. Before showing the form the method applies
+options specified in the
+:doc:`edit_options <at_edit_options>`
 attribute.
 
-Triggers the 
+Triggers the
 :doc:`on_edit_form_shown </refs/client/task/on_edit_form_shown>`
 of the task.
 
-Triggers the 
+Triggers the
 :doc:`on_edit_form_shown </refs/client/group/on_edit_form_shown>`
 of the group that owners the item, if one is defined for the group.
 
-Triggers the 
+Triggers the
 :doc:`on_edit_form_shown <on_edit_form_shown>`
 of the item, if one is defined.
 

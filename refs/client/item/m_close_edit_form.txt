@@ -2,81 +2,105 @@
 close_edit_form
 ===============
 
-.. js:function:: close_edit_form()
+.. js:function:: Item.close_edit_form()
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Item class </refs/client/item_api>`
+  :domain: client
+  :language: javascript
+  :class: :js:class:`Item`
 
 Description
 ===========
 
+The ``close_edit_form`` method closes the item's edit form. Before
+destroying it, it queries up to **three handlers** in cascade, all sharing
+the same name (``on_edit_form_close_query``) but defined on different
+classes:
 
+1. Class :js:class:`Item` on_edit_form_close_query
+2. Class :js:class:`Group` on_edit_form_close_query (the item's parent group)
+3. Class :js:class:`Task` on_edit_form_close_query (the task)
 
-The ``close_edit_form`` method triggers the 
-:doc:`on_edit_form_close_query <on_edit_form_close_query>` 
-event handler of the item, if defined:
+The table below summarizes how ``close_edit_form`` behaves depending on
+which handler is queried and what it returns:
 
-* If the handler returns ``true``, the form is destroyed, the item's 
-  :attr:`edit_form` attribute is set to ``undefined``, and the method exits.
-* If the handler returns ``false``, the operation is aborted and the method exits.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 30 50
 
-If the handler returns ``undefined``, the method triggers the 
-:doc:`on_edit_form_close_query </refs/client/group/on_edit_form_close_query>`
-of the item's parent group, if defined:
+   * - Step
+     - Handler called
+     - Behavior
+   * - 1
+     - :js:func:`Item.on_edit_form_close_query <Item.on_edit_form_close_query>`
+     - If defined and it returns ``true``, the form is destroyed,
+       :js:attr:`edit_form <Item.edit_form>` is set to ``undefined``, and
+       the method exits.
 
-* If the handler returns ``true``, the form is destroyed, the item's 
-  :attr:`edit_form` attribute is set to ``undefined``, and the method exits.
-* If the handler returns ``false``, the operation is aborted and the method exits.
+       If defined and it returns ``false``, the operation is aborted and
+       the method exits.
 
-If the group handler returns ``undefined``, the method triggers the 
-:doc:`on_edit_form_close_query </refs/client/task/on_edit_form_close_query>`
-of the task:
+       If undefined, or it returns ``undefined``, move to step 2.
+   * - 2
+     - :js:func:`Group.on_edit_form_close_query <Group.on_edit_form_close_query>`
+       (item's parent group)
+     - Same logic as step 1: ``true`` closes the form, ``false`` aborts
+       the operation, ``undefined`` (or no handler defined) moves to
+       step 3.
+   * - 3
+     - :js:func:`Task.on_edit_form_close_query <Task.on_edit_form_close_query>`
+     - Same logic: ``true`` closes the form, ``false`` aborts the
+       operation.
 
-* If the handler returns ``true``, the form is destroyed, the item's 
-  :attr:`edit_form` attribute is set to ``undefined``, and the method exits.
-* If the handler returns ``false``, the operation is aborted and the method exits.
+       If this handler is also undefined (or returns ``undefined``), the
+       form is closed by default.
 
-If no event handler is defined, or none of the handlers return ``false``, 
-the form is destroyed and the item's :attr:`edit_form` attribute is set to 
-``undefined``.
+**Summary**: ``close_edit_form`` walks through the three levels (item →
+group → task) until it gets a definitive answer (``true`` or ``false``).
+If none of the levels decides, the form is closed by default.
 
-``close_edit_form`` is mostly used with :doc:`Virtual table </admin/items/item_editor_dialog>`.
+Typical use case
+=================
 
+``close_edit_form`` is mostly used with
+:doc:`Virtual tables </admin/items/item_editor_dialog>`.
 
-Example:
+Example
+=======
 
-Form 2 has a button ``Next Form`` and after click, the form is destroyed and Form 1 displayed. 
+In this example, form 2 has a ``Next Form`` button. On click, the form is
+closed and form 1 is displayed after a short delay.
 
 .. code:: js
 
-      function on_edit_form_created(item) {
-          item.edit_form.find('#ok-btn')
-              .text('Next Form')
-              .off('click.task')
-              .on('click', function() {
-                  item.close_edit_form();
-                  setTimeout(function() {
-                      show_f1(item);
-                  }, 300);
-              });    
-      }
-      function on_edit_form_close_query(item) {
-          return true;
-      }      
-      
+   function on_edit_form_created(item) {
+       item.edit_form.find('#ok-btn')
+           .text('Next Form')
+           .off('click.task')
+           .on('click', function() {
+               item.close_edit_form();
+               setTimeout(function() {
+                   show_f1(item);
+               }, 300);
+           });
+   }
+
+   function on_edit_form_close_query(item) {
+       return true;
+   }
 
 See also
 ========
 
-:doc:`Virtual Table </how_to/authentication/how_give_user_ability_to_change_password>`
+**Related attributes**
 
-:doc:`Forms </programming/interface/forms>`
+* :js:attr:`edit_form <Item.edit_form>`
 
-:doc:`create_edit_form <m_create_edit_form>`
+**Related functions**
 
-:doc:`edit_form <at_edit_form>`
+* :js:func:`create_edit_form <Item.create_edit_form>`
+* :js:func:`Task.on_edit_form_close_query <Task.on_edit_form_close_query>`
 
-:doc:`on_edit_form_close_query </refs/client/task/on_edit_form_close_query>`
+**Related concepts**
+
+* :doc:`Virtual Table </how_to/authentication/how_give_user_ability_to_change_password>`
+* :doc:`Forms </programming/interface/forms>`

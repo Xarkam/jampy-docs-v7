@@ -2,9 +2,9 @@
 on_edit_form_created
 ====================
 
-.. js:function:: on_edit_form_created(item)
+.. js:function:: Item.on_edit_form_created(item)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
@@ -13,13 +13,13 @@ on_edit_form_created
 Description
 ===========
 
-The **on_edit_form_created** event is triggered by the 
+The **on_edit_form_created** event is triggered by the
 :doc:`create_edit_form <m_create_edit_form>`
 method when the form has been created but not shown yet.
 
 The ``item`` parameter is the item that triggered the event.
 
-The following code is used in the 
+The following code is used in the
 :doc:`Demo project </intro/demo_project>`
 Invoices table to make read only the field ``paid``, and to remove the footer:
 
@@ -30,7 +30,7 @@ Invoices table to make read only the field ``paid``, and to remove the footer:
         item.read_only = item.paid.value;
         item.edit_form.find('.form-footer').remove();
     }
- 
+
 
 See also
 ========

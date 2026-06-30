@@ -2,30 +2,34 @@
 on_edit_form_created
 ====================
 
-.. js:function:: on_edit_form_created(item)
+.. js:function:: Group.on_edit_form_created(item)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Group class </refs/client/item_group_api>`
+**class**: :js:class:`Group`
 
 Description
 ===========
 
-The ``on_edit_form_created`` event is triggered by the 
-:doc:`create_edit_form </refs/client/item/m_create_edit_form>`
+The ``on_edit_form_created`` event is triggered by the
+:js:func:`on_create_edit_form <Item.create_edit_form>`
 method of the item when the form has been created but not shown yet.
 
 The ``item`` parameter is the item that triggered the event.
 
-This event, if defined, is triggered for every item of the group, whose 
-:doc:`create_edit_form </refs/client/item/m_create_edit_form>`
+This event, if defined, is triggered for every item of the group, whose
+:js:func:`on_create_edit_form <Item.create_edit_form>`
 method has been called.
 
 See also
 ========
 
-:doc:`Forms </programming/interface/forms>`
+**Related functions**
 
-:doc:`create_edit_form </refs/client/item/m_create_edit_form>`
+:js:func:`on_create_edit_form <Item.create_edit_form>`
+
+**Related concepts**
+
+:doc:`Forms </programming/interface/forms>`
