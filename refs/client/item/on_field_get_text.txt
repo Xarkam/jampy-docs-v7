@@ -40,10 +40,10 @@ Example
 See also
 ========
 
-**Related concepts**
-
-* :doc:`Fields </programming/data/fields>`
-
 **Related events**
 
 * :js:func:`on_field_get_html <Item.on_field_get_html>`
+
+**Related concepts**
+
+* :doc:`Fields </programming/data/fields>`

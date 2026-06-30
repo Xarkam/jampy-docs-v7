@@ -2,18 +2,18 @@
 task
 ====
 
-Indicates the root of the :doc:`task tree </programming/task_tree>` that owns this item. 
+Indicates the root of the :doc:`task tree </programming/task_tree>` that owns this item.
 
-.. js:attribute:: task
+.. js:attribute:: AbstractItem.task
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+**class**: :js:class:`AbstractItem`
 
 Description
 ===========
 
-Use task attribute to find the root of the :doc:`task tree </programming/task_tree>` 
+Use task attribute to find the root of the :doc:`task tree </programming/task_tree>`
 of which the item is a member.

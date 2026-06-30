@@ -2,18 +2,18 @@
 abort
 =====
 
-.. js:function:: abort(message)
+.. js:function:: AbstractItem.abort(message)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+**class**: :js:class:`AbstractItem`
 
 Description
 ===========
 
-Use **abort** method to throw exception. 
+Use **abort** method to throw exception.
 
 It can be usefull when you need to abort execution of some 'on_before' events.
 

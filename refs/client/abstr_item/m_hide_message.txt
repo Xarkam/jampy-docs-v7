@@ -2,20 +2,20 @@
 hide_message
 ============
 
-.. js:function:: hide_message(form)
+.. js:function:: AbstractItem.hide_message(form)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+**class**: :js:class:`AbstractItem`
 
 Description
 ===========
 
-Use **hide_message** method to close a modal form created by 
-:doc:`message <m_message>` method
+Use **hide_message** method to close a modal form created by
+:js:func:`message <AbstractItem.message>` method
 
-The **form** parameter is a JQuery object returned by 
-:doc:`message <m_message>` method.
+The **form** parameter is a JQuery object returned by
+:js:func:`message <AbstractItem.message>` method.
 

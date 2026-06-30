@@ -2,24 +2,24 @@
 each_item
 =========
 
-.. js:function:: each_item(function(item))
+.. js:function:: AbstractItem.each_item(function(item))
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+**class**: :js:class:`AbstractItem`
 
 Description
 ===========
 
-Use each_item method to iterate over :doc:`items <at_items>` owned by this object.
+Use each_item method to iterate over :js:attr:`items <AbstractItem.items>` owned by this object.
 
-The each_item() method specifies a function to run for each child item (child item
+The :guilabel:`each_item()` method specifies a function to run for each child item (child item
 is passed as a parameter).
 
-You can break the each_item loop at a particular iteration by making the callback 
-function return false. 
+You can break the each_item loop at a particular iteration by making the callback
+function return false.
 
 Example
 =======
@@ -33,5 +33,5 @@ The following code will output all catalogs of the project in a browser console:
             console.log(item.item_name);
         })
     }
-    
+
 

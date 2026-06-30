@@ -2,13 +2,13 @@
 item_caption
 ============
 
-.. js:attribute:: Field.item_caption
+.. js:attribute:: AbstractItem.item_caption
 
 **domain**: client
 
 **language**: javascript
 
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+**class**: :js:class:`AbstractItem`
 
 Description
 ===========

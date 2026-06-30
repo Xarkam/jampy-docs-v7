@@ -2,32 +2,32 @@
 yes_no_cancel
 =============
 
-.. js:function:: yes_no_cancel(mess, yes_callback, no_callback, cancel_callback)
+.. js:function:: AbstractItem.yes_no_cancel(mess, yes_callback, no_callback, cancel_callback)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+**class** :js:class:`AbstractItem`
 
 Description
 ===========
 
 
-Use **yes_no_cancel** to create a modal form with **Yes** **No**, **Cancel** buttons. 
+Use **yes_no_cancel** to create a modal form with **Yes** **No**, **Cancel** buttons.
 
-The **mess** parameter specifies the text or html content that will appear in the 
+The **mess** parameter specifies the text or html content that will appear in the
 body of the form.
 
-If **yes_callback**, **no_callback**, **cancel_callback**  functions are 
-specified they will be executed when user clicks on the **Yes**, **No** or 
+If **yes_callback**, **no_callback**, **cancel_callback**  functions are
+specified they will be executed when user clicks on the **Yes**, **No** or
 **Cancel** button, respectively, and then the form will be closed.
 
 Example
 =======
 
-The following code is executed when user clicks on the close button in the upper 
-right corner of an item edit form. 
+The following code is executed when user clicks on the close button in the upper
+right corner of an item edit form.
 
 .. code-block:: js
 
@@ -51,7 +51,7 @@ right corner of an item edit form.
         }
         return result;
     }
-    
+
 The result of the code above will be:
 
 .. image:: _images/yes_no_cancel_jampy.png
