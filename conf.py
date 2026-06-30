@@ -239,7 +239,7 @@ html_theme_options = {
 
     'logo_only': False,
 
-    'display_version': True
+    #'display_version': True
 
 }
 
@@ -247,7 +247,7 @@ html_theme_options = {
 
 # Add any paths that contain custom themes here, relative to this directory.
 
-html_theme_path = ['_templates']
+# html_theme_path = ['_templates']
 
 
 
