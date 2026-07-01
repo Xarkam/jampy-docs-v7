@@ -138,7 +138,7 @@ Examples of database setups
     * If using Firebird_,  ``fdb`` package is needed.
     * If using Databricks_, ``databricks-sql-connector`` is needed.
     * If using DuckDB_, ``duckdb`` is needed.
-    * To generate reports, **LibreOffice** must be installed. :doc:`Portable </refs/server/reports/on_convert_report>` LibreOffice is supported.  
+    * To generate reports, **LibreOffice** must be installed. :doc:`Portable </refs/server/reports/on_convert_report>` LibreOffice is supported. External libraries are also supported.
 
 
 .. _Jam.py Design Tips: https://jampy-application-design-tips.readthedocs.io/

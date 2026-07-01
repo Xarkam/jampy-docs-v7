@@ -86,7 +86,7 @@ Then the same way we generate detail and summary bands.
 
 When the report is generated and the value of report 
 :doc:`extension </refs/client/report/at_extension>`
-attribute, set on the client, is not equals 'pdf' the server converts the ods 
+attribute, set on the client, is not equal to 'pdf', the server converts the ods 
 file using **LibreOffice**.
 
 Once the report is generated it is stored in a report folder of the static 

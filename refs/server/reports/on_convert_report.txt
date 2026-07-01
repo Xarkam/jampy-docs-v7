@@ -19,7 +19,7 @@ It is possible to use portable LibreOffice installlation.
 
 Use the 
 **on_convert_report** event if you want to use some other service or change some 
-parameters of report conversion.
+parameters of report conversion. For example external JSreport_ service.
 
 The **report** parameter is the report that triggered the event.
 
@@ -65,5 +65,5 @@ Add the event to report and modify the above with the LO installation path, ie.:
 
 
 
-
+.. _JSreport: https://github.com/jsreport/jsreport
 
