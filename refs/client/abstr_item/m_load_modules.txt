@@ -15,9 +15,26 @@ Use **load_modules** method to dynamically load specified modules before
 executing the **callback**.
 
 The method works the same way as
-:js:func:`load_module <AbstractItem.load_module>`,
+:js:meth:`load_module <AbstractItem.load_module>`,
 only loads and initializes all modules of items specified in the
 **module_array**.
+
+Parameters
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``module_array``
+     - ``array``
+     - The list of modules to load and initialize.
+   * - ``callback``
+     - ``function``
+     -
 
 Example
 =======

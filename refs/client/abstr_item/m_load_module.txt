@@ -21,6 +21,20 @@ passed to the callback function as a parameter.
 
 The request to the server is executed asynchronously.
 
+Parameter
+=========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``callback``
+     - ``function``
+     -
+
 Example
 =======
 
