@@ -14,12 +14,28 @@ Description
 
 Use **yes_no_cancel** to create a modal form with **Yes** **No**, **Cancel** buttons.
 
-The **mess** parameter specifies the text or html content that will appear in the
-body of the form.
+Parameters
+==========
 
-If **yes_callback**, **no_callback**, **cancel_callback**  functions are
-specified they will be executed when user clicks on the **Yes**, **No** or
-**Cancel** button, respectively, and then the form will be closed.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``mess``
+     - ``string``
+     - Specifies the text or html content that will appear in the body of the form.
+   * - ``yes_callback``
+     - ``function``
+     - Function are specified they will be executed when user clicks on the **Yes** button.
+   * - ``no_callback``
+     - ``function``
+     - Function are specified they will be executed when user clicks on the **No** button.
+   * - ``cancel_callback``
+     - ``function``
+     - Function are specified they will be executed when user clicks on the **Cancel** button.
 
 Example
 =======

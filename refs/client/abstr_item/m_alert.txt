@@ -14,25 +14,50 @@ Description
 Use the ``alert`` method to create a pop-up message in the upper-right corner
 application that disappears after the first click on the page.
 
-The ``mess`` parameter specifies the text that will be displayed.
+Parameters
+==========
 
-The ``options`` parameter is an object with the following attributes:
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
 
-* ``type`` - indicates the type of the message - its font, background color and
-  header text, if it is not specified in the header parameters.
-  This must be one of the following:
+   * - Parameter
+     - Type
+     - Description
+   * - ``message``
+     - ``string``
+     - Specifies the text that will be displayed.
+   * - ``option``
+     - ``object``
+     - An object with the following attributes:
 
-  * 'info',
-  * 'error',
-  * 'success'
+       .. list-table::
+          :header-rows: 1
+          :widths: 20 80
 
-  default value is 'info'
+          * - Attribute
+            - Description
+          * - ``type``
+            - Indicates the type of the message — its font, background
+              color and header text, if not specified in the header
+              parameter.
 
-* ``header`` - specifies the header of the alert
+              Must be one of the following:
 
-* ``pulsate`` - if true, the header will pulsate, the default value is true
+              * ``'info'``
+              * ``'error'``
+              * ``'success'``
 
-* ``show_header`` - if false, the header will not be displayed.
+              Default: ``'info'``.
+   * - ``header``
+     - ``string``
+     - Specifies the header of the alert.
+   * - ``pulsate``
+     - ``boolean``
+     - If ``true``, the header will pulsate. Default: ``true``.
+   * - ``show_header``
+     - ``boolean``
+     - If ``false``, the header will not be displayed.
 
 The methods ``alert_error`` and ``alert_success`` are the same as ``alert``
 with the corresponding ``type`` options.

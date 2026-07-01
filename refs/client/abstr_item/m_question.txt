@@ -2,8 +2,6 @@
 question
 ========
 
-Creates a modal form with **Yes**, **No** buttons
-
 .. js:function:: AbstractItem.question(mess, yes_callback, no_callback, options)
 
     :domain: client
@@ -13,14 +11,34 @@ Creates a modal form with **Yes**, **No** buttons
 Description
 ===========
 
-Use **question** to create a modal form with **Yes** and **No** buttons.
-
-The **mess** parameter specifies the text or html content that will appear in the
-body of the form.
+Creates a modal form with **Yes**, **No** buttons
 
 If **yes_callback**, **no_callback** functions are specified they will
 be executed when user clicks on the **Yes** or **No** button, respectively,
 and then the form will be closed.
+
+Parameters
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``mess``
+     - ``string``
+     - specifies the text or html content that will appear in the body of the form.
+   * - ``yes_callback``
+     - ``function``
+     - functions will be executed when user clicks on the **Yes** button.
+   * - ``no_callback``
+     - ``function``
+     - functions will be executed when user clicks on the **No** button.
+   * - ``options``
+     - ``object``
+     -
 
 Example
 =======

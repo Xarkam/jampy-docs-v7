@@ -11,9 +11,11 @@ hide_message
 Description
 ===========
 
-Use **hide_message** method to close a modal form created by
-:js:func:`message <AbstractItem.message>` method
+Use :js:meth:`hide_message <AbstractItem.hide_message>` method to close a modal form created by
+:js:meth:`message <AbstractItem.message>` method
 
-The **form** parameter is a JQuery object returned by
-:js:func:`message <AbstractItem.message>` method.
+Parameter
+=========
+
+:guilabel:`form` is a JQuery object returned by :js:meth:`message <AbstractItem.message>` method.
 

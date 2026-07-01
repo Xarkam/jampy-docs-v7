@@ -16,8 +16,22 @@ Use each_item method to iterate over :js:attr:`items <AbstractItem.items>` owned
 The :guilabel:`each_item()` method specifies a function to run for each child item (child item
 is passed as a parameter).
 
-You can break the each_item loop at a particular iteration by making the callback
+⚠️ You can break the each_item loop at a particular iteration by making the callback
 function return false.
+
+Parameter
+=========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``function(item)``
+     - ``function``
+     -  Function to run for each child item (child itemis passed as a parameter)
 
 Example
 =======

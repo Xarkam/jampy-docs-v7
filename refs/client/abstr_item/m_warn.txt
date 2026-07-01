@@ -13,11 +13,22 @@ Description
 
 Use **warning** to create a modal form with the **Ok** button.
 
-The **mess** parameter specifies the text or html content that will appear in the
-body of the form.
+Parameters
+==========
 
-If **callback** function are specified it will be executed when user
-clicks the button and then the form will be closed.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``mess``
+     - ``string``
+     - Specifies the text or html content that will appear in the body of the form.
+   * - ``callback``
+     - ``function``
+     - If is specified it will be executed when user clicks the button and then the form will be closed.
 
 Example
 =======

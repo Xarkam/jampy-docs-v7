@@ -42,8 +42,8 @@ See also
 
 **Related functions**
 
-* :js:func:`load_modules <AbstractItem.load_modules>`
-* :js:func:`load_script <AbstractItem.load_script>`
+* :js:meth:`load_modules <AbstractItem.load_modules>`
+* :js:meth:`load_script <AbstractItem.load_script>`
 
 **Related concepts**
 

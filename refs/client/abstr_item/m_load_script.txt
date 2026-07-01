@@ -45,8 +45,8 @@ See also
 
 **Related functions**
 
-* :js:func:`load_module <AbstractItem.load_module>`
-* :js:func:`load_modules <AbstractItem.load_modules>`
+* :js:meth:`load_module <AbstractItem.load_module>`
+* :js:meth:`load_modules <AbstractItem.load_modules>`
 
 **Related concepts**
 

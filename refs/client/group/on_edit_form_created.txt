@@ -15,19 +15,22 @@ The ``on_edit_form_created`` event is triggered by the
 :js:func:`on_create_edit_form <Item.create_edit_form>`
 method of the item when the form has been created but not shown yet.
 
-The ``item`` parameter is the item that triggered the event.
-
 This event, if defined, is triggered for every item of the group, whose
 :js:func:`on_create_edit_form <Item.create_edit_form>`
 method has been called.
 
+Parameter
+=========
+
+:guilabel:`item` is the item that triggered the event.
+
 See also
 ========
 
-**Related functions**
+**Related methods**
 
-:js:func:`on_create_edit_form <Item.create_edit_form>`
+* :js:meth:`on_create_edit_form <Item.create_edit_form>`
 
 **Related concepts**
 
-:doc:`Forms </programming/interface/forms>`
+* :doc:`Forms </programming/interface/forms>`

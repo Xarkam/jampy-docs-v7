@@ -4,30 +4,49 @@ abort
 
 .. js:function:: AbstractItem.abort(message)
 
-    :domain: client
-    :language: javascript
-    :class: :js:class:`AbstractItem`
+   :domain: client
+   :language: javascript
+   :class: :js:class:`AbstractItem`
 
 Description
 ===========
 
-Use **abort** method to throw exception.
+Use the **abort** method to throw an exception. It can be useful when you
+need to abort the execution of certain ``on_before`` events.
 
-It can be usefull when you need to abort execution of some 'on_before' events.
+Parameters
+==========
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``message``
+     - ``string``
+     - The text of the exception to be thrown.
+
+Raises
+======
+
+Throws an exception with the message:
+
+.. code-block:: text
+
+   execution aborted: <message>
 
 Example
 =======
 
-The following code will throw exception with the text:
-
-execution aborted: invoice_table - a quantity value is required
+The following code throws an exception with the text
+``execution aborted: invoice_table - a quantity value is required``:
 
 .. code-block:: js
 
-    function on_before_post(item) {
-        if (item.quantity.value === 0) {
-            item.abort('a quantity value is required');
-        }
-    }
-
+   function on_before_post(item) {
+       if (item.quantity.value === 0) {
+           item.abort('a quantity value is required');
+       }
+   }

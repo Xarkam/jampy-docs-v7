@@ -34,6 +34,28 @@ followed by the parameters specified in the function on the client.
 ``params`` is a list of parameters. If there are not parameters, the ``params``
 can be omitted.
 
+Parameters
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``func_name``
+     - ``function``
+     - function with a name ``func_name`` defined in the server
+       module of an item with parameters specified in ``params``
+   * - ``params``
+     - ``array``
+     - list of parameters. Can by optional.
+
+       **The first parameter of the function on the server must be ``item``**
+   * - ``callback``
+     - ``function``
+     - if specified, the function named ``func_name`` on the server is executed asynchronously, after which the ``callback`` is executed.
 
 Example
 =======

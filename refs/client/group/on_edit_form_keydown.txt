@@ -2,27 +2,35 @@
 on_edit_form_keydown
 ====================
 
-on_edit_form_keydown(item, event)
+.. js:function:: Group.on_edit_form_keydown(item, event)
 
     :domain: client
     :language: javascript
-    :class: :doc:`Group class </refs/client/item_group_api>`
+    :class: :js:class:`Group`
 
 Description
 ===========
 
 The ``on_edit_form_keydown`` event is triggered when the keydown event
 occurs for the
-:doc:`edit_form </refs/client/item/at_edit_form>`
+:js:attr:`edit_form <Item.edit_form>`
 of the item.
 
-The ``item`` parameter is the item that triggered the event.
+Parameters
+==========
 
-The ``event`` is JQuery event object.
+:guilabel:`item` is the item that triggered the event.
+
+:guilabel:`event` is JQuery event object.
 
 See also
 ========
 
-:doc:`Forms </programming/interface/forms>`
+**Related methods**
 
-:doc:`create_edit_form </refs/client/item/m_create_edit_form>`
+* :js:func:`create_edit_form <Item.create_edit_form>`
+
+**Related concepts**
+
+* :doc:`Forms </programming/interface/forms>`
+

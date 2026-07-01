@@ -15,14 +15,17 @@ The ``on_edit_form_close_query`` event is triggered by the
 :js:func:`close_edit_form <Item.close_edit_form>`
 method of the item.
 
-The ``item`` parameter is the item that triggered the event.
+Parameter
+=========
+
+:guilabel:`item` is the item that triggered the event.
 
 See also
 ========
 
-**Related functions**
+**Related methods**
 
-* :js:func:`close_edit_form <Item.close_edit_form>`
+* :js:meth:`close_edit_form <Item.close_edit_form>`
 
 **Related concepts**
 
