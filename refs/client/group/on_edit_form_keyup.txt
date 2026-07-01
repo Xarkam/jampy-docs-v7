@@ -12,16 +12,24 @@ Description
 ===========
 
 The ``on_edit_form_keyup`` event is triggered when the keyup event
-occurs for the
-:js:attr:`edit_form <Item.edit_form>`
-of the item.
+occurs for the :js:attr:`edit_form <Item.edit_form>` of the item.
 
 Paramaters
 ==========
 
-:guilabel:`item` is the item that triggered the event.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
 
-:guilabel:`event` is JQuery event object.
+   * - Parameter
+     - Type
+     - Description
+   * - ``item``
+     -
+     - The item that triggered the event.
+   * - ``event``
+     -
+     - The JQuery event object.
 
 See also
 ========

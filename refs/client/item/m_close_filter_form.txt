@@ -2,9 +2,9 @@
 close_filter_form
 =================
 
-.. js:function:: close_filter_form()
+.. js:function:: Item.close_filter_form()
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
@@ -15,32 +15,32 @@ Description
 
 Use the ``close_filter_form`` method to close the item's filter form.
 
-The ``close_filter_form`` method triggers the 
-:doc:`on_filter_form_close_query <on_filter_form_close_query>` 
+The ``close_filter_form`` method triggers the
+:doc:`on_filter_form_close_query <on_filter_form_close_query>`
 event handler of the item, if defined:
 
-* If the handler returns ``true``, the form is destroyed, the item's 
+* If the handler returns ``true``, the form is destroyed, the item's
   :attr:`filter_form` attribute is set to ``undefined``, and the method exits.
 * If the handler returns ``false``, the operation is aborted and the method exits.
 
-If the handler returns ``undefined``, the method triggers the 
-:doc:`on_filter_form_close_query </refs/client/group/on_filter_form_close_query>` 
+If the handler returns ``undefined``, the method triggers the
+:doc:`on_filter_form_close_query </refs/client/group/on_filter_form_close_query>`
 of the item's parent group, if defined:
 
-* If the handler returns ``true``, the form is destroyed, the item's 
+* If the handler returns ``true``, the form is destroyed, the item's
   :attr:`filter_form` attribute is set to ``undefined``, and the method exits.
 * If the handler returns ``false``, the operation is aborted and the method exits.
 
-If the group handler returns ``undefined``, the method triggers the 
-:doc:`on_filter_form_close_query </refs/client/task/on_filter_form_close_query>` 
+If the group handler returns ``undefined``, the method triggers the
+:doc:`on_filter_form_close_query </refs/client/task/on_filter_form_close_query>`
 of the task:
 
-* If the handler returns ``true``, the form is destroyed, the item's 
+* If the handler returns ``true``, the form is destroyed, the item's
   :attr:`filter_form` attribute is set to ``undefined``, and the method exits.
 * If the handler returns ``false``, the operation is aborted and the method exits.
 
-If no event handler is defined, or none of the handlers return ``false``, 
-the form is destroyed and the item's :attr:`filter_form` attribute is set to 
+If no event handler is defined, or none of the handlers return ``false``,
+the form is destroyed and the item's :attr:`filter_form` attribute is set to
 ``undefined``.
 
 See also

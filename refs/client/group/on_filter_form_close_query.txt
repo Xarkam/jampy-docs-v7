@@ -12,20 +12,29 @@ Description
 ===========
 
 The ``on_filter_form_close_query`` event is triggered by the
-:js!meth:`close_filter_form <Item.close_filter_form>`
+:js:meth:`close_filter_form <Item.close_filter_form>`
 method of the item.
 
 Parameter
 =========
 
-:guilabel:`item` is the item that triggered the event.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``item``
+     -
+     - The item that triggered the event.
 
 See also
 ========
 
 **Related methods**
 
-* :doc:`close_filter_form </refs/client/item/m_close_filter_form>`
+* :js:meth:`close_filter_form <Item.close_filter_form>`
 
 **Related concepts**
 

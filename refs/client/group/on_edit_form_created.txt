@@ -22,7 +22,16 @@ method has been called.
 Parameter
 =========
 
-:guilabel:`item` is the item that triggered the event.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``item``
+     -
+     - The item that triggered the event.
 
 See also
 ========

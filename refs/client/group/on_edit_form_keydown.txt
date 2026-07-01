@@ -19,16 +19,26 @@ of the item.
 Parameters
 ==========
 
-:guilabel:`item` is the item that triggered the event.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
 
-:guilabel:`event` is JQuery event object.
+   * - Parameter
+     - Type
+     - Description
+   * - ``item``
+     -
+     - The item that triggered the event.
+   * - ``event``
+     -
+     - The JQuery event object.
 
 See also
 ========
 
 **Related methods**
 
-* :js:func:`create_edit_form <Item.create_edit_form>`
+* :js:meth:`create_edit_form <Item.create_edit_form>`
 
 **Related concepts**
 

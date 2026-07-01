@@ -18,7 +18,16 @@ method of the item.
 Parameter
 =========
 
-:guilabel:`item` is the item that triggered the event.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``item``
+     -
+     - is the item that triggered the event.
 
 See also
 ========
