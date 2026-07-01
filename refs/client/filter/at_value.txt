@@ -2,19 +2,17 @@
 value
 =====
 
-.. js:attribute:: value
+.. js:attribute:: Filter.value
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Filter class </refs/client/filter_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Filter`
 
 
 Description
 ===========
 
-Use **value** property to get or set the value of the filter. 
+Use **value** property to get or set the value of the filter.
 
 Example
 =======
@@ -29,9 +27,12 @@ Example
 See also
 ========
 
-:doc:`Filters </programming/data/filters>`
+**Related attributes**
 
-:doc:`visible <at_visible>`
+* :js:attr:`visible <Filter.visible>`
 
-:doc:`Dataset </programming/data/dataset>`
+**Related concepts**
+
+* :doc:`Filters </programming/data/filters>`
+* :doc:`Dataset </programming/data/dataset>`
 

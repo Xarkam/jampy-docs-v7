@@ -2,13 +2,11 @@
 ID
 ==
 
-.. js:attribute:: ID
+.. js:attribute:: AbstractItem.ID
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 
 Description
@@ -16,7 +14,7 @@ Description
 
 The ID attribute is the unique in the framework id of the item
 
-The ID attribute is most useful when referring to the item by number rather than 
+The ID attribute is most useful when referring to the item by number rather than
 name. It is also used internally.
 
 

@@ -2,29 +2,42 @@
 on_edit_form_keyup
 ==================
 
-on_edit_form_keyup(item, event)
+.. js:function:: Group.on_edit_form_keyup(item, event)
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Group class </refs/client/item_group_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Group`
 
 Description
 ===========
 
-The ``on_edit_form_keyup`` event is triggered when the keyup event 
-occurs for the 
-:doc:`edit_form </refs/client/item/at_edit_form>`
-of the item.
+The ``on_edit_form_keyup`` event is triggered when the keyup event
+occurs for the :js:attr:`edit_form <Item.edit_form>` of the item.
 
-The ``item`` parameter is the item that triggered the event.
+Paramaters
+==========
 
-The ``event`` is JQuery event object.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``item``
+     -
+     - The item that triggered the event.
+   * - ``event``
+     -
+     - The JQuery event object.
 
 See also
 ========
 
-:doc:`Forms </programming/interface/forms>`
+**Related methods**
 
-:doc:`create_edit_form </refs/client/item/m_create_edit_form>`
+* :js:meth:`create_edit_form <Item.create_edit_form>`
+
+**Related concepts**
+
+* :doc:`Forms </programming/interface/forms>`

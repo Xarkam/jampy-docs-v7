@@ -2,18 +2,16 @@
 open
 ====
 
-.. js:function:: open() 
+.. js:function:: Field.open()
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Field class </refs/client/field_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 Description
 ===========
 
-Call ``open`` for fields of type FILE to open the url to the file by using 
+Call ``open`` for fields of type FILE to open the url to the file by using
 ``window.open``.
 
 Example
@@ -23,6 +21,6 @@ Example
 
   function on_view_form_created(item) {
     item.add_view_button('Open').click(function() {
-       item.attachment.open(); 
+       item.attachment.open();
     });
   }

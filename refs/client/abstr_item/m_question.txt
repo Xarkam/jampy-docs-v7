@@ -2,27 +2,43 @@
 question
 ========
 
-Creates a modal form with **Yes**, **No** buttons
+.. js:function:: AbstractItem.question(mess, yes_callback, no_callback, options)
 
-.. js:function:: question(mess, yes_callback, no_callback, options)
-
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========
 
-Use **question** to create a modal form with **Yes** and **No** buttons. 
+Creates a modal form with **Yes**, **No** buttons
 
-The **mess** parameter specifies the text or html content that will appear in the 
-body of the form.
-
-If **yes_callback**, **no_callback** functions are specified they will 
-be executed when user clicks on the **Yes** or **No** button, respectively, 
+If **yes_callback**, **no_callback** functions are specified they will
+be executed when user clicks on the **Yes** or **No** button, respectively,
 and then the form will be closed.
+
+Parameters
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``mess``
+     - ``string``
+     - specifies the text or html content that will appear in the body of the form.
+   * - ``yes_callback``
+     - ``function``
+     - functions will be executed when user clicks on the **Yes** button.
+   * - ``no_callback``
+     - ``function``
+     - functions will be executed when user clicks on the **No** button.
+   * - ``options``
+     - ``object``
+     -
 
 Example
 =======
@@ -37,7 +53,7 @@ record when the user clicks the Yes button:
             item.delete();
         }
     );
-    
+
 The result of the code above will be:
 
 

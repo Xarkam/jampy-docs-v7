@@ -4,28 +4,42 @@ on_view_form_shown
 
 .. js:function:: on_view_form_shown(item)
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Group class </refs/client/item_group_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Group`
 
 Description
 ===========
 
-The ``on_view_form_shown`` event is triggered by the 
-:doc:`view </refs/client/item/m_view>`
+The ``on_view_form_shown`` event is triggered by the
+:js:meth:`view <Item.view>`
 method of the item when the form has been shown.
 
-The ``item`` parameter is the item that triggered the event.
-
-This event, if defined, is triggered for every item of the group, whose 
-:doc:`view </refs/client/item/m_view>`
+This event, if defined, is triggered for every item of the group, whose
+:js:meth:`view <Item.view>`
 method has been called.
+
+Parameter
+=========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``item``
+     -
+     - The item that triggered the event.
 
 See also
 ========
 
-:doc:`Forms </programming/interface/forms>`
+**Related methods**
 
-:doc:`view </refs/client/item/m_view>`
+:js:meth:`view <Item.view>`
+
+**Related concepts**
+
+:doc:`Forms </programming/interface/forms>`

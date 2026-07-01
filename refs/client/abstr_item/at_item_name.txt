@@ -2,13 +2,11 @@
 item_name
 =========
 
-.. js:attribute:: item_name
+.. js:attribute:: AbstractItem.item_name
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========

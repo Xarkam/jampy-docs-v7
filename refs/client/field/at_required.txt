@@ -2,13 +2,11 @@
 required
 ========
 
-.. js:attribute:: required
+.. js:attribute:: Field.required
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Field class </refs/client/field_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description
@@ -16,14 +14,18 @@ Description
 
 Specifies whether a not empty value for a field is required.
 
-Use **required** to find out if a field requires a value or if the field can be 
-blank. When **required** property is set to true, trying to post a null value 
+Use **required** to find out if a field requires a value or if the field can be
+blank. When **required** property is set to true, trying to post a null value
 will cause an exception to be raised.
 
 
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+**Related attributes**
 
-:doc:`read_only <at_read_only>`
+* :js:attr:`read_only <Field.read_only>`
+
+**Related concepts**
+
+* :doc:`Fields </programming/data/fields>`

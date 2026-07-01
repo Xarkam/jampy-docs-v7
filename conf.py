@@ -63,7 +63,7 @@ html_context = {
 
 # Add any paths that contain templates here, relative to this directory.
 
-templates_path = ['_templates']
+# templates_path = ['_templates']
 
 
 
@@ -146,7 +146,10 @@ language = "en"
 
 # directories to ignore when looking for source files.
 
-exclude_patterns = ['_build']
+exclude_patterns = [
+    '_build',
+    'requirements.txt'
+]
 
 
 
@@ -236,7 +239,20 @@ html_theme_options = {
 
     'logo_only': False,
 
-    'display_version': True
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    'vcs_pageview_mode': '',
+    # 'style_nav_header_background': 'white',
+    'flyout_display': 'hidden',
+    'version_selector': True,
+    'language_selector': True,
+
+    # Toc options
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
 
 }
 
@@ -244,7 +260,7 @@ html_theme_options = {
 
 # Add any paths that contain custom themes here, relative to this directory.
 
-html_theme_path = ['_templates']
+# html_theme_path = ['_templates']
 
 
 
@@ -287,7 +303,10 @@ html_favicon = '_static/favicon.ico'
 # so a file named "default.css" will overwrite the builtin "default.css".
 
 html_static_path = ['_static']
-html_css_files = ['Jam.py.html_files/freemind2html.css']
+html_css_files = [
+    'Jam.py.html_files/freemind2html.css',
+    'styles.css'
+]
 
 
 # Add any extra paths that contain custom files (such as robots.txt or
@@ -581,12 +600,12 @@ def linkcode_resolve(domain, info):
     """Map specific exceptions to specific files."""
     if domain != 'py':
         return None
-    
+
     mapping = {
         'LanguageNotFound': 'https://github.com/jam-py-v5/jam-py-v7/blob/master/jam/langs.py',
         'NetworkError': 'https://github.com/username/repo/blob/main/network.py',
         'FileError': 'https://github.com/username/repo/blob/main/file_ops.py',
     }
-    
+
     exception_name = info['fullname']
     return mapping.get(exception_name)

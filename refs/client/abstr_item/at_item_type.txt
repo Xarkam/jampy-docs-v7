@@ -2,27 +2,39 @@
 item_type
 =========
 
-.. js:attribute:: item_type
+.. js:attribute:: AbstractItem.item_type
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========
 
 Specifies the type of the item.
 
-Use the type attribute to get the type of the item. It can have one of the 
-following values: 
+Use the type attribute to get the type of the item. It can have one of the
+following values:
 
-* “task”, 
-* “items”, 
-* “details”, 
-* “reports”, 
-* “item”, 
-* “detail_item”, 
-* “report”, 
-* “detail”
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Value
+     - Description
+   * - ``task``
+     - The item represents a task.
+   * - ``items``
+     - The item represents a collection of items.
+   * - ``details``
+     - The item represents a collection of detail items.
+   * - ``reports``
+     - The item represents a collection of reports.
+   * - ``item``
+     - The item represents a single item.
+   * - ``detail_item``
+     - The item represents a single detail item.
+   * - ``report``
+     - The item represents a single report.
+   * - ``detail``
+     - The item represents a single detail.

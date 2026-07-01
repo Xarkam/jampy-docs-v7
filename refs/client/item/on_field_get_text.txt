@@ -2,27 +2,27 @@
 on_field_get_text
 =================
 
-on_field_get_text(field)
+.. js:function:: Item.on_field_get_text(field)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Item class </refs/client/item_api>`
+**class** :js:class:`Item`
 
 Description
 ===========
 
-Write an ``on_field_get_text`` event handler to specify the ``text`` that will be 
+Write an ``on_field_get_text`` event handler to specify the ``text`` that will be
 inserted in the table cell for the field.
 
 
-The ``field`` parameter is the field whose 
-:doc:`display_text </refs/client/field/at_display_text>`
+The ``field`` parameter is the field whose
+:js:attr:`display_text <Field.display_text>`
 is processed. To get the item that owns the field, use the
-:doc:`owner </refs/client/field/at_owner>` attribute of the field.
+:js:attr:`owner <Field.owner>` attribute of the field.
 
-The function is used to concatenate two or more fields for displaying. The 
+The function is used to concatenate two or more fields for displaying. The
 fields can be any lookups from some other tables.
 
 Example
@@ -40,6 +40,10 @@ Example
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+**Related events**
 
-:doc:`on_field_get_html <on_field_get_html>`
+* :js:func:`on_field_get_html <Item.on_field_get_html>`
+
+**Related concepts**
+
+* :doc:`Fields </programming/data/fields>`

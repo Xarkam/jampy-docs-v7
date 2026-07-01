@@ -2,12 +2,12 @@
 Jam.py documentation contents
 =============================
 
-.. toctree:: 
+.. toctree::
     :hidden:
 
     index
 
-.. toctree:: 
+.. toctree::
     :maxdepth: 3
 
     intro/index
@@ -17,4 +17,6 @@ Jam.py documentation contents
     admin/index
     refs/index
     releases/index
+
+.. This page doesn't exist. FIXIT
     jampy-design-doco/contents

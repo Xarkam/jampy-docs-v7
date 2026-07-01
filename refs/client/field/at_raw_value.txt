@@ -2,13 +2,11 @@
 raw_value
 =========
 
-.. js:attribute:: raw_value
+.. js:attribute:: Field.raw_value
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Field class </refs/client/field_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description
@@ -17,20 +15,25 @@ Description
 Represents the data in a field object.
 
 Use **raw_value** read only property to read data directly from the item dataset.
-Other properties such as 
-:doc:`value <at_value>`
+Other properties such as
+:js:attr:`value <Field.value>`
 and
-:doc:`text <at_text>`
+:js:attr:`text <Field.text>`
 use conversion.
 So the
-:doc:`value <at_value>`
-property converts the **null** value to **0** for the numeric fields. 
+:js:attr:`value <Field.value>`
+property converts the **null** value to **0** for the numeric fields.
 
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+**Related attributes**
 
-:doc:`value <at_value>`
+* :js:attr:`value <Field.value>`
+* :js:attr:`text <Field.text>`
 
-:doc:`text <at_text>`
+**Related concepts**
+
+* :doc:`Fields </programming/data/fields>`
+
+

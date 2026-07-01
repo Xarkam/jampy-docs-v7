@@ -2,17 +2,29 @@
 item_by_ID
 ==========
 
-.. js:function:: item_by_ID(ID)
+.. js:function:: AbstractItem.item_by_ID(ID)
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========
 
-item_by_ID searches among all items of the project :doc:`task tree </programming/task_tree>`, 
-starting with the current item, for an item whose :doc:`ID <at_id>` attribute is 
+item_by_ID searches among all items of the project :doc:`task tree </programming/task_tree>`,
+starting with the current item, for an item whose :js:attr:`ID <AbstractItem.id>` attribute is
 equal to the ID parameter.
+
+Parameter
+=========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``ID``
+     - :js:attr:`ID <AbstractItem.id>`
+     - The ID item to find.

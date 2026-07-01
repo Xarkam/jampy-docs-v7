@@ -2,13 +2,11 @@
 owner
 =====
 
-.. js:attribute:: owner
+.. js:attribute:: Field.owner
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Field class </refs/client/field_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description
@@ -16,8 +14,8 @@ Description
 
 Identifies the item to which a field object belongs.
 
-Check the value of the owner attribute to determine the item that uses the field 
-object to represent one of its fields. 
+Check the value of the owner attribute to determine the item that uses the field
+object to represent one of its fields.
 
 Example
 =======
@@ -37,7 +35,8 @@ Example
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+**Related concepts**
 
-:doc:`Fields </programming/data/fields>`
+* :doc:`Dataset </programming/data/dataset>`
+* :doc:`Fields </programming/data/fields>`
 

@@ -1,10 +1,14 @@
+.. This pages is not in any toctree. FIXIT
+
+:orphan:
+
 ===================
 Foreign Keys Dialog
 ===================
 
-If an item has a lookup field, and in the definition of lookup item the soft 
+If an item has a lookup field, and in the definition of lookup item the soft
 delete attribute is not set, in order to maintain the integrity of the data,
-we can create a foreign key. See 
+we can create a foreign key. See
 :doc:`Foreign keys topic </faq/faq_foreign_keys>` in FAQ
 
 .. image:: /admin/_images/foreign_keys_dialog_jampy.png

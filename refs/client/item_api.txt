@@ -4,18 +4,17 @@ Item class
 
 .. js:class:: Item
 
-**domain**: client 
+    :domain: client
+    :language: javascript
 
-**language**: javascript
-
-Item class is used to create item objects of the 
-:doc:`task tree </programming/task_tree>` that may have an associated database 
-table. 
+Item class is used to create item objects of the
+:doc:`task tree </programming/task_tree>` that may have an associated database
+table.
 
 Below the attributes, methods and events of the class are listed.
 
 It, as well, inherits attributes and methods of its ancestor class
-:doc:`AbstractItem class <abstractitem_api>`
+:js:class:`AbstractItem`
 
 Attributes and properties
 =========================
@@ -23,16 +22,16 @@ Attributes and properties
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     item/at_*
 
-Methods 
+Methods
 =======
 
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     item/m_*
     item/master_*
 
@@ -42,6 +41,6 @@ Events
 .. toctree::
     :maxdepth: 1
     :glob:
-    
+
     item/on_*
     item/process_*

@@ -2,26 +2,27 @@
 filter_caption
 ==============
 
-.. js:attribute:: filter_caption
+.. js:attribute:: Filter.filter_caption
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Filter class </refs/client/filter_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Filter`
 
 
 Description
 ===========
 
-**Filter_caption** attribute specifies the name of the filter that appears to 
+**Filter_caption** attribute specifies the name of the filter that appears to
 users.
 
 See also
 ========
 
-:doc:`Filters </programming/data/filters>`
+**Related attributes**
 
-:doc:`filter_name <at_filter_name>`
+* :js:attr:`filter_name <Filter.filter_name>`
 
-:doc:`Dataset </programming/data/dataset>`
+**Related concepts**
+
+* :doc:`Filters </programming/data/filters>`
+* :doc:`Dataset </programming/data/dataset>`

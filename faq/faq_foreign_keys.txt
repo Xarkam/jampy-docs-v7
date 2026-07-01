@@ -1,17 +1,21 @@
+.. This pages is not in any toctree. FIXIT
+
+:orphan:
+
 ===============================
 What are foreign keys used for?
 ===============================
 
-Foreign keys that you can create in the Jam.py V5 Application Builder, prevent deletion 
-of a record in the lookup table if a reference to it is stored in the lookup field. 
+Foreign keys that you can create in the Jam.py V5 Application Builder, prevent deletion
+of a record in the lookup table if a reference to it is stored in the lookup field.
 
-For example, when a foreign key is created on the "Customer" field for "Invoices" 
-item, user won't be able to delete a customer in "Customers" catalog if a 
+For example, when a foreign key is created on the "Customer" field for "Invoices"
+item, user won't be able to delete a customer in "Customers" catalog if a
 reference to it is stored in "Invoices".
 
-The soft delete attribute of the lookup item must be set to false (see 
+The soft delete attribute of the lookup item must be set to false (see
 :doc:`Item Editor Dialog </admin/items/item_editor_dialog>`
-) for the lookup field to appear in the 
+) for the lookup field to appear in the
 :doc:`Foreign Keys Dialog </admin/items/foreign_keys_dialog>`
 
 The creation/deleting support for foreign keys is dropped in Jam.py V7.

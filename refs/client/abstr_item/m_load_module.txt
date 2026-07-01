@@ -2,39 +2,51 @@
 load_module
 ===========
 
-.. js:function:: load_module(callback)
+.. js:function:: AbstractItem.load_module(callback)
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========
 
-Use **load_module** method to dynamically load javascript file of an item 
+Use **load_module** method to dynamically load javascript file of an item
 module, before executing callback.
 
-The method checks whether the module has been loaded, if not, loads the 
-module from the server, initializes the item and then executes the **callback** 
-function, otherwise just the **callback** function is executed. The item is 
-passed to the callback function as a parameter. 
+The method checks whether the module has been loaded, if not, loads the
+module from the server, initializes the item and then executes the **callback**
+function, otherwise just the **callback** function is executed. The item is
+passed to the callback function as a parameter.
 
 The request to the server is executed asynchronously.
+
+Parameter
+=========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``callback``
+     - ``function``
+     -
 
 Example
 =======
 
-Bellow, the do_some_work function is executed only when an item module has been 
-loaded: 
+Bellow, the do_some_work function is executed only when an item module has been
+loaded:
 
 .. code-block:: js
 
     function some_work(item) {
         item.load_module(do_some_work);
     }
-    
+
     function do_some_work(item) {
         // some code
     }
@@ -42,8 +54,11 @@ loaded:
 See also
 ========
 
-:doc:`Working with modules </programming/modules>`
+**Related functions**
 
-:doc:`load_modules <m_load_modules>`
+* :js:meth:`load_modules <AbstractItem.load_modules>`
+* :js:meth:`load_script <AbstractItem.load_script>`
 
-:doc:`load_script <m_load_script>`
+**Related concepts**
+
+* :doc:`Working with modules </programming/modules>`

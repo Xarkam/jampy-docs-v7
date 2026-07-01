@@ -2,13 +2,11 @@
 owner
 =====
 
-.. js:attribute:: owner
+.. js:attribute:: Filter.owner
 
-**domain**: client 
-
-**language**: javascript
-
-:doc:`Filter class </refs/client/filter_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Filter`
 
 
 Description
@@ -16,6 +14,6 @@ Description
 
 Identifies the item to which a filter object belongs.
 
-Check the value of the owner attribute to determine the item that uses the filter 
-object to represent one of its filters. 
+Check the value of the owner attribute to determine the item that uses the filter
+object to represent one of its filters.
 

@@ -2,9 +2,9 @@
 view_form
 =========
 
-.. js:attribute:: view_form
+.. js:attribute:: Item.view_form
 
-**domain**: client  
+**domain**: client
 
 **language**: javascript
 
@@ -13,31 +13,31 @@ view_form
 Description
 ===========
 
-Use ``view_form`` attribute to get access to a Jquery object representing the 
-view form of the item. 
+Use ``view_form`` attribute to get access to a Jquery object representing the
+view form of the item.
 
-It is created by the 
+It is created by the
 :doc:`view <m_view>`
 method.
 
-The 
+The
 :doc:`close_view_form <m_close_view_form>`
 method sets the ``view_form`` value to undefined.
 
 Example
 =======
 
-In the following example the button defined in the item html template is assigned 
+In the following example the button defined in the item html template is assigned
 a click event:
 
 .. code-block:: js
 
-    item.view_form.find("#new-btn").on('click', 
+    item.view_form.find("#new-btn").on('click',
         function() {
             item.insert_record();
         }
     );
-    
+
 See also
 ========
 
@@ -48,4 +48,3 @@ See also
 :doc:`create_view_form <m_create_view_form>`
 
 :doc:`close_view_form <m_close_view_form>`
-    

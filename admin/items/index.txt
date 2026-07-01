@@ -2,42 +2,42 @@
 Items
 =====
 
-Select a group node in the project tree to get access to items that this 
-group owns, see 
+Select a group node in the project tree to get access to items that this
+group owns, see
 :doc:`Task tree </programming/task_tree>`.
 
 At the bottom of the page there are 3 buttons:
 
-* **New** - click on New to create a new item in the 
+* **New** - click on New to create a new item in the
   :doc:`Item Editor Dialog <item_editor_dialog>`
 
 * **Edit** - use this button to modify item's attributes as well to add, change
-  or delete fields in the 
+  or delete fields in the
   :doc:`Item Editor Dialog <item_editor_dialog>`
 
-* **Delete** - click on the button to delete an item and its underlying database 
-  table. 
+* **Delete** - click on the button to delete an item and its underlying database
+  table.
 
-You can use the up and down arrows to arrange the items in the list. This may be 
-useful for creating a menu or display it in some way on the web page. 
+You can use the up and down arrows to arrange the items in the list. This may be
+useful for creating a menu or display it in some way on the web page.
 
 The right panel of the page have following buttons:
 
-* **Client module** - click on this button to open the 
+* **Client module** - click on this button to open the
   :doc:`Code editor </admin/code_editor>`
-  to edit client module of an item, see 
+  to edit client module of an item, see
   :doc:`Working with modules </programming/modules>`.
 
-* **Server module**	- click on this button to open the 
+* **Server module**	- click on this button to open the
   :doc:`Code editor </admin/code_editor>`
-  to edit server module of an item, see 
+  to edit server module of an item, see
   :doc:`Working with modules </programming/modules>`.
 
-* **View Form** - use this button to invoke the 
-  :doc:`View Form Dialog <view_form_dialog>` 
+* **View Form** - use this button to invoke the
+  :doc:`View Form Dialog <view_form_dialog>`
   to set how the view form will be displayed.
 
-* **Edit Form** - use this button to invoke the 
+* **Edit Form** - use this button to invoke the
   :doc:`Edit Form Dialog <edit_form_dialog>`
   to set how the edit form will be displayed.
 
@@ -67,21 +67,21 @@ The right panel of the page have following buttons:
 
 * **Reports** - сlick this button to open the
   :doc:`Reports Dialog <reports_dialog>`
-  to specify reports that could printed for the item. 
-  A new project has a function that can be used to create a drop-up 
+  to specify reports that could printed for the item.
+  A new project has a function that can be used to create a drop-up
   button to print the reports.
-  
-* **Privileges** - click this button to open a dialog to configure the 
+
+* **Privileges** - click this button to open a dialog to configure the
   privileges assigned to user roles for this item.
 
 .. image:: /admin/_images/items_jampy.png
 	:align: center
 	:alt: Task node
-	
+
 
 .. toctree::
    :maxdepth: 1
-   
+
    item_editor_dialog
    field_editor_dialog
    edit_form_dialog
@@ -91,6 +91,8 @@ The right panel of the page have following buttons:
    order_dialog
    indices_dialog
    reports_dialog
+
+.. This page doesn't exist. FIXIT
    priviledges_dialog
 
 ..

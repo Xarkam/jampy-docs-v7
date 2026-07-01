@@ -2,13 +2,11 @@
 field_type
 ==========
 
-.. js:attribute:: field_type
+.. js:attribute:: Field.field_type
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Field class </refs/client/field_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description
@@ -16,22 +14,23 @@ Description
 
 Identifies the data type of the field object.
 
-Use the **field_type** attribute to learn the type of the data the field contains. 
-It is one of the following values: 
+Use the **field_type** attribute to learn the type of the data the field contains.
+It is one of the following values:
 
-* "text", 
-* "integer", 
+* "text",
+* "integer",
 * "float",
-* "currency", 
-* "date", 
-* "datetime", 
-* "boolean", 
+* "currency",
+* "date",
+* "datetime",
+* "boolean",
 * "blob"
 
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+**Related concepts**
 
-:doc:`Fields </programming/data/fields>`
+* :doc:`Dataset </programming/data/dataset>`
+* :doc:`Fields </programming/data/fields>`
 

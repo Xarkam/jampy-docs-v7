@@ -2,13 +2,11 @@
 master
 ======
 
-.. js:attribute:: master
+.. js:attribute:: Detail.master
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Detail class </refs/client/detail_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Detail`
 
 
 Description
@@ -19,4 +17,6 @@ Use ``master`` attribute to get reference to the master of the detail.
 See also
 ========
 
-:doc:`Details </programming/data/details>`
+**Related concepts**
+
+* :doc:`Details </programming/data/details>`

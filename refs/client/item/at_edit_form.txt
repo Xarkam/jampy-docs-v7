@@ -2,37 +2,37 @@
 edit_form
 =========
 
-.. js:attribute:: edit_form
+.. js:attribute:: Item.edit_form
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
-**class** :doc:`Item class </refs/client/item_api>`
+**class**: :js:class:`Item`
 
 Description
 ===========
 
-Use ``edit_form`` attribute to get access to a Jquery object representing the 
-edit form of the item. 
+Use ``edit_form`` attribute to get access to a Jquery object representing the
+edit form of the item.
 
-It is created by the 
+It is created by the
 :doc:`create_edit_form <m_create_edit_form>`
 method.
 
-The 
+The
 :doc:`close_edit_form <m_close_edit_form>`
 method sets the ``edit_form`` value to undefined.
 
 Example
 =======
 
-In the following example the button defined in the item edit html template is 
+In the following example the button defined in the item edit html template is
 assigned a click event:
 
 .. code-block:: js
 
-    item.edit_form.find("#ok-btn").on('click.task', 
+    item.edit_form.find("#ok-btn").on('click.task',
         function() {
             item.apply_record();
         }
@@ -46,4 +46,3 @@ See also
 :doc:`create_edit_form <m_create_edit_form>`
 
 :doc:`close_edit_form <m_close_edit_form>`
-    

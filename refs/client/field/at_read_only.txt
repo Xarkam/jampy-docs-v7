@@ -2,13 +2,11 @@
 Field read_only
 ===============
 
-.. js:attribute:: read_only
+.. js:attribute:: Field.read_only
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Field class </refs/client/field_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Field`
 
 
 Description
@@ -16,15 +14,16 @@ Description
 
 Determines whether the field can be modified in data-aware controls.
 
-Set **read_only** to **true** to prevent a field from being modified in 
+Set **read_only** to **true** to prevent a field from being modified in
 data-aware controls.
 
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+**Related attributes**
 
-:doc:`required <at_required>`
+* :js:attr:`required <Field.required>`
 
+**Related concepts**
 
-
+* :doc:`Fields </programming/data/fields>`

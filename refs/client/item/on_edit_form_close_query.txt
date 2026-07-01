@@ -2,9 +2,9 @@
 on_edit_form_close_query
 ========================
 
-.. js:function:: on_edit_form_close_query(item)
+.. js:function:: Item.on_edit_form_close_query(item)
 
-**domain**: client 
+**domain**: client
 
 **language**: javascript
 
@@ -13,7 +13,7 @@ on_edit_form_close_query
 Description
 ===========
 
-The ``on_edit_form_close_query`` event is triggered by the 
+The ``on_edit_form_close_query`` event is triggered by the
 :doc:`close_edit_form <m_close_edit_form>`
 method of the item.
 
@@ -26,7 +26,7 @@ Example:
 
       function on_edit_form_close_query(item) {
           return true;
-      }    
+      }
 
 
 

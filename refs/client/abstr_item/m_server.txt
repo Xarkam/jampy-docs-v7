@@ -2,40 +2,60 @@
 server
 ======
 
-.. js:function:: server(func_name, params, callback)
+.. js:function:: AbstractItem.server(func_name, params, callback)
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`AbstractItem`
 
 Description
 ===========
 
 Use ``server`` method to execute a function defined in the server module of an item.
 
-``Server`` method executes a function with a name ``func_name`` defined in the server 
-module of an item with parameters specified in ``params``. 
+``Server`` method executes a function with a name ``func_name`` defined in the server
+module of an item with parameters specified in ``params``.
 
-If callback is specified, the function on the server is executed asynchronously, 
-after which the ``callback`` is executed with parameter that is the result of 
-the server function execution, otherwise the function is executed synchronously 
-and returns the result of the server function. 
+If callback is specified, the function on the server is executed asynchronously,
+after which the ``callback`` is executed with parameter that is the result of
+the server function execution, otherwise the function is executed synchronously
+and returns the result of the server function.
 
-If exception was raised during the operation on the server and the callback 
+If exception was raised during the operation on the server and the callback
 parameter is not passed (synchronous execution), the client throws an exception.
 If the callback parameter is present, it is passed to the callback as parameter.
 
-When exception is raised during the server function execution, the application 
-on the client throws exception with the server exception text. 
+When exception is raised during the server function execution, the application
+on the client throws exception with the server exception text.
 
-The first parameter of the function on the server must be ``item``, it must be 
+The first parameter of the function on the server must be ``item``, it must be
 followed by the parameters specified in the function on the client.
 
-``params`` is a list of parameters. If there are not parameters, the ``params`` 
-can be omitted. 
+``params`` is a list of parameters. If there are not parameters, the ``params``
+can be omitted.
 
+Parameters
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - Parameter
+     - Type
+     - Description
+   * - ``func_name``
+     - ``function``
+     - function with a name ``func_name`` defined in the server
+       module of an item with parameters specified in ``params``
+   * - ``params``
+     - ``array``
+     - list of parameters. Can by optional.
+
+       **The first parameter of the function on the server must be ``item``**
+   * - ``callback``
+     - ``function``
+     - if specified, the function named ``func_name`` on the server is executed asynchronously, after which the ``callback`` is executed.
 
 Example
 =======
@@ -54,8 +74,8 @@ The function defined in the **Invoices** journal ``Server Module``:
         else:
             raise Exception, 'Journal "invoices" does not have a record with id  %s' % id_value
         return result;
-        
-the following code in the **Invoices** journal ``Client Module`` will execute this 
+
+the following code in the **Invoices** journal ``Client Module`` will execute this
 server function:
 
 .. code-block:: js
@@ -68,13 +88,3 @@ server function:
             console.log(total);
         }
     });
-
-
-
-
-
-
-
-
-
-
