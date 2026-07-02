@@ -2,8 +2,6 @@
 task
 ====
 
-Indicates the root of the :doc:`task tree </programming/task_tree>` that owns this item.
-
 .. js:attribute:: AbstractItem.task
 
     :domain: client
