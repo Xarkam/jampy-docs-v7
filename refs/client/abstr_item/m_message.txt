@@ -16,55 +16,120 @@ Use **message** method to create a modal form.
 Parameters
 ==========
 
-:guilabel:`mess` specifies the text or html content that will appear in the
-body of the form.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 65
 
-:guilabel:`options` is an object with the following attributes:
+   * - Parameter
+     - Type
+     - Description
+   * - ``mess``
+     - ``string``
+     - Specifies the text or HTML content that will appear in the body of the form.
+   * - ``options``
+     - ``object``
+     - Is an object with the following attributes:
+
+       .. list-table::
+          :header-rows: 1
+          :widths: 5 5 60
+
+          * - Attribute
+            - Type
+            - Description
+          * - ``title``
+            - ``string``
+            - The title of the form.
+
+              **Default:** ``empty``
+          * - ``width``
+            - ``integer``
+            - The width of the form.
+
+              **Default:** ``400px``
+          * - ``height``
+            - ``integer``
+            - The height of the form.
+
+              **Default:** ``empty``
+          * - ``margin``
+            - ``string``
+            - Defines the margins of the form body.
+
+              **Default:** ``empty``
+          * - ``text_center``
+            - ``boolean``
+            - If ``true``, the body tags will be centered.
+
+              **Default:** ``false``
+          * - ``buttons``
+            - ``object``
+            - An object defining the buttons created in the footer of the form.
+
+              Keys are button names, values are functions executed when the
+              corresponding button is clicked.
+
+              **Default:** —
+          * - ``button_min_width``
+            - ``integer``
+            - The minimum width of the buttons.
+
+              **Default:** ``100px``
+          * - ``center_buttons``
+            - ``boolean``
+            - If ``true``, the buttons will be centered.
+
+              **Default:** ``false``
+          * - ``close_button``
+            - ``boolean``
+            - If ``true``, a close button is created in the upper-right corner
+              of the form.
+
+              **Default:** ``true``
+          * - ``close_on_escape``
+            - ``boolean``
+            - If ``true``, the form is closed when the user presses :kbd:`Escape`.
+
+              **Default:** ``true``
+          * - ``print``
+            - ``boolean``
+            - If ``true``, a print button is created in the upper-right corner
+              of the form to print its body.
+
+              **Default:** ``false``
+
+**The buttons Object**
+
+The ``buttons`` attribute defines the buttons displayed in the footer of the form.
+
+It is a plain object where each key/value pair describes one button.
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 15 65
+   :widths: 20 20 60
 
-   * - Option
-     - Default
+   * - Key
+     - Value type
      - Description
-   * - ``title``
-     - —
-     - The title of the form.
-   * - ``width``
-     - ``400px``
-     - The width of the form.
-   * - ``height``
-     - —
-     - The height of the form.
-   * - ``margin``
-     - —
-     - Defines the margins of the form body.
-   * - ``text_center``
-     - ``false``
-     - If ``true``, the body tags will be centered.
-   * - ``buttons``
-     - —
-     - An object defining the buttons created in the footer of the form.
-       Keys are button names, values are functions executed when the
-       corresponding button is clicked.
-   * - ``button_min_width``
-     - ``100px``
-     - The minimum width of the buttons.
-   * - ``center_buttons``
-     - ``false``
-     - If ``true``, the buttons will be centered.
-   * - ``close_button``
-     - ``true``
-     - If ``true``, a close button is created in the upper-right corner of
-       the form.
-   * - ``close_on_escape``
-     - ``true``
-     - If ``true``, the form is closed when the user presses :kbd:`Escape`.
-   * - ``print``
-     - ``false``
-     - If ``true``, a print button is created in the upper-right corner of
-       the form to print its body.
+   * - ``Yes``
+     - ``function``
+     - Functions executed when the button is clicked
+   * - ``No``
+     - ``function``
+     - Functions executed when the button is clicked
+   * - ``Cancel``
+     - ``function``
+     - Functions executed when the button is clicked
+
+**Example**
+
+.. code-block:: js
+
+  var buttons = {
+          Yes: yesCallback,
+          No: noCallback,
+          Cancel: cancelCallback
+      };
 
 Return
 ======
