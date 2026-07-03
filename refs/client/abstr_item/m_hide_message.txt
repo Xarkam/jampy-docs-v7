@@ -17,5 +17,41 @@ Use :js:meth:`hide_message <AbstractItem.hide_message>` method to close a modal 
 Parameter
 =========
 
-:guilabel:`form` is a JQuery object returned by :js:meth:`message <AbstractItem.message>` method.
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 20
 
+   * - Parameter
+     - Type
+     - Description
+   * - ``form``
+     - ``object``
+     - a JQuery object returned by :js:meth:`message <AbstractItem.message>` method.
+
+Examples
+========
+
+**Client**
+
+.. code-block:: javascript
+
+    function on_edit_form_created(item) {
+        let calc_btn = item.add_edit_button('Calculate');
+        calc_btn.click(function() {
+            let mess = item.message('Сalculation in progress, please wait', {close_on_escape: false, margin: 20, text_center: true});
+            item.server('calculate', [100, 200], function(result) {
+                // item.calculated_value.value = result;
+                item.hide_message(mess);
+            });
+        });
+    }
+
+**Server**
+
+.. code-block:: python
+
+   import time
+
+   def calculate(item, params1, param2):
+       time.sleep(5)
+       return params1 + param2
