@@ -8,6 +8,8 @@ load_script
     :language: javascript
     :class: :js:class:`AbstractItem`
 
+    **Execution:** ``asynchronous``
+
 Description
 ===========
 
@@ -16,13 +18,37 @@ executing callback.
 
 The method checks whether the file has been loaded, if not, loads
 it from the server, executes (if specified) onload function and then executes
-the **callback**, otherwise just the **callback** function is executed. The item
-is passed to the callback function as a parameter.
+the **callback**, otherwise just the **callback** function is executed.
 
-The **js_filename** should specify the path to javascript file relative to the
-server directory.
+The item is passed to the callback function as a parameter.
+
+.. Attention::
+  The **js_filename** should specify the path to javascript file relative to the server directory.
 
 The request to the server is executed asynchronously.
+
+Paramaters
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 5 5 30
+
+   * - Parameter
+     - Type
+     - Description
+
+   * - ``js_filename``
+     - ``string``
+     - Filename script to load.
+
+       The ``js_filename`` should specify the path to javascript file relative to the server directory
+   * - ``callback``
+     - ``function``
+     - callback function.
+   * - ``onload``
+     - ``function``
+     - Function executed (if specified) before the callback.
 
 Example
 =======

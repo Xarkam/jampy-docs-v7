@@ -1,5 +1,7 @@
 .wy-nav-content { max-width: none; }
 
+#rtd-search-form { display: none;}
+
 /* code.literal {
     color: #404040 !important;
     background-color: #fbfbfb !important;
@@ -7,4 +9,26 @@
 
 .highlight {
     background: #f8f8f8;
+}
+
+/* custom badge */
+.exec-badge {
+    display: inline-block;
+    margin-left: 0.6em;
+    padding: 0.1em 0.5em;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.exec-badge--asynchronous {
+    background-color: #7c3aed; /* violet */
+    color: #fff;
+}
+
+.exec-badge--synchronous {
+    background-color: #0891b2; /* cyan */
+    color: #fff;
 }
