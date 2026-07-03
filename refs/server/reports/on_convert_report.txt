@@ -15,7 +15,7 @@ Description
 
 
 The framework converts reports internally, using LibreOffice. 
-It is possible to use portable LibreOffice installlation.
+It is possible to use portable LibreOffice installation.
 
 Use the 
 **on_convert_report** event if you want to use some other service or change some 
@@ -62,6 +62,72 @@ Add the event to report and modify the above with the LO installation path, ie.:
             convertion = Popen([s_office, '--headless', '--convert-to', report.ext,
                 report.report_filename, '--outdir', os.path.join(report.task.work_dir, 'static', 'reports') ],
                 stderr=STDOUT,stdout=PIPE)
+
+
+External JSreport service
+====================================
+
+This example will run `JSreport` report name ``invoice-main`` from local server ``jsreport_url``.
+The **report** parameter might be used to specify ``jsreport_url``. The downloaded file will have ODS extension
+regardless of :doc:`extension </refs/client/report/at_extension>` used (we are looking into this for the versions above 7.0.100).
+
+.. code-block:: py
+
+        import os
+        import json
+        import requests
+
+        def on_convert_report(report):
+            # Using the confirmed working template name
+            report_data = {
+                "template": { "name": "invoice-main" },
+                "data": {
+                    "number": "123",
+                    "seller": {
+                        "name": "Next Step Webs, Inc.",
+                        "road": "12345 Sunny Road",
+                        "country": "Sunnyville, TX 12345"
+                    },
+                    "buyer": {
+                        "name": "Acme Corp.",
+                        "road": "16 Johnson Road",
+                        "country": "Paris, France 8060"
+                    },
+                    "items": [
+                        {
+                            "name": "Website design",
+                            "price": 300
+                        }
+                    ]
+                }
+            }
+
+            jsreport_url = "http://127.0.0.1:5488/api/report"
+
+            try:
+                response = requests.post(
+                    jsreport_url,
+                    headers={"Content-Type": "application/json"},
+                    json=report_data,
+                    timeout=30
+                )
+                response.raise_for_status()
+
+                # Save the PDF response
+                with open(report.report_filename, 'wb') as f:
+                    f.write(response.content)
+
+                print(f"Report successfully generated via jsreport: {report.report_filename}")
+                return True
+
+            except requests.exceptions.HTTPError as e:
+                print(f"HTTP Error: {e}")
+                if hasattr(response, 'text'):
+                    print(f"Response body: {response.text}")
+                return False
+            except Exception as e:
+                print(f"Unexpected error: {e}")
+                return False
 
 
 
