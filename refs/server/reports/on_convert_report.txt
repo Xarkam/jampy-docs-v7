@@ -64,12 +64,14 @@ Add the event to report and modify the above with the LO installation path, ie.:
                 stderr=STDOUT,stdout=PIPE)
 
 
-External JSreport service
+External Report service
 ====================================
 
-This example will run `JSreport` report name ``invoice-main`` from local server ``jsreport_url``.
+This example will run `JSreport`_ report name ``invoice-main`` from local server ``jsreport_url``.
 The **report** parameter might be used to specify ``jsreport_url``. The downloaded file will have ODS extension
-regardless of :doc:`extension </refs/client/report/at_extension>` used (we are looking into this for the versions above 7.0.100).
+regardless of :doc:`extension </refs/client/report/at_extension>` used (we are looking to fix this for Jam.py >7.0.100).
+
+.. _JSreport: https://github.com/jsreport/jsreport
 
 .. code-block:: py
 
@@ -129,7 +131,32 @@ regardless of :doc:`extension </refs/client/report/at_extension>` used (we are l
                 print(f"Unexpected error: {e}")
                 return False
 
+The above procedure is not based on `JSreport` authentication. If authentication is enabled,
+we need to pass the ``Authorization`` header for every request:
+
+.. code-block:: py
+
+        import base64
+        def on_convert_report(report):
+            username = "your_username"
+            password = "your_password"
+
+            credentials = f"{username}:{password}"
+            encoded_credentials = base64.b64encode(credentials.encode('utf-8')).decode('utf-8')
+
+            report_data = {
+            ...
+            }
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Basic {encoded_credentials}"
+            }
+            ...
 
 
-.. _JSreport: https://github.com/jsreport/jsreport
+
+
+
+
+
 
