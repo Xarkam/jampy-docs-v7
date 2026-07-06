@@ -16,6 +16,7 @@ On the General tab, you can specify general parameters of the project:
 
 * **Production** - if this checkbox is checked, the access to Application Builder is disabled.
   To enable the access, the ``builder.html`` file should be deleted from the application folder.
+  See Custom :doc:`builder.html </how_to/how_to_create_custom_production_msg>`.
 
 * **Safe mode** - if safe mode is enabled, authentication  is needed for user to 
   work in the system (See 
