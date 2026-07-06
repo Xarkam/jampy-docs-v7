@@ -1,0 +1,66 @@
+============================
+Custom production html page
+============================
+
+When access to Application Builder is disabled on :doc:`Paramaters </admin/project/parameters>`, 
+the plain ``Application Builder production mode`` is displayed.
+
+To change the content to forward user to application instead, use below for builder.html:
+
+.. code-block:: html
+
+        <html lang="en">
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+                <meta http-equiv="Pragma" content="no-cache" />
+                <meta http-equiv="Expires" content="0" />
+                <title>Jam.py demo</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="icon" href="static/img/j.png" type="image/png">
+
+                <link href="jam/css/bootstrap.css" rel="stylesheet">            <!--do not modify-->
+                <link href="jam/css/bootstrap-responsive.css" rel="stylesheet">
+                <link href="jam/css/bootstrap-modal.css" rel="stylesheet">
+                <link href="jam/css/jam.css" rel="stylesheet">                  <!--do not modify-->
+            </head>
+            <body>
+                <div class="modal fade in" style="top: 50%; margin-top: -150px; width: 500px;">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Jam.py Application Builder</h4>
+                    </div>
+                   <div>
+                            <p>The Application Builder is disabled. Please remove builder.html from Application folder to enable it!</p>
+                        
+                   </div>
+                    <form id="login-form" target="dummy" class="form-horizontal" style="margin: 0;">
+                        <div class="alert alert-success" style="margin: 0; display: none">
+                            Done. This window will close in 6 seconds!
+                        </div>
+                        <div class="alert alert-error" style="margin: 0; display: none">
+                        </div>
+                        <div class="form-footer">
+                            <input type="button" class="btn expanded-btn pull-right" id="register-btn" value="OK" tabindex="3">
+                        </div>
+                    </form>
+                </div>
+                <script src="jam/js/jquery.js"></script>
+
+         
+               <script>
+                $(document).ready(function(){
+
+                    $("div.alert-success").show();
+                    setTimeout(
+                        function() {
+                            window.location.href = "index.html";
+                        },
+                        6000
+                    );
+               
+                })
+                </script>
+
+            </body>
+        </html>
+

@@ -6,7 +6,7 @@ The framework has a full fledged demo application that demonstrates programming
 techniques used in the framework. 
 
 The demo is located in the demo folder of the Jam.py package downloaded from Github. There is also a standalone or an 
-portable Jam.py V7 Demo application for Windows x64 provided
+portable Jam.py V7 Demo application for Windows x64 provided for `Jam.py` >7.0.100 in 
 `here <https://github.com/jam-py-v5/jam-py-v7/releases/>`_.
 
 The portable application depends on LibreOffice for Reports and nothing more. Just extract, run it and point the browser as per below.
