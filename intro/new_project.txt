@@ -130,7 +130,8 @@ Examples of database setups
     database bindings are installed.
 
     * If using PostgreSQL_, the ``psycopg2`` or ``psycopg2-binary`` package is needed. 
-    * If using MySQL or MariaDB_, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient`` package is needed, as well as database client development files. 
+    * If using MySQL or MariaDB_, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient`` 
+      package is needed, as well as database client development files. 
     * If using MSSQL_, the ``pymssql`` is needed.
     * If using Oracle_, the `cx_Oracle`_ is needed, as well as Python headers (development files).
     * If using SQLCipher_ (TBA),  ``sqlcipher3-binary`` package is needed for Linux. There is a standalone DLL for Windows available.
@@ -138,8 +139,8 @@ Examples of database setups
     * If using Firebird_,  ``fdb`` package is needed.
     * If using Databricks_, ``databricks-sql-connector`` is needed.
     * If using DuckDB_, ``duckdb`` is needed.
-    * To generate reports, **LibreOffice** must be installed. :doc:`Portable </refs/server/reports/on_convert_report>` LibreOffice is supported. 
-External libraries are also supported. Pop-ups for the site should be enabled.
+    * To generate reports, **LibreOffice** must be installed. :doc:`Portable </refs/server/reports/on_convert_report>` LibreOffice is supported.
+      External libraries are also supported. Browser ``Pop-ups`` for the site should be enabled.
 
 
 .. _Jam.py Design Tips: https://jampy-application-design-tips.readthedocs.io/
@@ -184,8 +185,8 @@ in the Application builder.
 
 .. important::
 
-        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
-        ``Jam.py`` framework ``version`` number. 
+        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number,
+        ``Jam.py`` framework ``version`` number and Python version.
 
 
 Open a new tab, type
