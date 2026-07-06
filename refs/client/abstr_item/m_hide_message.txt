@@ -19,7 +19,7 @@ Parameter
 
 .. list-table::
    :header-rows: 1
-   :widths: 5 5 20
+   :widths: 5 5 30
 
    * - Parameter
      - Type

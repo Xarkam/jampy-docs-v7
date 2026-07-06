@@ -8,6 +8,8 @@ load_module
     :language: javascript
     :class: :js:class:`AbstractItem`
 
+    **Execution:** ``asynchronous``
+
 Description
 ===========
 
