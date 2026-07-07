@@ -55,9 +55,9 @@ inherits all its attributes, methods and events.
     The ``apply`` method of the Detail class does nothing. To write changes made 
     to a detail use ``apply`` method of its master.
     
-    To work with a detail its muster must be active
+    To work with a detail its master must be active.
     
-    To make any changes to a detail its master must be in an edit or insert mode
+    To make any changes to a detail its master must be in an edit or insert mode.
     
 Examples
 ========

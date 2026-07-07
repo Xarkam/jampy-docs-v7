@@ -92,7 +92,7 @@ Installing an official release manually
 
 .. caution::
 
-    This two differents installation methods, will install Jam.py in your Python global installation’s site-packages directory.
+    This two different installation methods, will install Jam.py in your Python global installation’s site-packages directory.
 
 
 
