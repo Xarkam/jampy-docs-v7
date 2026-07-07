@@ -56,7 +56,7 @@ the following code to the "Poll" client module:
         q.apply();
     }  
 
-.. image:: _images/details_jampy.png
+.. image:: /how_to/_images/details_jampy.png
 	:align: center
 	:alt: details_jampy.png
   

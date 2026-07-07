@@ -199,7 +199,7 @@ in the address bar and press Enter.
 A new project appears with an empty menu.
 
 
-.. image:: _images/empty_project_jampy.png
+.. image:: /intro/_images/empty_project_jampy.png
 	:align: center
 	:alt: Jam.py project
 

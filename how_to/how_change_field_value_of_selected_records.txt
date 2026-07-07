@@ -6,7 +6,7 @@ In this example, we will show how to change the “Media Type” field of the �
 catalog to the same value for the selected records.
 
 
-.. image:: _images/set_media_type_jampy.png
+.. image:: /how_to/_images/set_media_type_jampy.png
 	:align: center
 	:alt: set_media_type_jampy.png
 

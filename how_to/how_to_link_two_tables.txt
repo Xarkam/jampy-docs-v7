@@ -254,7 +254,7 @@ will be as follows:
       });
   }
 
-.. image:: _images/two_tables_jampy.png
+.. image:: /how_to/_images/two_tables_jampy.png
 	:align: center
 	:alt: two_tables_jampy.png
 

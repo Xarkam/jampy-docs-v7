@@ -53,7 +53,7 @@ For example this code
   
 will change form inputs this way:
 
-.. image:: _images/form_elements_style_jampy.png
+.. image:: /how_to/_images/form_elements_style_jampy.png
 	:align: center
 	:alt: form_elements_style_jampy.png
 
