@@ -2,7 +2,7 @@
 Creating a project
 ==================
 
-Create a new directory. 
+Create a new directory.
 
 Go into the directory and run from command line:
 
@@ -10,7 +10,7 @@ Go into the directory and run from command line:
 
     $ jam-project.py
 
-For Windows users, ``jam-project.py`` command is in ``Scripts`` folder, ie. 
+For Windows users, ``jam-project.py`` command is in ``Scripts`` folder, ie.
 folder above this one:
 
 .. code-block:: console
@@ -48,12 +48,12 @@ For Windows users::
 
 
 .. note::
-    You can specify a port as parameter, for example 
-    
+    You can specify a port as parameter, for example
+
     .. code-block:: console
-    
+
         $ ./server.py 8081
-        
+
     By default, the port is 8080. If you specify another port, you need to
     use it in your browser in the next steps.
 
@@ -71,7 +71,7 @@ You’ll see the similar output on the command line::
 If we open a Web browser and visit the app, the below message will display:
 
 
-.. image:: _images/run_builder_jampy.png
+.. image:: /intro/_images/run_builder_jampy.png
 	:alt: Jam.py new project
 
 
@@ -80,14 +80,14 @@ Open a Web browser and go to “/builder.html” on your local domain – e.g.:
 .. code-block:: console
 
     127.0.0.1:8080/builder.html
-    
+
 You should see the language selection dialog. This defines the language used for the
 user interface. You can select the language from the list of default languages, or
 import your own, using the "folder" icon to the right of the input field. See the
 :doc:`Language support </admin/language_support>` page for more information.
 Select your language and press the OK button.
 
-.. image:: _images/lang_jampy.png
+.. image:: /intro/_images/lang_jampy.png
 	:alt: Jam.py language dialog
 
 Next is the new project dialog. Fill in:
@@ -97,15 +97,15 @@ Next is the new project dialog. Fill in:
   to get access to the task object. This should be a short and valid python identifier.
   This name is also used as a prefix when creating a table in the project database.
 * **DB type** - select a database type. If the database is not Sqlite, it must be
-  created in advance and its attributes should be entered in the 
-  corresponding form fields. 
+  created in advance and its attributes should be entered in the
+  corresponding form fields.
   To see examples of Database setup, follow the :doc:`link </admin/project/database>`.
 
-.. image:: _images/project_params_jampy.png
+.. image:: /intro/_images/project_params_jampy.png
 	:align: center
 	:alt: New project setup
 
-When you press OK, the connection to the database will be checked, and in case 
+When you press OK, the connection to the database will be checked, and in case
 of failure an error message will be displayed.
 
 
@@ -114,7 +114,7 @@ Examples of database setups
 
 .. admonition:: Adapted from `Jam.py Design Tips`_
 
-    Jam.py supports many different database servers. For example PostgreSQL_, 
+    Jam.py supports many different database servers. For example PostgreSQL_,
     MariaDB_, MySQL_, MSSQL_, Oracle_, Firebird_, IBM_, SQLite_, Databricks_, DuckDB_,
     and SQLite with SQLCipher_.
 
@@ -129,9 +129,9 @@ Examples of database setups
     In addition to a database backend, we need to make sure the Python
     database bindings are installed.
 
-    * If using PostgreSQL_, the ``psycopg2`` or ``psycopg2-binary`` package is needed. 
-    * If using MySQL or MariaDB_, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient`` 
-      package is needed, as well as database client development files. 
+    * If using PostgreSQL_, the ``psycopg2`` or ``psycopg2-binary`` package is needed.
+    * If using MySQL or MariaDB_, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient``
+      package is needed, as well as database client development files.
     * If using MSSQL_, the ``pymssql`` is needed.
     * If using Oracle_, the `cx_Oracle`_ is needed, as well as Python headers (development files).
     * If using SQLCipher_ (TBA),  ``sqlcipher3-binary`` package is needed for Linux. There is a standalone DLL for Windows available.
@@ -157,16 +157,16 @@ Examples of database setups
 .. _IBM: https://www.ibm.com/support/pages/downloading-ibm-db2-version-115-linux-unix-and-windows
 .. _Databricks: https://www.databricks.com/blog/how-use-lakebase-transactional-data-layer-databricks-apps
 .. _DuckDB: https://github.com/duckdb/duckdb
-    
+
 .. note::
 
-    For **SQLite** databases, certain schema changes - such as deleting or renaming a field - require the  
-    :doc:`Application Builder </admin/index>`  
+    For **SQLite** databases, certain schema changes - such as deleting or renaming a field - require the
+    :doc:`Application Builder </admin/index>`
     to recreate the table. In this process, a new table is created and all records are
     copied from the original table into it.
-    
+
     Additionally, Jam.py does not support importing metadata into an existing SQLite
-    project (i.e., a project with already created tables).  
+    project (i.e., a project with already created tables).
     Metadata can only be imported when creating a new project.
 
 
@@ -174,8 +174,8 @@ Examples of database setups
 More about the database setups is within the :doc:`Project management </admin/project/database>`.
 
 
-If all goes well, a new project will be created and the project tree will appear 
-in the Application builder.    
+If all goes well, a new project will be created and the project tree will appear
+in the Application builder.
 
 
 .. image:: /intro/_images/detail_group_jampy.png

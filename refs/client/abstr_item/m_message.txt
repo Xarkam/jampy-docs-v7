@@ -170,7 +170,7 @@ The following code will create a yes-no-cancel dialog:
 
 The result of the code above will be:
 
-.. image:: /abstr_item/_images/message_jampy.png
+.. image:: /refs/client/abstr_item/_images/message_jampy.png
    :width: 400
    :align: center
    :alt: Message method example

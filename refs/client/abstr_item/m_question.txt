@@ -57,6 +57,6 @@ record when the user clicks the Yes button:
 The result of the code above will be:
 
 
-.. image:: /abstr_item/_images/delete_jampy.png
+.. image:: /refs/client/abstr_item/_images/delete_jampy.png
 	:align: center
 	:alt: Message delete record
