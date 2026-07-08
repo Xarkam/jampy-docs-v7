@@ -56,7 +56,10 @@ the following code to the "Poll" client module:
         q.apply();
     }  
 
-.. image:: _images/details_jampy.png
+.. Comment
+
+
+.. image:: _images/how_details_jampy.png
 	:align: center
 	:alt: details_jampy.png
   
