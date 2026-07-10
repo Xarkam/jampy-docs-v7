@@ -140,7 +140,7 @@ Examples of database setups
     * If using Databricks_, ``databricks-sql-connector`` is needed.
     * If using DuckDB_, ``duckdb`` is needed.
     * To generate reports, **LibreOffice** must be installed. :doc:`Portable </refs/server/reports/on_convert_report>` LibreOffice is supported.
-      External libraries are also supported. Browser ``Pop-ups`` for the site should be enabled.
+      External libraries are also supported as well as jinja templates. Browser ``Pop-ups`` for the site should be enabled.
 
 
 .. _Jam.py Design Tips: https://jampy-application-design-tips.readthedocs.io/
