@@ -52,16 +52,45 @@ Example
 Portable LibreOffice on Windows
 ===========================================
 
-Add the event to report and modify the above with the LO installation path, ie.:
+Add the event to report and use below with the LO installation path, ie.:
 
 .. code-block:: py
 
+        import os
+        from subprocess import Popen, STDOUT, PIPE
 
-        if os.name == "nt":
-            s_office = r"C:\Users\your_username\Downloads\LibreOfficePortable\App\libreoffice\program\soffice.exe"
-            convertion = Popen([s_office, '--headless', '--convert-to', report.ext,
-                report.report_filename, '--outdir', os.path.join(report.task.work_dir, 'static', 'reports') ],
-                stderr=STDOUT,stdout=PIPE)
+        def on_convert_report(report):
+            print("running on_convert !!!!!!!!!!!")
+            try:
+                if os.name == "nt":
+                    s_office = r"C:\LibreOfficePortable\App\libreoffice\program\soffice.exe"
+                convertion = Popen([s_office, '--headless', '--convert-to', report.ext.lstrip('.'),
+                    report.report_filename, '--outdir', os.path.join(report.task.work_dir, 'static', 'reports') ],
+                    stderr=STDOUT,stdout=PIPE)
+                out, err = convertion.communicate()
+
+                # Check if the converted file exists
+                ods_file = report.report_filename
+                pdf_file = ods_file.replace('.ods', report.ext)
+
+                if os.path.exists(pdf_file):
+                    print(f"Conversion successful: {pdf_file}")
+                    
+                    # CRITICAL: Update the report's filename and URL
+                    report.report_filename = pdf_file
+                    report.report_url = report.report_url.replace('.ods', report.ext)
+                    # OR rebuild the URL properly:
+                    # report.report_url = f"/static/reports/{os.path.basename(pdf_file)}"
+                    
+                    print(f"Updated report_url to: {report.report_url}")
+                    return True
+                else:
+                    print("Conversion failed: output file not found")
+                    return False
+                    
+            except Exception as e:
+                print(f"Conversion error: {e}")
+                return False
 
 
 External Report service
