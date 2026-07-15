@@ -37,6 +37,7 @@ The **Field** tab have the following fields:
   * **DATETIME**
   * **BOOLEAN**
   * **LONGTEXT**
+  * **KEYS** [1]_
   * **FILE**
   * **IMAGE**
 
@@ -53,6 +54,8 @@ The **Field** tab have the following fields:
   in the interface controls created by the
   :doc:`create_inputs </refs/client/item/m_create_inputs>`
   method on the client.
+
+.. [1] KEYS is a field array of primary fields values from another item.
 
 Lookup tab
 ==========

@@ -158,7 +158,7 @@ Oracle
 
 
 .. note::
-   DSN example: ``localhost\XE``
+   DSN example for oracledb: ``localhost:1521/XE``
 
 
 Databricks
