@@ -58,7 +58,7 @@ Examples of database setups
       package is needed, as well as database client development files. 
     * If using MSSQL_, the ``pymssql`` is needed.
     * If using Oracle_, the `cx_Oracle`_  and Python headers (development files), or `oracledb`_ is needed. 
-    * If using SQLCipher_ (TBA),  ``sqlcipher3-binary`` package is needed for Linux. There is a standalone DLL for Windows available.
+    * If using SQLCipher_ (TBA),  ``sqlcipher3-binary`` package is needed.
     * If using IBM_ (TBA),  ``ibm_db`` and ``ibm_db_dbi`` package is needed.
     * If using Firebird_,  ``fdb`` package is needed.
     * If using Databricks_, ``databricks-sql-connector`` is needed.
