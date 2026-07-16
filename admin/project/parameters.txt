@@ -39,7 +39,7 @@ On the General tab, you can specify general parameters of the project:
 * **Connection pool size** — the size of the server database connection pool. 
 
 * **Compressed JS, CSS files** - If this button is checked the server returns 
-  compressed *js* and *css* files when *index.html* page is loaded.
+  compressed *js* and *css* files when *index.html* page is loaded. [1]_
 
 * **All JS modules in a single file** - If this checkbox is unchecked, the 
   application will generate a javascript file in the project *js* folder for 
@@ -92,6 +92,7 @@ On the General tab, you can specify general parameters of the project:
    When **Connection pool size** or **Persistent connection** parameters are 
    changed, the server application must be restarted for changes to take effect.
 
+.. [1] Compressed JS is experimental.
 
 Interface tab
 =============
