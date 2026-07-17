@@ -97,8 +97,7 @@ External Report service
 ====================================
 
 This example will run `JSreport`_ report name ``invoice-main`` from local server ``jsreport_url``.
-The **report** parameter might be used to specify ``jsreport_url``. The downloaded file will have ODS extension
-regardless of :doc:`extension </refs/client/report/at_extension>` used (we are looking to fix this for Jam.py >7.0.100).
+The **report** parameter might be used to specify ``jsreport_url``.
 
 .. _JSreport: https://github.com/jsreport/jsreport
 
