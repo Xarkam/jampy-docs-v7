@@ -72,7 +72,7 @@ were not installed.
 
 .. note::
    Jam.py does not minify core JS and CSS files. It serves existing .min.js/.min.css files.
-   Regenerate minified files after changing source files with running utils/inify_all.py
+   Regenerate minified files after changing source files with running utils/minify_all.py
 
 
 After customisation is finished, the ``Prepare files`` clicked, we copy all the 
