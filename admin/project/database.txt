@@ -12,9 +12,6 @@ In this dialog project database parameters are displayed. When they have been
 changed and OK button is clicked, the Application builder will check connection 
 to the database and if it failed to connect an error will be displayed.
 
-.. note::
-   When any **Database** parameter is changed, except **DB manual update**, 
-   the server application must be restarted for changes to take effect.
 
 If the **DB Manual Update** checkbox is unchecked (default), any changes made to an
 item that has an associated database table will automatically be applied to that table.
@@ -31,6 +28,7 @@ The **DB manual update** was renamed to **DB manual mode** in more recent versio
 
 .. note::
     Please be very careful when using this option.
+
 
 
 Examples of database setups
@@ -58,7 +56,7 @@ Examples of database setups
       package is needed, as well as database client development files. 
     * If using MSSQL_, the ``pymssql`` is needed.
     * If using Oracle_, the `cx_Oracle`_  and Python headers (development files), or `oracledb`_ is needed. 
-    * If using SQLCipher_ (TBA),  ``sqlcipher3-binary`` package is needed.
+    * If using SQLCipher_ [1]_,  ``sqlcipher3-binary`` package is needed.
     * If using IBM_ (TBA),  ``ibm_db`` and ``ibm_db_dbi`` package is needed.
     * If using Firebird_,  ``fdb`` package is needed.
     * If using Databricks_, ``databricks-sql-connector`` is needed.
@@ -66,6 +64,11 @@ Examples of database setups
     * To generate reports, **LibreOffice** must be installed. :doc:`Portable </refs/server/reports/on_convert_report>` LibreOffice is supported.
       External libraries are also supported as well as jinja templates. Browser ``Pop-ups`` for the site should be enabled.
 
+.. [1] For SQLCipher for Windows use:
+    
+.. code-block:: py
+
+     pip install sqlcipher3-wheels
 
 .. _Jam.py Design Tips: https://jampy-application-design-tips.readthedocs.io/
 .. _PostgreSQL: https://www.postgresql.org/

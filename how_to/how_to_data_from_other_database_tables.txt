@@ -25,7 +25,7 @@ You can do it the following way:
 
 
 Then in the ``Server module`` for the new items, add code to read and write 
-the data to the database tables by using ``on_open`` and ``on_apply``.
+the data to the database tables by using ``on_open`` and ``on_apply`` with ``create_connection_ex``.
 
 Below code was tested with V7 for MySQL, MSSQL and PostgreSQL database (auto incremented primary field):
 
