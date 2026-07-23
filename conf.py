@@ -42,6 +42,7 @@ extensions = [
     'sphinx.ext.linkcode',
     'sphinx.ext.githubpages',
     'sphinx_llms_txt',
+    'sphinxcontrib.googleanalytics',
 ]
 
 
@@ -207,11 +208,13 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
+googleanalytics_id = 'G-BVZGENMJJT'
+googleanalytics_enabled = True
 html_theme_options = {
 
-    'analytics_id': 'UA-122962025-6',  #  Provided by Google in your dashboard
+#    'analytics_id': 'UA-122962025-6',  #  Provided by Google in your dashboard
 
-    'analytics_anonymize_ip': False,
+#    'analytics_anonymize_ip': False,
 
     'logo_only': False,
 
