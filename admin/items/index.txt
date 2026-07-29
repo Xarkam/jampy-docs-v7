@@ -6,7 +6,7 @@ Select a group node in the project tree to get access to items that this
 group owns, see
 :doc:`Task tree </programming/task_tree>`.
 
-At the bottom of the page there are 3 buttons:
+At the bottom of the page there are 4 buttons:
 
 * **New** - click on New to create a new item in the
   :doc:`Item Editor Dialog <item_editor_dialog>`
