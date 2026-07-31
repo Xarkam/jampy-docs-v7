@@ -1,0 +1,29 @@
+======================
+What Is a Copied Item?
+======================
+
+When creating a new Item, you can use the
+:doc:`Copy </admin/items/index>` feature.
+
+A copied Item is **not an independent copy**. Instead, it remains linked
+to the source Item.
+
+The copied Item inherits selected fields from the source Item and
+can add any fields that are later added to the source.
+Because of this relationship, the copied Item cannot define its own
+fields - the source Item remains the single place where the field
+definition is maintained.
+
+During the copy process, you may choose a different database table for
+the copied Item. The copied Item performs all CRUD operations on its own
+table while continuing to use the field definitions inherited from the
+source Item.
+
+This makes the **Copy** feature useful when multiple database tables
+share the same structure. A single source Item defines the fields, while
+each copied Item can work with a different table.
+
+.. note::
+
+   Think of a copied Item as sharing its **schema definition** with the
+   source Item, while maintaining its own database table and data.

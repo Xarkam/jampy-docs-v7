@@ -1,7 +1,3 @@
-.. This pages is not in any toctree. FIXIT
-
-:orphan:
-
 ===============================
 What are foreign keys used for?
 ===============================

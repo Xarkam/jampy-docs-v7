@@ -15,6 +15,10 @@ At the bottom of the page there are 4 buttons:
   or delete fields in the
   :doc:`Item Editor Dialog <item_editor_dialog>`
 
+* **Copy** - click on the button to create a ``copy`` of an item. Adding fields 
+  to a ``copy`` is used with ``Add fields``, which inherits fields from the source item.
+  Deleted fields are still available by ``Add fields``.
+
 * **Delete** - click on the button to delete an item and its underlying database
   table.
 

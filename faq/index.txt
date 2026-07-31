@@ -9,3 +9,5 @@ Jam.py FAQ
     faq_howto_upgrade_existing_project
     faq_using_other_libraries
     faq_print_ods_pdf
+    faq_copied_item
+    faq_foreign_keys
