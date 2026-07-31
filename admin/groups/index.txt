@@ -31,7 +31,7 @@ For each of the group, its own editor will be shown:
     report_group_editor    
     item_group_editor
 
-..    table_group_editor
+..    item_group_editor
 	
 Use buttons in the right panel of the page to edit Client and Server modules of 
 a selected group, see:
