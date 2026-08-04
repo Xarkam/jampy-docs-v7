@@ -65,6 +65,8 @@ The upper part of the **Item Editor dialog** have the following fields:
 * **Edit lock** - if this checkbox is checked, the application will use record 
   locking while users concurrently edit a record, see
   :doc:`Record locking </admin/record_locking>`
+
+* **Copy of** - 
   
 In the center part of the **Item Editor dialog** there is a table containing a
 list of fields, defined for the item. To add, modify or delete a field use the 

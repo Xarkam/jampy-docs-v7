@@ -23,6 +23,8 @@ This makes the **Copy** feature useful when multiple database tables
 share the same structure. A single source Item defines the fields, while
 each copied Item can work with a different table.
 
+It is possible to **detach** the table from the source.
+
 .. note::
 
    Think of a copied Item as sharing its **schema definition** with the
