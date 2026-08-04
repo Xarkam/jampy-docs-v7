@@ -19,7 +19,7 @@ At the bottom of the page there are a few buttons:
   to a ``copy`` is used with ``Add fields``, which inherits fields from the source item.
   Deleted fields are still available by ``Add fields``.
 
-* **Move** - used to move and Item to a different Item Group.
+* **Move** - used to move an Item to a different Item Group.
 
 * **Delete** - click on the button to delete an item and its underlying database
   table.
