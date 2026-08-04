@@ -3,7 +3,7 @@ Demo project
 ============
 
 The framework has a full fledged demo application that demonstrates programming 
-techniques used in the framework. 
+techniques used in the framework. The default Username/password for authentication is andrew/111.
 
 The demo is located in the demo folder of the Jam.py package downloaded from Github. There is also a standalone or an 
 portable Jam.py V7 Demo application for Windows x64 provided for `Jam.py` >7.0.100 in 
