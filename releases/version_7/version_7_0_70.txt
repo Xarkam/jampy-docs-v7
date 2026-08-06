@@ -48,3 +48,5 @@ In version 7.0.91, custom Menu permission issues fixed, History accordion fixed,
 In version 7.0.97, GitHub Code Security and Quality was applied and merged.    
 
 In version 7.0.99, create_connection_ex ported from v5.
+
+In version 7.0.112, f_copy_of (translation is needed at langs.sqlite), disabling feature was added on Item Editor. wsgi.py got ready for jinja2. 
