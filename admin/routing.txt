@@ -36,7 +36,7 @@ Routing code
 
 As mentioned, the ``on_request`` is used.
 
-The similar code should exist on "Task/Server Module". This example exists in the Northwind application, as well as ``login.html`` and ``reset_pass.html`` files:
+The similar code should exist on "Task/Server Module". This example exists in the :doc:`Northwind </intro/demo_project>` application, as well as ``login.html`` and ``reset_pass.html`` files:
 
 .. code-block:: Python
 

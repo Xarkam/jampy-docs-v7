@@ -10,7 +10,7 @@ portable Jam.py V7 Demo application for Windows x64 provided for `Jam.py` >7.0.1
 `here <https://github.com/jam-py-v5/jam-py-v7/releases/>`_.
 
 The portable application depends on LibreOffice for Reports and nothing more. Just extract, run it and point the browser as per below.
-If the application is blocked by the Windows Defender or similar, there is also portable Northwind V7 application
+If the application is blocked by the Windows Defender or similar, there is also **Northwind** V7 application
 at Windows 10/11 App store. Search for Jam.py Application Builder.
 
 To start the demo application go to the demo folder and run *server.py* script.
@@ -28,6 +28,14 @@ Open a Web browser and enter
 
 in the address bar.
 
+
+
+.. image:: /intro/_images/demo_jampy.png
+	:scale: 70 %
+	:align: center
+	:alt: Demo application
+
+
 To see the
 :doc:`Application builder </admin/index>`,
 open a new page in a browser and enter
@@ -36,12 +44,6 @@ open a new page in a browser and enter
 
 	127.0.0.1:8080/builder.html
 
-
-
-.. image:: /intro/_images/demo_jampy.png
-	:scale: 70 %
-	:align: center
-	:alt: Demo application
 
 
 .. image:: /intro/_images/demo_admin_jampy.png

@@ -47,7 +47,7 @@ The LLMS-full.txt is released:
 Github Repository
 =================
 
-The Github Jam.py repository: https://github.com/jam-py-v5/jam-py-v7
+The Github Jam.py repository: https://github.com/jam-py-v7/jam-py-v7
 
 |
 
