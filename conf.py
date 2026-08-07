@@ -42,6 +42,7 @@ extensions = [
     'sphinx.ext.linkcode',
     'sphinx.ext.githubpages',
     'sphinxcontrib.googleanalytics',
+    'sphinx_llms_txt',
 ]
 
 
