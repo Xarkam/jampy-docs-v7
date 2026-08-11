@@ -548,18 +548,19 @@ llms_txt_exclude = [
     "requirements",  # Exclude the search page
 ]
 
-
+GITHUB_REPO = 'https://github.com/jam-py-v7/jam-py-v7/blob/master'
 
 def linkcode_resolve(domain, info):
-    """Map specific exceptions to specific files."""
     if domain != 'py':
         return None
 
     mapping = {
-        'LanguageNotFound': 'https://github.com/jam-py-v5/jam-py-v7/blob/master/jam/langs.py',
-        'NetworkError': 'https://github.com/username/repo/blob/main/network.py',
-        'FileError': 'https://github.com/username/repo/blob/main/file_ops.py',
+        'LanguageNotFound': 'jam/langs.py',
+        'NetworkError': 'network.py',
+        'FileError': 'file_ops.py',
     }
 
+    filename = mapping.get(info['fullname'])
+    return f'{GITHUB_REPO}/{filename}' if filename else None
     exception_name = info['fullname']
     return mapping.get(exception_name)
