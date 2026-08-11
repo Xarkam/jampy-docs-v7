@@ -3,7 +3,7 @@ Authentication
 ==============
 
 
-This :doc:`export </admin/project/export>`  demonstrates the first three topics of this section:
+This :doc:`export </admin/project/export>`  demonstrates the first three topics of this section for Jam.py version 7.0.99 and lower:
 
 
    :download:`auth.zip <../../_static/auth.zip>`
