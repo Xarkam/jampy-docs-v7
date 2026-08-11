@@ -7,7 +7,7 @@ The examples are in tests folder.
 
 First, start with forking `Jam.py-v7`_.
 
-.. _Jam.py-v7: https://github.com/jam-py-v5/jam-py-v7
+.. _Jam.py-v7: https://github.com/jam-py-v7/jam-py-v7
 
 Next, clone your fork::
 
