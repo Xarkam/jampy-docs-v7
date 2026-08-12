@@ -12,7 +12,7 @@ Description
 ===========
 
 item_by_ID searches among all items of the project :doc:`task tree </programming/task_tree>`,
-starting with the current item, for an item whose :js:attr:`ID <AbstractItem.id>` attribute is
+starting with the current item, for an item whose :js:attr:`ID <AbstractItem.ID>` attribute is
 equal to the ID parameter.
 
 Parameter
@@ -26,5 +26,5 @@ Parameter
      - Type
      - Description
    * - ``ID``
-     - :js:attr:`ID <AbstractItem.id>`
+     - :js:attr:`ID <AbstractItem.ID>`
      - The ID item to find.

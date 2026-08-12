@@ -2,13 +2,11 @@
 can_modify
 ==========
 
-.. js:attribute:: active
+.. js:attribute:: Item.can_modify
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Item class </refs/client/item_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Item`
 
 Description
 ===========
@@ -16,11 +14,10 @@ Description
 Set the ``can_modify`` property to false if you need to prohibit changing
 of the item in the visual controls.
 
-When ``can_modify`` is true the 
-:doc:`can_create <m_can_create>`, 
-:doc:`can_edit <m_can_edit>`, 
-:doc:`can_delete <m_can_delete>` 
+When ``can_modify`` is true the
+:js:meth:`can_create <Item.create>`,
+:js:meth:`can_edit <Item.can_edit>`,
+:js:meth:`can_delete <Item.can_delete>`
 methods return false.
 
 By default the ``can_modify`` property is true.
-

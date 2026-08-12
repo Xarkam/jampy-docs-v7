@@ -2,37 +2,35 @@
 filter_form
 ===========
 
-.. js:attribute:: filter_form
+.. js:attribute:: Item.filter_form
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Item class </refs/client/item_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Item`
 
 Description
 ===========
 
-Use ``filter_form`` attribute to get access to a Jquery object representing the 
-filter form of the item. 
+Use ``filter_form`` attribute to get access to a Jquery object representing the
+filter form of the item.
 
-It is created by the 
-:doc:`create_filter_form <m_create_filter_form>`
+It is created by the
+:js:func:`create_filter_form <Item.create_filter_form>`
 method.
 
-The 
-:doc:`close_filter_form <m_close_filter_form>`
+The
+:js:func:`close_filter_form <Item.close_filter_form>`
 method sets the ``filter_form`` value to undefined.
 
 Example
 =======
 
-In the following example the button defined in the item filter html template is 
+In the following example the button defined in the item filter html template is
 assigned a click event:
 
 .. code-block:: js
 
-    item.filter_form.find("#cancel-btn").on('click', 
+    item.filter_form.find("#cancel-btn").on('click',
         function() {
             item.close_filter()
         }
@@ -41,9 +39,11 @@ assigned a click event:
 See also
 ========
 
+**Related methods**
+
+* :js:func:`create_filter_form <Item.create_filter_form>`
+* :js:func:`close_filter_form <Item.close_filter_form>`
+
+**Related concepts**
+
 :doc:`Forms </programming/interface/forms>`
-
-:doc:`create_filter_form <m_create_filter_form>`
-
-:doc:`close_filter_form <m_close_filter_form>`
-    

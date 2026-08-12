@@ -4,11 +4,9 @@ edit_form
 
 .. js:attribute:: Item.edit_form
 
-**domain**: client
-
-**language**: javascript
-
-**class**: :js:class:`Item`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Item`
 
 Description
 ===========
@@ -17,11 +15,11 @@ Use ``edit_form`` attribute to get access to a Jquery object representing the
 edit form of the item.
 
 It is created by the
-:doc:`create_edit_form <m_create_edit_form>`
+:js:meth:`create_edit_form <Item.create_edit_form>`
 method.
 
 The
-:doc:`close_edit_form <m_close_edit_form>`
+:js:meth:`close_edit_form <Item.close_edit_form>`
 method sets the ``edit_form`` value to undefined.
 
 Example
@@ -41,8 +39,12 @@ assigned a click event:
 See also
 ========
 
-:doc:`Forms </programming/interface/forms>`
+**Related methods**
 
-:doc:`create_edit_form <m_create_edit_form>`
+* :doc:`create_edit_form <m_create_edit_form>`
+* :doc:`close_edit_form <m_close_edit_form>`
 
-:doc:`close_edit_form <m_close_edit_form>`
+**Related concepts**
+
+* :doc:`Forms </programming/interface/forms>`
+

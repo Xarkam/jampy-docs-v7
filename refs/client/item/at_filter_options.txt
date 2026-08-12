@@ -2,13 +2,11 @@
 filter_options
 ==============
 
-.. js:attribute:: filter_options
+.. js:attribute:: Item.filter_options
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Item class </refs/client/item_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Item`
 
 Description
 ===========
@@ -17,23 +15,17 @@ Use the ``filter_options`` attribute to specify parameters of the modal filter f
 
 ``filter_options`` is an object that has the following attributes:
 
-* ``width`` - the width of the modal form, the default value is 560 px,
-* ``title`` - use it to get or set the title of the filter form,
-* ``close_button`` - if true, the close button will be created in the upper-right 
-  corner of the form, the default value is true,
-* ``close_caption`` - if true and close_button is true, will display 'Close - [Esc]'
-  near the button
-* ``close_on_escape`` - if true, pressing on the Escape key will trigger the 
-  :doc:`close_filter_form <m_close_filter_form>`
-  method.
-* ``close_focusout`` - if true, the 
-  :doc:`close_filter_form <m_close_filter_form>`
-  method will be called when a form loses focus
-* ``template_class`` - if specified, the div with this class will be searched in 
-  the task 
-  :doc:`templates </refs/client/task/at_templates>` 
-  attribute and used as a form html template when creating a form
-  
+====================== ===========================================
+Option                 Description
+====================== ===========================================
+``title``              use it to get or set the title of the filter form,
+``close_button``       if true, the close button will be created in the upper-rightcorner of the form, the default value is true,
+``close_caption``      if true and close_button is true, will display 'Close - [Esc]' near the button
+``close_on_escape``    if true, pressing on the Escape key will trigger the :js:func:`close_filter_form <Item.close_filter_form>` method.
+``close_focusout``     if true, the :js:func:`close_filter_form <Item.close_filter_form>` method will be called when a form loses focus
+``template_class``     | if specified, the div with this class will be searched in the task :js:attr:`templates <Task_api.templates>` attribute
+                       | and used as a form html template when creating a form
+====================== ===========================================
 
 Example
 =======
@@ -47,9 +39,12 @@ Example
 See also
 ========
 
-:doc:`Forms </programming/interface/forms>`
+**Related methods**
 
-:doc:`create_filter_form <m_create_filter_form>`
+* :js:func:`create_filter_form <Item.create_filter_form>`
+* :js:func:`close_filter_form <Item.close_filter_form>`
 
-:doc:`close_filter_form <m_close_filter_form>`
+**Related concepts**
+
+* :doc:`Forms </programming/interface/forms>`
 

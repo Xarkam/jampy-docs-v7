@@ -2,19 +2,17 @@
 fields
 ======
 
-.. js:attribute:: fields
+.. js:attribute:: Item.fields
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Item class </refs/client/item_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Item`
 
 Description
 ===========
 
-Lists all 
-:doc:`field </refs/client/field_api>`
+Lists all
+:js:class:`field <Field>`
 objects of the item.
 
 Example
@@ -27,13 +25,19 @@ Example
         for (var i = 0; i < customers.fields.length; i++) {
             console.log(customers.fields[i].field_caption, customers.fields[i].display_text);
         }
-    }    
-    
+    }
+
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+**Related methods**
 
-:doc:`Field class </refs/client/field_api>`
+* :js:func:`each_field <Item.each_field>`
 
-:doc:`each_field <m_each_field>`
+**Related class**
+
+* :js:class:`Field class <Field>`
+
+**Related concepts**
+
+* :doc:`Fields </programming/data/fields>`

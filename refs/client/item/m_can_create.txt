@@ -4,25 +4,23 @@ can_create
 
 .. js:function:: can_create()
 
-**domain**: client 
-
-**language**: javascript
-
-**class** :doc:`Item </refs/client/item_api>`
+    :domain: client
+    :language: javascript
+    :class: :js:class:`Item`
 
 Description
 ===========
 
-Use ``can_create`` method to determine if a user have a right to create a new 
-record. 
+Use ``can_create`` method to determine if a user have a right to create a new
+record.
 
 This method takes into account the user permissions set in the :doc:`roles node </admin/roles>`
-in the Application Builder when the project 
+in the Application Builder when the project
 :doc:`safe mode parameter </admin/project/parameters>`
-is set as well as the values of the 
-:doc:`permissions <at_permissions>` 
+is set as well as the values of the
+:js:attr:`permissions <Item.permissions>`
 attribute and the value of
-:doc:`can_modify <at_can_modify>` attribute.
+:js:attr:`can_modify <Item.can_modify>` attribute.
 
 Example
 =======
@@ -30,7 +28,7 @@ Example
 .. code-block:: js
 
     if (item.can_create()) {
-        item.view_form.find("#new-btn").on('click', 
+        item.view_form.find("#new-btn").on('click',
             function() {
                 item.append_record();
             }
@@ -43,4 +41,6 @@ Example
 See also
 ========
 
-:doc:`Parameters </admin/project/parameters>`
+**Related concepts**
+
+* :doc:`Parameters </admin/project/parameters>`
